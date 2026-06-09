@@ -4,32 +4,41 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mouseenter', () => el.setAttribute('aria-selected', 'true'));
     el.addEventListener('mouseleave', () => el.removeAttribute('aria-selected'));
   });
+});
 
-  const header = document.querySelector('.header');
-  const menuButton = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
+// Correctif stable menu mobile — 2026-06-09
+(function () {
+  function initMobileMenu() {
+    var button = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.nav');
+    if (!button || !nav) return;
 
-  if (header && menuButton && nav) {
-    menuButton.addEventListener('click', () => {
-      const isOpen = header.classList.toggle('menu-open');
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.textContent = isOpen ? 'Fermer' : 'Menu';
+    button.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      button.textContent = isOpen ? 'Fermer' : 'Menu';
     });
 
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        header.classList.remove('menu-open');
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.textContent = 'Menu';
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Menu';
       });
     });
 
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', function () {
       if (window.innerWidth > 1120) {
-        header.classList.remove('menu-open');
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.textContent = 'Menu';
+        nav.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Menu';
       }
     });
   }
-});
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
