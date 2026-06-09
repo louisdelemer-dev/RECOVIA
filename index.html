@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>RECOVIA - Recouvrement de créances</title>
-
-  <meta name="description" content="RECOVIA accompagne les entreprises dans le recouvrement amiable de leurs créances avec méthode, transparence et efficacité." />
+  <title>RECOVIA - Recouvrement de créances amiable</title>
+  <meta name="description" content="RECOVIA accompagne les entreprises dans le recouvrement amiable de leurs créances impayées avec méthode, clarté et efficacité." />
 
   <style>
     :root {
-      --violet: #70136f;
-      --violet-dark: #3f0b45;
-      --magenta: #d62c7d;
-      --gris: #f6f4f7;
-      --gris-texte: #5f5f68;
-      --noir: #241525;
-      --blanc: #ffffff;
-      --bordure: #e6dfe8;
+      --violet: #74117a;
+      --violet-dark: #35113f;
+      --violet-soft: #f4e8f5;
+      --magenta: #d42b82;
+      --text: #241525;
+      --muted: #64606b;
+      --light: #f8f6fa;
+      --white: #ffffff;
+      --border: #e7dde9;
+      --shadow: 0 20px 50px rgba(53, 17, 63, 0.12);
     }
 
     * {
@@ -26,104 +27,161 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--noir);
-      background: var(--blanc);
+      color: var(--text);
+      background: var(--white);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     header {
-      background: var(--blanc);
-      border-bottom: 1px solid var(--bordure);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
     .topbar {
       max-width: 1180px;
       margin: auto;
-      padding: 22px 24px;
+      padding: 18px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
     .logo img {
       height: 58px;
-      width: auto;
       display: block;
     }
 
     nav {
       display: flex;
-      gap: 30px;
       align-items: center;
-      font-size: 16px;
-      font-weight: 600;
+      gap: 26px;
+      font-weight: 700;
+      font-size: 15px;
     }
 
     nav a {
-      color: var(--noir);
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    nav a:not(.btn-header)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--magenta);
+      transition: width 0.25s ease;
     }
 
     nav a:hover {
       color: var(--violet);
     }
 
-    .btn-header {
-      background: linear-gradient(135deg, var(--magenta), var(--violet));
-      color: var(--blanc);
-      padding: 14px 24px;
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-header,
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-header {
+      padding: 13px 22px;
+      background: linear-gradient(135deg, var(--magenta), var(--violet));
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(116, 17, 122, 0.20);
+    }
+
+    .btn-primary {
+      padding: 16px 28px;
+      background: linear-gradient(135deg, var(--magenta), var(--violet));
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(116, 17, 122, 0.22);
+    }
+
+    .btn-secondary {
+      padding: 14px 26px;
+      border: 2px solid var(--violet);
+      color: var(--violet);
+      background: var(--white);
+    }
+
+    .btn-header:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(116, 17, 122, 0.25);
+    }
+
+    .btn-secondary:hover {
+      background: var(--violet-soft);
     }
 
     .hero {
+      padding: 92px 24px 84px;
       background:
-        radial-gradient(circle at 85% 20%, rgba(214,44,125,0.10), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, #faf8fb 100%);
-      padding: 90px 24px 80px;
+        radial-gradient(circle at 82% 16%, rgba(212, 43, 130, 0.14), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(116, 17, 122, 0.10), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, #faf7fb 100%);
     }
 
     .hero-inner {
       max-width: 1180px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 58px;
       align-items: center;
     }
 
     .badge {
       display: inline-block;
-      color: var(--violet);
-      background: #f1e6f1;
-      padding: 8px 16px;
+      padding: 9px 17px;
       border-radius: 999px;
+      background: var(--violet-soft);
+      color: var(--violet);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 24px;
     }
 
     h1 {
-      font-size: 54px;
-      line-height: 1.08;
+      font-size: 56px;
+      line-height: 1.06;
       color: var(--violet-dark);
+      letter-spacing: -1.6px;
       margin-bottom: 24px;
-      letter-spacing: -1.5px;
     }
 
-    .hero p {
+    .hero-text {
       font-size: 20px;
-      color: var(--gris-texte);
-      max-width: 650px;
+      color: var(--muted);
+      max-width: 660px;
       margin-bottom: 34px;
     }
 
@@ -131,57 +189,58 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 34px;
     }
 
-    .btn-primary,
-    .btn-secondary {
-      display: inline-block;
-      padding: 16px 26px;
-      border-radius: 999px;
+    .trust-line {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 700px;
+    }
+
+    .trust-item {
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
       font-weight: 700;
-      font-size: 16px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--magenta), var(--violet));
-      color: var(--blanc);
-      box-shadow: 0 14px 30px rgba(112,19,111,0.22);
-    }
-
-    .btn-secondary {
-      border: 2px solid var(--violet);
-      color: var(--violet);
-      background: var(--blanc);
+      color: var(--violet-dark);
     }
 
     .hero-card {
-      background: var(--blanc);
-      border: 1px solid var(--bordure);
-      border-radius: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 30px;
       padding: 38px;
-      box-shadow: 0 24px 60px rgba(63,11,69,0.10);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 70px rgba(53, 17, 63, 0.16);
     }
 
     .hero-card img {
       width: 100%;
-      max-width: 430px;
+      max-width: 410px;
       display: block;
       margin: 0 auto 28px;
     }
 
     .hero-card h2 {
-      color: var(--violet);
-      font-size: 26px;
+      color: var(--violet-dark);
+      font-size: 27px;
       margin-bottom: 12px;
     }
 
     .hero-card p {
-      font-size: 16px;
-      margin: 0;
+      color: var(--muted);
     }
 
     section {
-      padding: 80px 24px;
+      padding: 82px 24px;
     }
 
     .container {
@@ -190,20 +249,20 @@
     }
 
     .section-title {
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 46px;
     }
 
     .section-title h2 {
-      font-size: 38px;
+      font-size: 40px;
       color: var(--violet-dark);
+      letter-spacing: -0.9px;
       margin-bottom: 14px;
-      letter-spacing: -0.8px;
     }
 
     .section-title p {
-      color: var(--gris-texte);
       font-size: 18px;
+      color: var(--muted);
     }
 
     .cards {
@@ -213,38 +272,45 @@
     }
 
     .card {
-      background: var(--blanc);
-      border: 1px solid var(--bordure);
-      border-radius: 24px;
-      padding: 30px;
-      min-height: 230px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 32px;
+      min-height: 250px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
-    .card-number {
-      width: 42px;
-      height: 42px;
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: rgba(116, 17, 122, 0.35);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--magenta), var(--violet));
-      color: var(--blanc);
+      color: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      margin-bottom: 20px;
+      font-weight: 900;
+      margin-bottom: 22px;
     }
 
     .card h3 {
+      font-size: 23px;
       color: var(--violet-dark);
-      font-size: 22px;
       margin-bottom: 12px;
     }
 
     .card p {
-      color: var(--gris-texte);
+      color: var(--muted);
     }
 
     .grey {
-      background: var(--gris);
+      background: var(--light);
     }
 
     .steps {
@@ -254,54 +320,64 @@
     }
 
     .step {
-      background: var(--blanc);
-      border-radius: 22px;
-      padding: 26px;
-      border: 1px solid var(--bordure);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
     }
 
     .step strong {
-      display: block;
       color: var(--magenta);
-      margin-bottom: 10px;
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
+      letter-spacing: 0.6px;
     }
 
     .step h3 {
+      margin: 10px 0;
       color: var(--violet-dark);
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 21px;
     }
 
     .step p {
-      color: var(--gris-texte);
+      color: var(--muted);
       font-size: 15px;
     }
 
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: stretch;
+      gap: 28px;
     }
 
     .panel {
-      border-radius: 28px;
-      padding: 42px;
+      border-radius: 30px;
+      padding: 44px;
       background: var(--violet-dark);
-      color: var(--blanc);
+      color: var(--white);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
     }
 
     .panel.light {
-      background: var(--blanc);
-      color: var(--noir);
-      border: 1px solid var(--bordure);
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid var(--border);
     }
 
     .panel h2 {
       font-size: 34px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .panel p {
@@ -310,39 +386,42 @@
     }
 
     .panel.light p {
-      color: var(--gris-texte);
+      color: var(--muted);
     }
 
     .panel .btn-secondary {
       background: transparent;
-      color: var(--blanc);
-      border-color: var(--blanc);
+      border-color: var(--white);
+      color: var(--white);
     }
 
-    .contact {
-      background: linear-gradient(135deg, var(--violet-dark), var(--violet));
-      color: var(--blanc);
+    .contact-box {
       text-align: center;
       border-radius: 34px;
-      padding: 56px 30px;
+      padding: 58px 34px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 10%, rgba(212,43,130,0.34), transparent 25%),
+        linear-gradient(135deg, var(--violet-dark), var(--violet));
+      box-shadow: var(--shadow);
     }
 
-    .contact h2 {
+    .contact-box h2 {
       font-size: 38px;
       margin-bottom: 14px;
     }
 
-    .contact p {
-      max-width: 680px;
-      margin: 0 auto 28px;
+    .contact-box p {
+      max-width: 720px;
+      margin: 0 auto 30px;
       color: rgba(255,255,255,0.84);
       font-size: 18px;
     }
 
     footer {
-      padding: 40px 24px;
-      border-top: 1px solid var(--bordure);
-      color: var(--gris-texte);
+      padding: 42px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       font-size: 14px;
     }
 
@@ -355,7 +434,7 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 930px) {
       nav {
         display: none;
       }
@@ -370,7 +449,8 @@
       }
 
       .cards,
-      .steps {
+      .steps,
+      .trust-line {
         grid-template-columns: 1fr;
       }
 
@@ -383,169 +463,182 @@
 
 <body>
 
-  <header>
-    <div class="topbar">
-      <a href="#" class="logo">
-        <img src="logo-recovia.png" alt="RECOVIA - Recouvrement de créances">
-      </a>
+<header>
+  <div class="topbar">
+    <a href="#" class="logo">
+      <img src="logo-recovia.png" alt="RECOVIA">
+    </a>
 
-      <nav>
-        <a href="#solutions">Solutions</a>
-        <a href="#creanciers">Créanciers</a>
-        <a href="#debiteurs">Débiteurs</a>
-        <a href="#methode">Méthode</a>
-        <a href="#contact">Contact</a>
-        <a href="#confier" class="btn-header">Confier un dossier</a>
-      </nav>
-    </div>
-  </header>
+    <nav>
+      <a href="#solutions">Solutions</a>
+      <a href="#methode">Méthode</a>
+      <a href="#creanciers">Créanciers</a>
+      <a href="#debiteurs">Débiteurs</a>
+      <a href="#contact">Contact</a>
+      <a href="#confier" class="btn-header">Confier un dossier</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
+<main>
 
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <span class="badge">Recouvrement amiable de créances</span>
-          <h1>Recouvrer vos impayés avec méthode, clarté et efficacité.</h1>
-          <p>
-            RECOVIA accompagne les entreprises dans le traitement de leurs factures impayées,
-            avec une approche structurée, professionnelle et respectueuse de votre relation client.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#confier" class="btn-primary">Confier une créance</a>
-            <a href="#debiteurs" class="btn-secondary">Régler mon dossier</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <img src="logo-recovia.png" alt="Logo RECOVIA">
-          <h2>Un partenaire de confiance pour vos créances clients</h2>
-          <p>
-            Suivi rigoureux, relances adaptées, traçabilité des actions et information régulière
-            du créancier à chaque étape du dossier.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="solutions">
-      <div class="container">
-        <div class="section-title">
-          <h2>Des solutions pensées pour les entreprises confrontées aux impayés.</h2>
-          <p>
-            RECOVIA intervient en phase amiable afin de favoriser un règlement rapide,
-            tout en préservant l’image et les intérêts de votre entreprise.
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <div class="card-number">1</div>
-            <h3>Recouvrement amiable</h3>
-            <p>Prise de contact, relances écrites et téléphoniques, négociation et suivi jusqu’au règlement.</p>
-          </div>
-
-          <div class="card">
-            <div class="card-number">2</div>
-            <h3>Suivi structuré</h3>
-            <p>Chaque dossier est traité avec méthode, historisation des actions et information claire du créancier.</p>
-          </div>
-
-          <div class="card">
-            <div class="card-number">3</div>
-            <h3>Orientation judiciaire</h3>
-            <p>Lorsque la phase amiable n’aboutit pas, le dossier peut être préparé pour une suite contentieuse adaptée.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grey" id="methode">
-      <div class="container">
-        <div class="section-title">
-          <h2>Une méthode claire, progressive et documentée.</h2>
-          <p>
-            Notre objectif est simple : obtenir le paiement dans les meilleurs délais,
-            sans brutalité inutile, mais avec fermeté et professionnalisme.
-          </p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <strong>Étape 1</strong>
-            <h3>Analyse</h3>
-            <p>Vérification des éléments transmis : facture, contrat, relances et coordonnées du débiteur.</p>
-          </div>
-
-          <div class="step">
-            <strong>Étape 2</strong>
-            <h3>Relance</h3>
-            <p>Mise en place d’un cycle de relances adapté à la nature et à l’ancienneté de la créance.</p>
-          </div>
-
-          <div class="step">
-            <strong>Étape 3</strong>
-            <h3>Négociation</h3>
-            <p>Recherche d’une solution de règlement, immédiate ou échelonnée, selon la situation du débiteur.</p>
-          </div>
-
-          <div class="step">
-            <strong>Étape 4</strong>
-            <h3>Reporting</h3>
-            <p>Information du créancier sur l’évolution du dossier et les suites envisageables.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="creanciers">
-      <div class="container split">
-        <div class="panel">
-          <h2>Vous êtes créancier ?</h2>
-          <p>
-            Confiez vos créances impayées à RECOVIA pour structurer vos relances,
-            accélérer vos encaissements et préserver votre trésorerie.
-          </p>
-          <a href="#confier" class="btn-secondary">Confier un dossier</a>
-        </div>
-
-        <div class="panel light" id="debiteurs">
-          <h2>Vous avez reçu une relance RECOVIA ?</h2>
-          <p>
-            Notre équipe est à votre disposition pour comprendre votre situation,
-            vous orienter vers le règlement de votre dossier ou étudier une solution adaptée.
-          </p>
-          <a href="#contact" class="btn-primary">Contacter RECOVIA</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="confier">
-      <div class="container">
-        <div class="contact">
-          <h2>Vous souhaitez confier une créance à RECOVIA ?</h2>
-          <p>
-            Adressez-nous les premiers éléments de votre dossier. Nous vous recontacterons rapidement
-            afin d’évaluer la situation et les modalités de prise en charge.
-          </p>
-          <a href="mailto:contact@recovia.fr" class="btn-primary">contact@recovia.fr</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="contact">
-    <div class="footer-inner">
+  <section class="hero">
+    <div class="hero-inner">
       <div>
-        © 2026 RECOVIA — Recouvrement de créances
+        <span class="badge">Recouvrement amiable de créances</span>
+
+        <h1>Recouvrer vos impayés avec méthode, clarté et efficacité.</h1>
+
+        <p class="hero-text">
+          RECOVIA accompagne les entreprises dans le traitement de leurs factures impayées,
+          avec une approche structurée, professionnelle et respectueuse de la relation client.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#confier" class="btn-primary">Confier une créance</a>
+          <a href="#debiteurs" class="btn-secondary">Régler mon dossier</a>
+        </div>
+
+        <div class="trust-line">
+          <div class="trust-item">Suivi clair</div>
+          <div class="trust-item">Relances structurées</div>
+          <div class="trust-item">Approche amiable</div>
+        </div>
       </div>
-      <div>
-        Mentions légales · Politique de confidentialité · Contact
+
+      <div class="hero-card">
+        <img src="logo-recovia.png" alt="Logo RECOVIA">
+        <h2>Un partenaire de confiance pour vos créances clients</h2>
+        <p>
+          RECOVIA met en œuvre des actions progressives et documentées afin de favoriser
+          un règlement rapide, tout en préservant l’image de votre entreprise.
+        </p>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="solutions">
+    <div class="container">
+      <div class="section-title">
+        <h2>Des solutions pensées pour les entreprises confrontées aux impayés.</h2>
+        <p>
+          RECOVIA intervient en phase amiable pour structurer les relances,
+          faciliter le dialogue et accélérer les encaissements.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">1</div>
+          <h3>Recouvrement amiable</h3>
+          <p>
+            Prise de contact, relances écrites et téléphoniques, négociation
+            et suivi jusqu’au règlement.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">2</div>
+          <h3>Suivi rigoureux</h3>
+          <p>
+            Chaque dossier est traité avec méthode, historisation des actions
+            et information régulière du créancier.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">3</div>
+          <h3>Préparation des suites</h3>
+          <p>
+            Lorsque la phase amiable n’aboutit pas, le dossier peut être préparé
+            pour une suite adaptée.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grey" id="methode">
+    <div class="container">
+      <div class="section-title">
+        <h2>Une méthode claire, progressive et documentée.</h2>
+        <p>
+          Notre objectif : obtenir le paiement dans les meilleurs délais,
+          sans brutalité inutile, mais avec sérieux et fermeté.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>Étape 1</strong>
+          <h3>Analyse</h3>
+          <p>Vérification des factures, contrats, relances et coordonnées disponibles.</p>
+        </div>
+
+        <div class="step">
+          <strong>Étape 2</strong>
+          <h3>Relance</h3>
+          <p>Mise en place d’un cycle de relances adapté à la créance.</p>
+        </div>
+
+        <div class="step">
+          <strong>Étape 3</strong>
+          <h3>Négociation</h3>
+          <p>Recherche d’un règlement immédiat ou échelonné selon la situation.</p>
+        </div>
+
+        <div class="step">
+          <strong>Étape 4</strong>
+          <h3>Reporting</h3>
+          <p>Information claire du créancier sur l’évolution du dossier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="creanciers">
+    <div class="container split">
+      <div class="panel">
+        <h2>Vous êtes créancier ?</h2>
+        <p>
+          Confiez vos créances impayées à RECOVIA pour structurer vos relances,
+          accélérer vos encaissements et préserver votre trésorerie.
+        </p>
+        <a href="#confier" class="btn-secondary">Confier un dossier</a>
+      </div>
+
+      <div class="panel light" id="debiteurs">
+        <h2>Vous avez reçu une relance RECOVIA ?</h2>
+        <p>
+          Notre équipe est à votre disposition pour comprendre votre situation,
+          vous orienter vers le règlement de votre dossier ou étudier une solution adaptée.
+        </p>
+        <a href="#contact" class="btn-primary">Contacter RECOVIA</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="confier">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Vous souhaitez confier une créance à RECOVIA ?</h2>
+        <p>
+          Adressez-nous les premiers éléments de votre dossier.
+          Nous vous recontacterons afin d’évaluer la situation et les modalités de prise en charge.
+        </p>
+        <a href="mailto:contact@recovia.fr" class="btn-primary">contact@recovia.fr</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div>© 2026 RECOVIA — Recouvrement de créances</div>
+    <div>Mentions légales · Politique de confidentialité · Contact</div>
+  </div>
+</footer>
 
 </body>
 </html>
