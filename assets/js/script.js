@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll(".card, .step, .choice, .panel, .dashboard-card");
-  revealItems.forEach((item) => item.classList.add("ready"));
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card, .step, .choice, .panel');
+  cards.forEach((el) => {
+    el.addEventListener('mouseenter', () => el.setAttribute('aria-selected', 'true'));
+    el.addEventListener('mouseleave', () => el.removeAttribute('aria-selected'));
+  });
 });

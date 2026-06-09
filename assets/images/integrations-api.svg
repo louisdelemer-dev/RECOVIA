@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
 <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#d42b82"/><stop offset="1" stop-color="#74117a"/></linearGradient></defs>
-<rect width="900" height="540" rx="36" fill="#fbf8fc"/>
-<circle cx="450" cy="270" r="92" fill="url(#g)"/>
-<text x="450" y="262" font-family="Arial" font-size="28" font-weight="800" fill="white" text-anchor="middle">RECOVIA</text>
-<text x="450" y="294" font-family="Arial" font-size="18" fill="white" text-anchor="middle">API</text>
+<rect width="900" height="520" rx="34" fill="#fbf8fc"/>
+<circle cx="450" cy="260" r="88" fill="url(#g)"/>
+<text x="450" y="250" text-anchor="middle" font-family="Arial" font-weight="700" font-size="26" fill="white">RECOVIA</text>
+<text x="450" y="282" text-anchor="middle" font-family="Arial" font-size="18" fill="white">API</text>
 <g fill="#fff" stroke="#eadfeb" stroke-width="2">
-<rect x="70" y="75" width="200" height="82" rx="22"/><rect x="630" y="75" width="200" height="82" rx="22"/>
-<rect x="70" y="383" width="200" height="82" rx="22"/><rect x="630" y="383" width="200" height="82" rx="22"/>
-<rect x="350" y="35" width="200" height="82" rx="22"/><rect x="350" y="423" width="200" height="82" rx="22"/>
+<rect x="80" y="80" width="190" height="80" rx="20"/><rect x="630" y="80" width="190" height="80" rx="20"/>
+<rect x="80" y="360" width="190" height="80" rx="20"/><rect x="630" y="360" width="190" height="80" rx="20"/>
+<rect x="355" y="30" width="190" height="80" rx="20"/><rect x="355" y="410" width="190" height="80" rx="20"/>
 </g>
 <g stroke="#74117a" stroke-width="5" opacity=".35" fill="none">
-<path d="M270 116 C330 140 375 180 405 220"/><path d="M630 116 C570 140 525 180 495 220"/>
-<path d="M270 424 C330 400 375 360 405 320"/><path d="M630 424 C570 400 525 360 495 320"/>
-<path d="M450 117 L450 178"/><path d="M450 423 L450 362"/>
+<path d="M270 120 C330 135 370 170 405 205"/><path d="M630 120 C570 135 530 170 495 205"/>
+<path d="M270 400 C330 385 370 350 405 315"/><path d="M630 400 C570 385 530 350 495 315"/>
+<path d="M450 110 L450 172"/><path d="M450 410 L450 348"/>
 </g>
-<g font-family="Arial" font-weight="800" font-size="22" fill="#35113f" text-anchor="middle">
-<text x="170" y="124">ERP</text><text x="730" y="124">Facturation</text>
-<text x="170" y="432">Comptabilité</text><text x="730" y="432">Plateformes</text>
-<text x="450" y="85">CRM</text><text x="450" y="473">Reporting</text>
+<g font-family="Arial" font-weight="700" font-size="22" fill="#35113f" text-anchor="middle">
+<text x="175" y="130">ERP</text><text x="725" y="130">Facturation</text>
+<text x="175" y="410">Comptabilité</text><text x="725" y="410">Plateformes</text>
+<text x="450" y="80">CRM</text><text x="450" y="460">Reporting</text>
 </g>
 </svg>
