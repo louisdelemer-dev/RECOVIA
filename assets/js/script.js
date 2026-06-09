@@ -1,1 +1,4 @@
-document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){const target=document.querySelector(id);if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}}});});});
+document.addEventListener("DOMContentLoaded", () => {
+  const revealItems = document.querySelectorAll(".card, .step, .choice, .panel, .dashboard-card");
+  revealItems.forEach((item) => item.classList.add("ready"));
+});

@@ -1,20 +1,23 @@
-# Site RECOVIA
+# Site RECOVIA complet
 
-Site vitrine RECOVIA prêt pour GitHub Pages.
+Archive prête pour import GitHub Pages.
 
-## Structure
+## Pages incluses
+- index.html
+- solutions.html
+- judiciaire.html
+- recherches.html
+- integrations.html
+- debiteurs.html
+- contact.html
+- mentions-legales.html
+- politique-confidentialite.html
 
-- `index.html` : page d'accueil
-- `solutions.html` : offres et méthode
-- `creanciers.html` : espace créanciers
-- `debiteurs.html` : espace débiteurs
-- `contact.html` : contact
-- `mentions-legales.html` : mentions légales
-- `politique-confidentialite.html` : RGPD
-- `assets/css/style.css` : feuille de style globale
-- `assets/js/script.js` : interactions légères
-- `assets/images/logo-recovia.png` : logo
+## Déploiement GitHub Pages
+Importer tous les fichiers à la racine du dépôt, puis activer GitHub Pages :
+Settings > Pages > Deploy from a branch > main > /root.
 
-## Mise en ligne
-
-Importer les fichiers à la racine du dépôt GitHub, puis activer GitHub Pages depuis Settings > Pages.
+## Contacts intégrés
+- Clients : contact@recovia-france.fr
+- Débiteurs : debiteurs@recovia-france.fr
+- Téléphone : 01 74 30 30 03

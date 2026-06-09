@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#d42b82"/><stop offset="1" stop-color="#74117a"/></linearGradient></defs>
+<rect width="900" height="540" rx="36" fill="#fbf8fc"/>
+<circle cx="450" cy="270" r="92" fill="url(#g)"/>
+<text x="450" y="262" font-family="Arial" font-size="28" font-weight="800" fill="white" text-anchor="middle">RECOVIA</text>
+<text x="450" y="294" font-family="Arial" font-size="18" fill="white" text-anchor="middle">API</text>
+<g fill="#fff" stroke="#eadfeb" stroke-width="2">
+<rect x="70" y="75" width="200" height="82" rx="22"/><rect x="630" y="75" width="200" height="82" rx="22"/>
+<rect x="70" y="383" width="200" height="82" rx="22"/><rect x="630" y="383" width="200" height="82" rx="22"/>
+<rect x="350" y="35" width="200" height="82" rx="22"/><rect x="350" y="423" width="200" height="82" rx="22"/>
+</g>
+<g stroke="#74117a" stroke-width="5" opacity=".35" fill="none">
+<path d="M270 116 C330 140 375 180 405 220"/><path d="M630 116 C570 140 525 180 495 220"/>
+<path d="M270 424 C330 400 375 360 405 320"/><path d="M630 424 C570 400 525 360 495 320"/>
+<path d="M450 117 L450 178"/><path d="M450 423 L450 362"/>
+</g>
+<g font-family="Arial" font-weight="800" font-size="22" fill="#35113f" text-anchor="middle">
+<text x="170" y="124">ERP</text><text x="730" y="124">Facturation</text>
+<text x="170" y="432">Comptabilité</text><text x="730" y="432">Plateformes</text>
+<text x="450" y="85">CRM</text><text x="450" y="473">Reporting</text>
+</g>
+</svg>
