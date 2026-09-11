@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css?v=20260911-paiement">
+<title>Régler un dossier | RECOVIA</title>
+<meta name="description" content="Réglez en ligne par carte bancaire un dossier RECOVIA de manière sécurisée.">
+</head>
+<body>
+<header class="header">
+  <div class="topbar">
+    <a href="index.html" class="logo"><img src="assets/images/logo-recovia.png" alt="RECOVIA"></a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    <nav class="nav" id="site-navigation">
+      <a href="solutions.html">Solutions</a><a href="judiciaire.html">Judiciaire</a><a href="recherches.html">Recherches</a>
+      <a href="debiteurs.html">Débiteurs</a><a href="contact.html">Contact</a>
+      <a href="https://stopimpayes.app" target="_blank" rel="noopener">StopImpayes.app</a>
+      <a href="contact.html" class="btn-header">Confier vos impayés</a>
+      <a href="regler-un-dossier.html" class="btn-secondary">Régler un dossier</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="container"><span class="badge">PAIEMENT SÉCURISÉ</span><h1>Régler un dossier</h1><p class="hero-text">Munissez-vous de votre référence RECOVIA et choisissez le montant que vous souhaitez régler par carte bancaire.</p></div></section>
+<section class="payment-section"><div class="container payment-layout">
+  <div class="payment-card">
+    <div class="payment-card-head"><img src="assets/images/logo-recovia.png" alt="RECOVIA"><div><strong>Paiement par carte bancaire</strong><span>Connexion sécurisée à notre prestataire de paiement</span></div></div>
+    <form id="payment-form" class="form payment-form" novalidate>
+      <label for="reference">Référence du dossier <span>*</span></label>
+      <input class="input" id="reference" name="reference" type="text" inputmode="text" autocomplete="off" maxlength="100" placeholder="Ex. 145500117" required>
+      <p class="field-help">Votre référence figure sur les courriers, e-mails ou SMS adressés par RECOVIA.</p>
+      <label for="amount">Montant à régler <span>*</span></label>
+      <div class="amount-wrap"><input class="input" id="amount" name="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00" required><b>€</b></div>
+      <div id="payment-message" class="payment-message" role="status" aria-live="polite"></div>
+      <button id="payment-submit" class="btn-primary payment-submit" type="submit">Régler par carte bancaire</button>
+    </form>
+    <div class="payment-security"><strong>Paiement sécurisé</strong><p>Après validation, vous serez redirigé vers la page de paiement sécurisée CentralPay. RECOVIA ne conserve pas vos données de carte bancaire.</p></div>
+  </div>
+  <aside class="payment-aside">
+    <div class="panel"><h2>Besoin d’aide ?</h2><p>Notre service débiteurs peut vous accompagner pour identifier votre dossier ou convenir d’une solution de règlement.</p><p><strong>01 74 30 30 03</strong><br>debiteurs@recovia-france.fr</p></div>
+    <div class="payment-note"><strong>Important</strong><p>Le paiement sera automatiquement rattaché à votre dossier RECOVIA après confirmation par notre prestataire de paiement.</p></div>
+  </aside>
+</div></section>
+</main>
+<footer class="footer" id="contact"><div class="footer-inner"><div><div class="recovia-coords"><a class="recovia-phone-btn" href="tel:+33174303003">Tél. : 01 74 30 30 03</a><div>contact@recovia-france.fr</div><div>99, Avenue Achille Peretti</div><div>92200 Neuilly-sur-Seine</div></div>© 2026 RECOVIA — Marque du groupe DGB Alliance SAS</div><div><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a> · <a href="contact.html">Contact</a></div></div></footer>
+<script src="assets/js/script.js?v=20260911-paiement"></script>
+<script src="assets/js/regler-dossier.js?v=20260911"></script>
+</body></html>

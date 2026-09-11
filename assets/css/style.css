@@ -445,3 +445,17 @@ section{padding:78px 24px}
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(116, 17, 122, 0.22);
 }
+
+/* Page paiement RECOVIA */
+.payment-section{background:linear-gradient(180deg,#fff 0%,var(--light) 100%);padding-top:48px}
+.payment-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:34px;align-items:start}
+.payment-card{background:#fff;border:1px solid var(--border);border-radius:30px;padding:38px;box-shadow:var(--shadow)}
+.payment-card-head{display:flex;align-items:center;gap:20px;padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid var(--border)}
+.payment-card-head img{width:170px;height:auto}.payment-card-head strong,.payment-card-head span{display:block}.payment-card-head strong{font-size:20px;color:var(--violet-dark)}.payment-card-head span{font-size:14px;color:var(--muted);margin-top:3px}
+.payment-form label{font-weight:800;color:var(--violet-dark);margin-bottom:-9px}.payment-form label span{color:var(--magenta)}
+.field-help{font-size:13px;color:var(--muted);margin-top:-9px}.amount-wrap{position:relative}.amount-wrap .input{padding-right:52px;font-size:19px;font-weight:700}.amount-wrap b{position:absolute;right:19px;top:50%;transform:translateY(-50%);color:var(--violet-dark);font-size:18px}
+.payment-submit{border:0;cursor:pointer;font-size:16px;width:100%;margin-top:5px}.payment-submit:disabled{opacity:.65;cursor:wait;transform:none}
+.payment-message{display:none;border-radius:14px;padding:13px 15px;font-size:14px;font-weight:700}.payment-message.is-error,.payment-message.is-success{display:block}.payment-message.is-error{background:#fff1f3;color:#9d1738;border:1px solid #f1c6d0}.payment-message.is-success{background:#effaf4;color:#176b43;border:1px solid #bfe4d0}
+.payment-security{margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}.payment-security strong{color:var(--violet-dark)}.payment-security p{font-size:14px;color:var(--muted);margin-top:5px}
+.payment-aside{display:grid;gap:22px}.payment-aside .panel{padding:32px}.payment-aside .panel h2{font-size:27px}.payment-note{border:1px solid var(--border);border-radius:24px;padding:26px;background:#fff}.payment-note strong{color:var(--violet-dark);font-size:18px}.payment-note p{color:var(--muted);margin-top:7px}
+@media(max-width:850px){.payment-layout{grid-template-columns:1fr}.payment-card{padding:26px}.payment-card-head{align-items:flex-start;flex-direction:column}.payment-card-head img{width:150px}}
