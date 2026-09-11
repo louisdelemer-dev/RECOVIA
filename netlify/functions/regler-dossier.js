@@ -31,12 +31,12 @@ exports.handler = async function (event) {
   }
 
   try {
-    // CentralPay est appelé via la fonction serveur déjà validée de POREC.
-    // Aucun accès Supabase n'est nécessaire sur le site public RECOVIA.
-    const cpResponse = await fetch(`${POREC_BASE_URL}/.netlify/functions/centralpay-payment-request`, {
+    // POREC cree la PaymentRequest et memorise une intention de paiement publique.
+    // Aucun acces Supabase ni identifiant CentralPay n'est expose sur le site RECOVIA.
+    const cpResponse = await fetch(`${POREC_BASE_URL}/.netlify/functions/public-payment-request`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ dossierRef: reference, amount: amountRounded, email })
+      body: JSON.stringify({ reference, amount: amountRounded, email })
     });
 
     const cp = await safeJson(cpResponse);
@@ -44,8 +44,8 @@ exports.handler = async function (event) {
       throw new Error(cp?.error || `CentralPay ${cpResponse.status}`);
     }
 
-    // Redirection directe vers le SmartForm CentralPay. Le rapprochement est fait après paiement
-    // à partir de la référence transmise dans la PaymentRequest ; aucune existence n'est révélée ici.
+    // Redirection vers le SmartForm CentralPay. Après paiement, POREC tente le rapprochement.
+    // Une reference inexistante ou ambigue reste en A_RAPPROCHER au lieu de perdre le paiement.
     return json(200, {
       ok: true,
       paymentUrl: cp.paymentUrl,
