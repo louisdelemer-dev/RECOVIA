@@ -459,3 +459,68 @@ section{padding:78px 24px}
 .payment-security{margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}.payment-security strong{color:var(--violet-dark)}.payment-security p{font-size:14px;color:var(--muted);margin-top:5px}
 .payment-aside{display:grid;gap:22px}.payment-aside .panel{padding:32px}.payment-aside .panel h2{font-size:27px}.payment-note{border:1px solid var(--border);border-radius:24px;padding:26px;background:#fff}.payment-note strong{color:var(--violet-dark);font-size:18px}.payment-note p{color:var(--muted);margin-top:7px}
 @media(max-width:850px){.payment-layout{grid-template-columns:1fr}.payment-card{padding:26px}.payment-card-head{align-items:flex-start;flex-direction:column}.payment-card-head img{width:150px}}
+
+
+/* === Identité RECOVIA 2026 — modernisation sobre et institutionnelle === */
+:root{
+  --violet:#0b4f8a;
+  --violet-dark:#06284b;
+  --violet-soft:#edf5fb;
+  --magenta:#ef172f;
+  --text:#14263a;
+  --muted:#5d6b7a;
+  --light:#f6f9fc;
+  --white:#fff;
+  --border:#e1e8ef;
+  --shadow:0 16px 42px rgba(6,40,75,.09);
+  --shadow-strong:0 26px 70px rgba(6,40,75,.14);
+}
+body{
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);
+  font-weight:400;
+  letter-spacing:-.01em;
+}
+.header{background:rgba(255,255,255,.97);border-bottom:1px solid #e7edf3;box-shadow:0 2px 14px rgba(6,40,75,.035)}
+.topbar{max-width:1320px;padding:13px 24px;gap:28px}
+.logo{display:flex;align-items:center;flex:0 0 auto}
+.logo img{height:68px !important;width:auto !important;max-width:285px;object-fit:contain}
+.nav{gap:20px;font-size:14px;font-weight:500;letter-spacing:-.005em}
+.nav a{white-space:nowrap}
+.nav a:not(.btn-header):hover{color:#0b4f8a}
+.nav a:not(.btn-header)::after{height:2px;background:#0b4f8a;bottom:-8px}
+.btn-header,.btn-primary,.btn-secondary,.btn-light{border-radius:12px;font-weight:650;letter-spacing:-.01em}
+.btn-header,.btn-primary{background:#ef172f;box-shadow:0 10px 24px rgba(239,23,47,.18)}
+.btn-header{padding:11px 17px}
+.btn-primary{padding:15px 25px}
+.btn-header:hover,.btn-primary:hover{background:#d90e26;box-shadow:0 14px 28px rgba(239,23,47,.22)}
+.btn-secondary{border:1.5px solid #0b4f8a;color:#0b4f8a;padding:13px 24px}
+.btn-secondary:hover{background:#edf5fb;box-shadow:0 12px 28px rgba(6,40,75,.10)}
+.hero{background:radial-gradient(circle at 82% 18%,rgba(11,79,138,.10),transparent 32%),linear-gradient(180deg,#fff 0%,#f7fafc 100%)}
+.badge{border-radius:8px;background:#edf5fb;color:#0b4f8a;font-weight:650;letter-spacing:.02em}
+h1,.section-title h2,.choice h3,.card h3,.panel h2,.contact-box h2,.page-hero h1{color:#06284b}
+h1{font-weight:750;letter-spacing:-2px}
+.hero-text,.section-title p,.card p,.choice p,.content-page p,.content-page li{color:#5d6b7a}
+.hero-note{font-weight:600;color:#163a5d;border-color:#dfe8f0;border-radius:12px}
+.dashboard-card,.card,.choice,.step,.visual-box,.payment-card,.payment-note{border-color:#e1e8ef}
+.dashboard-card{border-radius:24px}
+.metric{background:#f6f9fc;border-color:#e1e8ef;border-radius:16px}
+.metric strong,.dashboard-header strong,.card h3,.choice h3,.step h3,.comparison td:first-child{color:#06284b}
+.progress-block,.choice.featured,.panel,.contact-box{background:linear-gradient(135deg,#06284b,#0b4f8a)}
+.icon{background:linear-gradient(135deg,#0b4f8a,#06355f);border-radius:12px}
+.list li::before{color:#ef172f}
+.footer a{color:#0b4f8a}
+.recovia-phone-btn{background:#ef172f;border-radius:10px;font-size:16px;font-weight:650}
+.recovia-phone-btn:hover{box-shadow:0 12px 26px rgba(239,23,47,.20)}
+.menu-toggle{color:#06284b;border-color:#dfe8f0;border-radius:10px;font-weight:600;box-shadow:none}
+.menu-toggle:hover{background:#edf5fb;box-shadow:none}
+@media(max-width:1120px){
+  .logo img{height:62px !important;max-width:250px}
+  .nav{font-size:15px;font-weight:500}
+  .nav a{padding:12px 14px}
+  .nav a:hover{background:#edf5fb}
+}
+@media(max-width:520px){
+  .logo img{height:54px !important;max-width:210px}
+  h1{letter-spacing:-1.3px}
+}
