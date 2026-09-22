@@ -460,67 +460,35 @@ section{padding:78px 24px}
 .payment-aside{display:grid;gap:22px}.payment-aside .panel{padding:32px}.payment-aside .panel h2{font-size:27px}.payment-note{border:1px solid var(--border);border-radius:24px;padding:26px;background:#fff}.payment-note strong{color:var(--violet-dark);font-size:18px}.payment-note p{color:var(--muted);margin-top:7px}
 @media(max-width:850px){.payment-layout{grid-template-columns:1fr}.payment-card{padding:26px}.payment-card-head{align-items:flex-start;flex-direction:column}.payment-card-head img{width:150px}}
 
-
-/* === Identité RECOVIA 2026 — modernisation sobre et institutionnelle === */
-:root{
-  --violet:#0b4f8a;
-  --violet-dark:#06284b;
-  --violet-soft:#edf5fb;
-  --magenta:#ef172f;
-  --text:#14263a;
-  --muted:#5d6b7a;
-  --light:#f6f9fc;
-  --white:#fff;
-  --border:#e1e8ef;
-  --shadow:0 16px 42px rgba(6,40,75,.09);
-  --shadow-strong:0 26px 70px rgba(6,40,75,.14);
-}
-body{
-  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--text);
-  font-weight:400;
-  letter-spacing:-.01em;
-}
-.header{background:rgba(255,255,255,.97);border-bottom:1px solid #e7edf3;box-shadow:0 2px 14px rgba(6,40,75,.035)}
-.topbar{max-width:1320px;padding:13px 24px;gap:28px}
-.logo{display:flex;align-items:center;flex:0 0 auto}
-.logo img{height:68px !important;width:auto !important;max-width:285px;object-fit:contain}
-.nav{gap:20px;font-size:14px;font-weight:500;letter-spacing:-.005em}
-.nav a{white-space:nowrap}
-.nav a:not(.btn-header):hover{color:#0b4f8a}
-.nav a:not(.btn-header)::after{height:2px;background:#0b4f8a;bottom:-8px}
-.btn-header,.btn-primary,.btn-secondary,.btn-light{border-radius:12px;font-weight:650;letter-spacing:-.01em}
-.btn-header,.btn-primary{background:#ef172f;box-shadow:0 10px 24px rgba(239,23,47,.18)}
-.btn-header{padding:11px 17px}
-.btn-primary{padding:15px 25px}
-.btn-header:hover,.btn-primary:hover{background:#d90e26;box-shadow:0 14px 28px rgba(239,23,47,.22)}
-.btn-secondary{border:1.5px solid #0b4f8a;color:#0b4f8a;padding:13px 24px}
-.btn-secondary:hover{background:#edf5fb;box-shadow:0 12px 28px rgba(6,40,75,.10)}
-.hero{background:radial-gradient(circle at 82% 18%,rgba(11,79,138,.10),transparent 32%),linear-gradient(180deg,#fff 0%,#f7fafc 100%)}
-.badge{border-radius:8px;background:#edf5fb;color:#0b4f8a;font-weight:650;letter-spacing:.02em}
-h1,.section-title h2,.choice h3,.card h3,.panel h2,.contact-box h2,.page-hero h1{color:#06284b}
-h1{font-weight:750;letter-spacing:-2px}
-.hero-text,.section-title p,.card p,.choice p,.content-page p,.content-page li{color:#5d6b7a}
-.hero-note{font-weight:600;color:#163a5d;border-color:#dfe8f0;border-radius:12px}
-.dashboard-card,.card,.choice,.step,.visual-box,.payment-card,.payment-note{border-color:#e1e8ef}
-.dashboard-card{border-radius:24px}
-.metric{background:#f6f9fc;border-color:#e1e8ef;border-radius:16px}
-.metric strong,.dashboard-header strong,.card h3,.choice h3,.step h3,.comparison td:first-child{color:#06284b}
-.progress-block,.choice.featured,.panel,.contact-box{background:linear-gradient(135deg,#06284b,#0b4f8a)}
-.icon{background:linear-gradient(135deg,#0b4f8a,#06355f);border-radius:12px}
-.list li::before{color:#ef172f}
-.footer a{color:#0b4f8a}
-.recovia-phone-btn{background:#ef172f;border-radius:10px;font-size:16px;font-weight:650}
-.recovia-phone-btn:hover{box-shadow:0 12px 26px rgba(239,23,47,.20)}
-.menu-toggle{color:#06284b;border-color:#dfe8f0;border-radius:10px;font-weight:600;box-shadow:none}
-.menu-toggle:hover{background:#edf5fb;box-shadow:none}
-@media(max-width:1120px){
-  .logo img{height:62px !important;max-width:250px}
-  .nav{font-size:15px;font-weight:500}
-  .nav a{padding:12px 14px}
-  .nav a:hover{background:#edf5fb}
-}
-@media(max-width:520px){
-  .logo img{height:54px !important;max-width:210px}
-  h1{letter-spacing:-1.3px}
-}
+/* RECOVIA modernisation 2026-09-22 */
+:root{--violet:#0b5ea8;--violet-dark:#062d57;--violet-soft:#edf6fd;--magenta:#ef1426;--text:#102b47;--muted:#566b80;--light:#f5f9fc;--border:#dce7f0;--shadow:0 18px 45px rgba(6,45,87,.10);--shadow-strong:0 28px 70px rgba(6,45,87,.16)}
+body{font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text);font-weight:400}
+.header{background:rgba(255,255,255,.97);border-bottom:1px solid #e7eef5}
+.topbar{max-width:1420px;padding:12px 34px;gap:30px}
+.logo img{height:82px;max-width:310px;object-fit:contain}
+.nav{gap:28px;font-size:15px;font-weight:500;color:#092e55}
+.nav a:not(.btn-header)::after{background:#1576c7;height:3px;bottom:-10px}
+.nav a.active{font-weight:650}.nav a.active::after{width:100%!important}
+.btn-header,.btn-primary{background:#ef1426;box-shadow:none;border-radius:11px;font-weight:650}
+.btn-header{padding:13px 20px;color:#fff!important}.btn-header::after{display:none!important}
+.btn-secondary{border:1.5px solid #0b67b5;color:#0a4f8e;border-radius:11px;font-weight:600;background:#fff}
+.contact-strip{background:linear-gradient(90deg,#073a67,#062d57);color:#fff;font-size:13px}
+.contact-strip-inner{max-width:1420px;margin:auto;padding:9px 34px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contact-strip a{color:#fff}
+.hero.hero-photo{padding:0;background:#f5f9fc}
+.hero-photo .hero-inner{max-width:none;grid-template-columns:1.05fr .95fr;gap:0;min-height:505px;align-items:stretch}
+.hero-copy{padding:68px max(34px,calc((100vw - 1420px)/2 + 34px)) 48px max(34px,calc((100vw - 1420px)/2 + 34px));background:linear-gradient(100deg,#fff 0%,#fff 75%,rgba(255,255,255,.82) 100%);position:relative;z-index:2}
+.eyebrow{font-size:13px;letter-spacing:4px;color:#1677c7;font-weight:500;margin-bottom:28px}
+.hero-photo h1{font-size:49px;line-height:1.13;color:#062d57;letter-spacing:-1.6px;margin-bottom:22px;max-width:760px}.hero-photo h1 span{color:#1474bd}
+.red-rule{width:70px;height:5px;border-radius:5px;background:#ef1426;margin:22px 0}
+.hero-photo .hero-text{font-size:18px;line-height:1.55;color:#455f77;max-width:700px;margin-bottom:30px}
+.hero-photo .hero-actions{margin-bottom:22px}.hero-photo .btn-primary,.hero-photo .btn-secondary{padding:15px 28px}
+.hero-photo .hero-note{font-size:13px;font-weight:500;border:0;background:transparent;padding:0;color:#5b7084}
+.hero-photo-panel{min-height:505px;background-image:linear-gradient(90deg,rgba(255,255,255,.10),rgba(6,45,87,.03)),url('../images/hero-recovia-office.jpg');background-size:cover;background-position:center;position:relative}
+.quote-card{position:absolute;right:7%;bottom:42px;background:rgba(255,255,255,.94);padding:22px 28px;border-radius:15px;box-shadow:0 14px 38px rgba(6,45,87,.16);color:#083d70;font-size:16px}.quote-card span{display:block;width:48px;height:4px;background:#ef1426;border-radius:4px;margin-bottom:13px}
+.home-services{position:relative;margin-top:-1px;padding:0 24px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1420px}.home-service{background:rgba(255,255,255,.97);border:1px solid #e6eef5;border-radius:16px;padding:24px;display:flex;gap:18px;min-height:155px;box-shadow:0 8px 28px rgba(6,45,87,.06);transition:.2s}.home-service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.service-icon{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:#edf6fd;color:#0b5ea8;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:700}.home-service h3{font-size:18px;line-height:1.25;color:#062d57;margin:5px 0 10px}.home-service p{font-size:14px;line-height:1.45;color:#63778a}
+.trust-strip{padding:26px 24px;background:#fff;border-bottom:1px solid #e8eef4}.trust-grid{max-width:1360px;display:grid;grid-template-columns:repeat(4,1fr)}.trust-grid>div{padding:3px 34px;border-right:1px solid #cfdce8}.trust-grid>div:last-child{border:0}.trust-grid strong{display:block;color:#07467f;font-size:20px;margin-bottom:2px}.trust-grid span{font-size:14px;color:#62778b}
+.section-title h2,.card h3,.choice h3,.panel h2,.step h3{color:#062d57}.choice.featured,.panel:not(.light),.contact-box{background:linear-gradient(135deg,#062d57,#0b5ea8)}
+.footer a{color:#0b5ea8}
+@media(max-width:1100px){.nav{gap:16px;font-size:14px}.logo img{height:68px}.hero-photo h1{font-size:42px}.home-services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:960px){.contact-strip-inner{justify-content:center;flex-wrap:wrap;padding:7px 18px}.contact-strip-inner span:nth-child(2),.contact-strip-inner span:nth-child(4){display:none}.topbar{padding:10px 18px}.logo img{height:62px;max-width:230px}.hero-photo .hero-inner{grid-template-columns:1fr}.hero-copy{padding:48px 24px 34px}.hero-photo-panel{min-height:360px}.home-services{grid-template-columns:1fr 1fr;margin-top:0}.trust-grid{grid-template-columns:1fr 1fr;gap:20px}.trust-grid>div{border:0;padding:8px 12px}}
+@media(max-width:600px){.hero-photo h1{font-size:35px}.home-services{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr}.hero-photo-panel{min-height:300px}.quote-card{left:20px;right:20px;bottom:20px}.eyebrow{letter-spacing:2.5px}.contact-strip-inner{font-size:12px}}
