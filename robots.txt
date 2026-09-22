@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://recovia-france.fr/sitemap.xml
