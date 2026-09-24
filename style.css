@@ -1,0 +1,499 @@
+
+:root{
+  --violet:#74117a;
+  --violet-dark:#35113f;
+  --violet-soft:#f4e8f5;
+  --magenta:#d42b82;
+  --text:#241525;
+  --muted:#64606b;
+  --light:#f8f6fa;
+  --white:#fff;
+  --border:#e7dde9;
+  --shadow:0 20px 50px rgba(53,17,63,.12);
+  --shadow-strong:0 30px 80px rgba(53,17,63,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.topbar{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{height:58px;width:auto}
+.nav{display:flex;align-items:center;gap:22px;font-size:15px;font-weight:800}
+.nav a{position:relative;transition:.25s}
+.nav a:not(.btn-header):hover{color:var(--violet)}
+.nav a:not(.btn-header)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--magenta);transition:.25s}
+.nav a:not(.btn-header):hover::after{width:100%}
+.btn-header,.btn-primary,.btn-secondary,.btn-light{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:850;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s}
+.btn-header,.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--violet));color:#fff;box-shadow:0 14px 30px rgba(116,17,122,.22)}
+.btn-header{padding:12px 20px}
+.btn-primary{padding:16px 28px}
+.btn-secondary{padding:14px 26px;border:2px solid var(--violet);color:var(--violet);background:#fff}
+.btn-light{padding:14px 26px;border:2px solid #fff;color:#fff;background:transparent}
+.btn-header:hover,.btn-primary:hover,.btn-secondary:hover,.btn-light:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(116,17,122,.25)}
+.btn-secondary:hover{background:var(--violet-soft)}
+.hero{padding:86px 24px 70px;background:radial-gradient(circle at 84% 12%,rgba(212,43,130,.14),transparent 30%),radial-gradient(circle at 8% 88%,rgba(116,17,122,.10),transparent 28%),linear-gradient(180deg,#fff 0%,#faf7fb 100%)}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.badge{display:inline-block;padding:9px 17px;border-radius:999px;background:var(--violet-soft);color:var(--violet);font-size:14px;font-weight:850;margin-bottom:24px}
+h1{font-size:56px;line-height:1.06;color:var(--violet-dark);letter-spacing:-1.6px;margin-bottom:24px}
+.hero-text{font-size:20px;color:var(--muted);max-width:660px;margin-bottom:32px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.hero-note{font-weight:800;color:var(--violet-dark);background:rgba(255,255,255,.72);border:1px solid var(--border);padding:15px 18px;border-radius:18px;display:inline-block}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:32px;box-shadow:var(--shadow-strong)}
+.floating-card{position:absolute;left:-18px;bottom:28px;background:#fff;border:1px solid var(--border);border-radius:22px;padding:18px 20px;box-shadow:var(--shadow);max-width:285px}
+.floating-card strong{display:block;color:var(--violet-dark);font-size:18px;margin-bottom:4px}
+.floating-card span{color:var(--muted);font-size:14px}
+section{padding:78px 24px}
+.container{max-width:1180px;margin:auto}
+.section-title{max-width:800px;margin-bottom:42px}
+.section-title.center{text-align:center;margin-left:auto;margin-right:auto}
+.section-title h2{font-size:40px;line-height:1.15;color:var(--violet-dark);letter-spacing:-.9px;margin-bottom:14px}
+.section-title p{font-size:18px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:26px;padding:32px;min-height:240px;transition:.25s}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:rgba(116,17,122,.35)}
+.icon{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--magenta),var(--violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:22px}
+.card h3{font-size:23px;color:var(--violet-dark);margin-bottom:12px}
+.card p{color:var(--muted)}
+.grey{background:var(--light)}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.choice{border-radius:30px;padding:38px;border:1px solid var(--border);background:#fff;transition:.25s;position:relative;overflow:hidden}
+.choice::before{content:"";position:absolute;right:-55px;top:-55px;width:160px;height:160px;border-radius:50%;background:var(--violet-soft)}
+.choice:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.choice h3{font-size:29px;color:var(--violet-dark);margin-bottom:14px;position:relative}
+.choice p{color:var(--muted);margin-bottom:24px;position:relative}
+.choice.featured{background:linear-gradient(135deg,var(--violet-dark),var(--violet));color:#fff}
+.choice.featured::before{background:rgba(255,255,255,.10)}
+.choice.featured h3,.choice.featured p{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;transition:.25s}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step strong{color:var(--magenta);font-size:13px;text-transform:uppercase;letter-spacing:.6px}
+.step h3{margin:10px 0;color:var(--violet-dark);font-size:21px}
+.step p{color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.visual-box{background:#fff;border:1px solid var(--border);border-radius:30px;padding:22px;box-shadow:var(--shadow)}
+.panel{border-radius:30px;padding:44px;background:var(--violet-dark);color:#fff;transition:.25s}
+.panel:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.panel.light{background:#fff;color:var(--text);border:1px solid var(--border)}
+.panel h2{font-size:34px;line-height:1.16;margin-bottom:16px}
+.panel p{margin-bottom:20px;color:rgba(255,255,255,.82)}
+.panel.light p{color:var(--muted)}
+.list{margin:22px 0 26px;display:grid;gap:12px}
+.list li{list-style:none;padding-left:28px;position:relative;color:inherit}
+.list li::before{content:"✓";position:absolute;left:0;color:var(--magenta);font-weight:900}
+.contact-box{text-align:center;border-radius:34px;padding:58px 34px;color:#fff;background:radial-gradient(circle at 80% 10%,rgba(212,43,130,.34),transparent 25%),linear-gradient(135deg,var(--violet-dark),var(--violet));box-shadow:var(--shadow)}
+.contact-box h2{font-size:38px;margin-bottom:14px}
+.contact-box p{max-width:720px;margin:0 auto 30px;color:rgba(255,255,255,.84);font-size:18px}
+.footer{padding:42px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer a{color:var(--violet);font-weight:700}
+.page-hero{padding:70px 24px;background:linear-gradient(180deg,#fff,#faf7fb)}
+.page-hero .container{max-width:980px}
+.page-hero h1{font-size:46px}
+.content-page{max-width:980px;margin:auto;padding:62px 24px}
+.content-page h2{color:var(--violet);margin:32px 0 10px}
+.content-page p,.content-page li{color:var(--muted);margin-bottom:12px}
+.form{display:grid;gap:16px}
+.input,.textarea,select{width:100%;padding:15px 16px;border:1px solid var(--border);border-radius:16px;font:inherit}
+.textarea{min-height:145px}
+@media(max-width:960px){
+  .nav{display:none}
+  .hero-inner,.split,.choice-grid{grid-template-columns:1fr}
+  h1{font-size:40px}
+  .section-title h2{font-size:32px}
+  .cards,.steps{grid-template-columns:1fr}
+  .floating-card{position:static;margin-top:18px}
+  .hero{padding-top:56px}
+}
+
+
+/* Stabilisation V3 : tableau de bord hero, comparatif, judiciaire et recherches */
+.dashboard-visual {
+  position: relative;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 30px;
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(12px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.dashboard-header strong {
+  color: var(--violet);
+  font-size: 18px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.metric {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.metric:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.metric strong {
+  display: block;
+  color: var(--violet-dark);
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.progress-block {
+  margin-top: 24px;
+  background: linear-gradient(135deg, var(--violet-dark), var(--violet));
+  border-radius: 24px;
+  padding: 22px;
+  color: white;
+}
+
+.progress-block span {
+  display: block;
+  opacity: 0.82;
+  font-size: 14px;
+}
+
+.progress-block strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.progress-line {
+  height: 9px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 999px;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  width: 72%;
+  background: linear-gradient(90deg, #ffffff, var(--magenta));
+  border-radius: 999px;
+  animation: progressMove 2.8s ease-in-out infinite alternate;
+}
+
+.floating-text {
+  position: absolute;
+  top: 34px;
+  right: 12px;
+  background: white;
+  color: var(--violet-dark);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  animation: floatText 4s ease-in-out infinite;
+}
+
+.floating-text.second {
+  top: auto;
+  right: auto;
+  left: 0;
+  bottom: 42px;
+  color: var(--violet);
+  animation-delay: 1.2s;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes progressMove {
+  from { width: 58%; }
+  to { width: 86%; }
+}
+
+.comparison-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.comparison {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.comparison th,
+.comparison td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison th {
+  background: var(--violet-dark);
+  color: #fff;
+  font-size: 15px;
+}
+
+.comparison tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison td:first-child {
+  font-weight: 800;
+  color: var(--violet-dark);
+}
+
+.ok { color: #1d7f44; font-weight: 900; }
+.warn { color: #a05a00; font-weight: 900; }
+.no { color: #a02136; font-weight: 900; }
+
+@media (max-width: 960px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .floating-text,
+  .floating-text.second {
+    position: static;
+    margin-top: 16px;
+    display: inline-flex;
+  }
+  .dashboard-visual {
+    display: block;
+    min-height: auto;
+  }
+}
+
+
+/* Menu stabilisé avec nouvelles rubriques */
+.nav { gap: 16px; font-size: 14px; }
+.topbar { max-width: 1240px; }
+@media (max-width: 1120px) { .nav { display: none; } }
+
+
+/* Correctif stable logo + menu mobile — 2026-06-09
+   Ajouté en fin de fichier pour éviter les régressions liées aux anciennes règles. */
+.logo img {
+  height: 76px !important;
+  width: auto !important;
+  max-width: 260px;
+}
+
+.menu-toggle {
+  display: none !important;
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--violet-dark);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(53, 17, 63, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(53, 17, 63, 0.12);
+  background: var(--violet-soft);
+}
+
+@media (min-width: 1121px) {
+  .nav {
+    display: flex !important;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  .topbar {
+    position: relative;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 68px !important;
+    max-width: 220px;
+  }
+
+  .menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .nav {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 16px;
+    right: 16px;
+    z-index: 999;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 14px;
+    background: rgba(255,255,255,.98);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav.is-open {
+    display: flex !important;
+  }
+
+  .nav a {
+    padding: 13px 14px;
+    border-radius: 14px;
+  }
+
+  .nav a:hover {
+    background: var(--violet-soft);
+  }
+
+  .nav a::after {
+    display: none !important;
+  }
+
+  .nav .btn-header,
+  .nav .btn-secondary {
+    margin-top: 8px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    padding: 12px 16px;
+  }
+
+  .logo img {
+    height: 60px !important;
+    max-width: 190px;
+  }
+
+  .menu-toggle {
+    padding: 10px 15px;
+  }
+}
+
+/* Coordonnées RECOVIA en pied de page */
+.recovia-coords {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.recovia-phone-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #74117a;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recovia-phone-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(116, 17, 122, 0.22);
+}
+
+/* Page paiement RECOVIA */
+.payment-section{background:linear-gradient(180deg,#fff 0%,var(--light) 100%);padding-top:48px}
+.payment-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:34px;align-items:start}
+.payment-card{background:#fff;border:1px solid var(--border);border-radius:30px;padding:38px;box-shadow:var(--shadow)}
+.payment-card-head{display:flex;align-items:center;gap:20px;padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid var(--border)}
+.payment-card-head img{width:170px;height:auto}.payment-card-head strong,.payment-card-head span{display:block}.payment-card-head strong{font-size:20px;color:var(--violet-dark)}.payment-card-head span{font-size:14px;color:var(--muted);margin-top:3px}
+.payment-form label{font-weight:800;color:var(--violet-dark);margin-bottom:-9px}.payment-form label span{color:var(--magenta)}
+.field-help{font-size:13px;color:var(--muted);margin-top:-9px}.amount-wrap{position:relative}.amount-wrap .input{padding-right:52px;font-size:19px;font-weight:700}.amount-wrap b{position:absolute;right:19px;top:50%;transform:translateY(-50%);color:var(--violet-dark);font-size:18px}
+.payment-submit{border:0;cursor:pointer;font-size:16px;width:100%;margin-top:5px}.payment-submit:disabled{opacity:.65;cursor:wait;transform:none}
+.payment-message{display:none;border-radius:14px;padding:13px 15px;font-size:14px;font-weight:700}.payment-message.is-error,.payment-message.is-success{display:block}.payment-message.is-error{background:#fff1f3;color:#9d1738;border:1px solid #f1c6d0}.payment-message.is-success{background:#effaf4;color:#176b43;border:1px solid #bfe4d0}
+.payment-security{margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}.payment-security strong{color:var(--violet-dark)}.payment-security p{font-size:14px;color:var(--muted);margin-top:5px}
+.payment-aside{display:grid;gap:22px}.payment-aside .panel{padding:32px}.payment-aside .panel h2{font-size:27px}.payment-note{border:1px solid var(--border);border-radius:24px;padding:26px;background:#fff}.payment-note strong{color:var(--violet-dark);font-size:18px}.payment-note p{color:var(--muted);margin-top:7px}
+@media(max-width:850px){.payment-layout{grid-template-columns:1fr}.payment-card{padding:26px}.payment-card-head{align-items:flex-start;flex-direction:column}.payment-card-head img{width:150px}}
+
+/* RECOVIA modernisation 2026-09-22 */
+:root{--violet:#0b5ea8;--violet-dark:#062d57;--violet-soft:#edf6fd;--magenta:#ef1426;--text:#102b47;--muted:#566b80;--light:#f5f9fc;--border:#dce7f0;--shadow:0 18px 45px rgba(6,45,87,.10);--shadow-strong:0 28px 70px rgba(6,45,87,.16)}
+body{font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text);font-weight:400}
+.header{background:rgba(255,255,255,.97);border-bottom:1px solid #e7eef5}
+.topbar{max-width:1420px;padding:12px 34px;gap:30px}
+.logo img{height:82px;max-width:310px;object-fit:contain}
+.nav{gap:28px;font-size:15px;font-weight:500;color:#092e55}
+.nav a:not(.btn-header)::after{background:#1576c7;height:3px;bottom:-10px}
+.nav a.active{font-weight:650}.nav a.active::after{width:100%!important}
+.btn-header,.btn-primary{background:#ef1426;box-shadow:none;border-radius:11px;font-weight:650}
+.btn-header{padding:13px 20px;color:#fff!important}.btn-header::after{display:none!important}
+.btn-secondary{border:1.5px solid #0b67b5;color:#0a4f8e;border-radius:11px;font-weight:600;background:#fff}
+.contact-strip{background:linear-gradient(90deg,#073a67,#062d57);color:#fff;font-size:13px}
+.contact-strip-inner{max-width:1420px;margin:auto;padding:9px 34px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contact-strip a{color:#fff}
+.hero.hero-photo{padding:0;background:#f5f9fc}
+.hero-photo .hero-inner{max-width:none;position:relative;min-height:600px;display:block;overflow:hidden;background:#eaf2f8}
+.hero-copy{position:relative;z-index:2;width:min(560px,calc(100% - 68px));margin:56px 0 56px max(34px,calc((100vw - 1420px)/2 + 34px));padding:56px 48px 42px;background:#fff;border-radius:28px;box-shadow:0 22px 60px rgba(6,45,87,.12)}
+.eyebrow{font-size:13px;letter-spacing:4px;color:#1677c7;font-weight:500;margin-bottom:28px}
+.hero-photo h1{font-size:49px;line-height:1.13;color:#062d57;letter-spacing:-1.6px;margin-bottom:22px;max-width:760px}.hero-photo h1 span{color:#1474bd}
+.red-rule{width:70px;height:5px;border-radius:5px;background:#ef1426;margin:22px 0}
+.hero-photo .hero-text{font-size:18px;line-height:1.55;color:#455f77;max-width:700px;margin-bottom:30px}
+.hero-photo .hero-actions{margin-bottom:22px}.hero-photo .btn-primary,.hero-photo .btn-secondary{padding:15px 28px}
+.hero-photo .hero-note{font-size:13px;font-weight:500;border:0;background:transparent;padding:0;color:#5b7084}
+.hero-photo-panel{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.10) 28%,rgba(6,45,87,.03) 58%),url('../images/hero-recovia-office.jpg');background-size:cover;background-position:center center}
+.hero-photo-panel::before{content:'';position:absolute;left:max(16px,calc((100vw - 1420px)/2 + 12px));top:0;bottom:0;width:min(33vw,420px);background:linear-gradient(90deg,rgba(255,255,255,.82),rgba(255,255,255,.18));pointer-events:none}
+.quote-card{position:absolute;right:max(34px,calc((100vw - 1420px)/2 + 34px));bottom:34px;background:rgba(255,255,255,.95);padding:22px 28px;border-radius:15px;box-shadow:0 14px 38px rgba(6,45,87,.16);color:#083d70;font-size:16px;z-index:2}.quote-card span{display:block;width:48px;height:4px;background:#ef1426;border-radius:4px;margin-bottom:13px}
+.home-services{position:relative;margin-top:-34px;padding:0 24px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1420px}.home-service{background:rgba(255,255,255,.97);border:1px solid #e6eef5;border-radius:16px;padding:24px;display:flex;gap:18px;min-height:155px;box-shadow:0 8px 28px rgba(6,45,87,.06);transition:.2s}.home-service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.service-icon{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:#edf6fd;color:#0b5ea8;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:700}.home-service h3{font-size:18px;line-height:1.25;color:#062d57;margin:5px 0 10px}.home-service p{font-size:14px;line-height:1.45;color:#63778a}
+.trust-strip{padding:26px 24px;background:#fff;border-bottom:1px solid #e8eef4}.trust-grid{max-width:1360px;display:grid;grid-template-columns:repeat(4,1fr)}.trust-grid>div{padding:3px 34px;border-right:1px solid #cfdce8}.trust-grid>div:last-child{border:0}.trust-grid strong{display:block;color:#07467f;font-size:20px;margin-bottom:2px}.trust-grid span{font-size:14px;color:#62778b}
+.section-title h2,.card h3,.choice h3,.panel h2,.step h3{color:#062d57}.choice.featured,.panel:not(.light),.contact-box{background:linear-gradient(135deg,#062d57,#0b5ea8)}
+.footer a{color:#0b5ea8}
+@media(max-width:1180px){.hero-copy{width:min(520px,calc(100% - 48px));padding:50px 40px 38px}.hero-photo h1{font-size:44px}.home-services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){.nav{gap:16px;font-size:14px}.logo img{height:68px}.hero-photo h1{font-size:40px}}
+@media(max-width:960px){.contact-strip-inner{justify-content:center;flex-wrap:wrap;padding:7px 18px}.contact-strip-inner span:nth-child(2),.contact-strip-inner span:nth-child(4){display:none}.topbar{padding:10px 18px}.logo img{height:62px;max-width:230px}.hero-photo .hero-inner{min-height:auto;padding-top:0;display:flex;flex-direction:column}.hero-copy{width:auto;margin:0;padding:44px 24px 30px;border-radius:0;box-shadow:none}.hero-photo-panel{position:relative;order:2;min-height:360px;background-position:62% center}.hero-photo-panel::before{display:none}.home-services{grid-template-columns:1fr 1fr;margin-top:0}.trust-grid{grid-template-columns:1fr 1fr;gap:20px}.trust-grid>div{border:0;padding:8px 12px}.quote-card{right:20px;left:20px;bottom:20px}}
+@media(max-width:600px){.hero-photo h1{font-size:35px}.home-services{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr}.hero-photo-panel{min-height:300px}.eyebrow{letter-spacing:2.5px}.contact-strip-inner{font-size:12px}}
+
+/* RECOVIA careers forms */
+.content-page form label{display:block;font-weight:600;margin:0 0 18px}.content-page form input,.content-page form select,.content-page form textarea{box-sizing:border-box;width:100%;margin-top:7px;padding:13px 14px;border:1px solid #d9dee7;border-radius:8px;background:#fff;font:inherit;color:inherit}.content-page form input[type="checkbox"]{width:auto;margin-right:8px}.content-page form .consent{font-weight:400;line-height:1.5}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}@media(max-width:720px){.form-grid{grid-template-columns:1fr}}

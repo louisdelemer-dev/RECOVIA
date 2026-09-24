@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="650" viewBox="0 0 920 650">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d42b82"/>
+      <stop offset="1" stop-color="#74117a"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f6ecf7"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#35113f" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="920" height="650" rx="44" fill="#fbf8fc"/>
+  <circle cx="770" cy="90" r="110" fill="#f0dceb"/>
+  <circle cx="115" cy="535" r="150" fill="#f5e7f5"/>
+  <g filter="url(#shadow)">
+    <rect x="110" y="105" width="470" height="360" rx="30" fill="url(#g2)" stroke="#eadfeb"/>
+    <rect x="145" y="145" width="190" height="18" rx="9" fill="#35113f"/>
+    <rect x="145" y="188" width="360" height="15" rx="8" fill="#d9c8dc"/>
+    <rect x="145" y="222" width="320" height="15" rx="8" fill="#d9c8dc"/>
+    <rect x="145" y="276" width="370" height="64" rx="18" fill="#ffffff" stroke="#eadfeb"/>
+    <circle cx="179" cy="308" r="15" fill="url(#g1)"/>
+    <rect x="210" y="295" width="210" height="12" rx="6" fill="#35113f" opacity=".9"/>
+    <rect x="210" y="318" width="145" height="10" rx="5" fill="#d9c8dc"/>
+    <rect x="145" y="362" width="370" height="64" rx="18" fill="#ffffff" stroke="#eadfeb"/>
+    <circle cx="179" cy="394" r="15" fill="url(#g1)"/>
+    <rect x="210" y="381" width="230" height="12" rx="6" fill="#35113f" opacity=".9"/>
+    <rect x="210" y="404" width="165" height="10" rx="5" fill="#d9c8dc"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="520" y="250" width="270" height="240" rx="30" fill="#ffffff" stroke="#eadfeb"/>
+    <circle cx="655" cy="330" r="58" fill="url(#g1)"/>
+    <path d="M655 285 L698 305 V335 C698 375 672 397 655 405 C638 397 612 375 612 335 V305 Z" fill="white" opacity=".92"/>
+    <rect x="575" y="415" width="160" height="16" rx="8" fill="#35113f"/>
+    <rect x="598" y="447" width="114" height="12" rx="6" fill="#d9c8dc"/>
+  </g>
+  <path d="M580 145 C660 145 720 188 730 248" fill="none" stroke="#d42b82" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+  <path d="M246 515 C355 575 520 575 640 510" fill="none" stroke="#74117a" stroke-width="8" stroke-linecap="round" opacity=".28"/>
+</svg>
