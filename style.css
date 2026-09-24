@@ -497,3 +497,30 @@ body{font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text);font-weight
 
 /* RECOVIA careers forms */
 .content-page form label{display:block;font-weight:600;margin:0 0 18px}.content-page form input,.content-page form select,.content-page form textarea{box-sizing:border-box;width:100%;margin-top:7px;padding:13px 14px;border:1px solid #d9dee7;border-radius:8px;background:#fff;font:inherit;color:inherit}.content-page form input[type="checkbox"]{width:auto;margin-right:8px}.content-page form .consent{font-weight:400;line-height:1.5}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}@media(max-width:720px){.form-grid{grid-template-columns:1fr}}
+
+/* RECOVIA careers form v2 */
+.application-section{padding:72px 0 88px;background:#fff}
+.application-card{max-width:820px;margin:0 auto;padding:42px 46px 46px;background:#fff;border:1px solid #e5e9f0;border-radius:16px;box-shadow:0 12px 35px rgba(13,39,82,.07)}
+.application-heading{margin-bottom:30px;padding-bottom:22px;border-bottom:1px solid #e9edf3}
+.application-heading h2{margin:0 0 7px;color:#102d61;font-size:28px}
+.application-heading p{margin:0;color:#69758a}
+.career-form,.career-form *{box-sizing:border-box}
+.career-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 24px}
+.career-field{display:block;margin:0 0 22px}
+.career-grid .career-field{margin:0}
+.career-grid{margin-bottom:22px}
+.career-field label{display:block;margin:0 0 8px;font-size:14px;font-weight:700;color:#18335f}
+.career-field label span{color:#d33b31}
+.career-field label small{font-weight:400;color:#6d788b}
+.career-form input[type="text"],.career-form input[type="email"],.career-form input[type="tel"],.career-form select,.career-form textarea{display:block;width:100%;min-height:48px;margin:0;padding:12px 14px;border:1px solid #cfd7e4;border-radius:8px;background:#fff;color:#1f2f49;font:inherit;line-height:1.4;outline:none;transition:border-color .15s,box-shadow .15s}
+.career-form textarea{min-height:150px;resize:vertical}
+.career-form input:focus,.career-form select:focus,.career-form textarea:focus{border-color:#244f9e;box-shadow:0 0 0 3px rgba(36,79,158,.10)}
+.career-upload{padding:16px;border:1px dashed #bdc8d9;border-radius:8px;background:#f8fafc}
+.career-upload input[type="file"]{display:block;width:100%;margin:0 0 7px;font:inherit;color:#34445f}
+.career-upload small{color:#748096}
+.career-consent{display:flex!important;align-items:flex-start;gap:10px;margin:4px 0 28px!important;font-size:13px!important;font-weight:400!important;line-height:1.55;color:#59677d}
+.career-consent input[type="checkbox"]{flex:0 0 auto;width:17px!important;height:17px;margin:2px 0 0!important}
+.career-consent a{color:#244f9e;text-decoration:underline}
+.career-submit{padding-top:2px}
+.career-submit .btn-primary{min-width:220px;border:0;cursor:pointer}
+@media(max-width:720px){.application-section{padding:42px 0 60px}.application-card{padding:28px 22px;border-radius:12px}.career-grid{grid-template-columns:1fr;gap:20px}.career-grid .career-field{margin:0}.career-submit .btn-primary{width:100%}}
