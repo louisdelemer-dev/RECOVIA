@@ -1,10 +1,5 @@
-# RECOVIA — sous-domaine de paiement
-# Affiche la page de règlement à la racine de payer.recovia-france.fr
-# sans modifier l'URL visible et sans affecter le domaine principal.
-
 [[redirects]]
-  from = "/"
+  from = "https://payer.recovia-france.fr/"
   to = "/regler-un-dossier.html"
   status = 200
   force = true
-  conditions = { Host = ["payer.recovia-france.fr"] }
