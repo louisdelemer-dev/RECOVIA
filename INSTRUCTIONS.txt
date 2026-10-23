@@ -1,0 +1,1 @@
+Importer les 3 fichiers aux emplacements indiqués dans le dépôt GitHub RECOVIA. Ne pas modifier les autres fichiers. La photo est un recadrage de la photographie existante hero-recovia-office.jpg du ZIP fourni. Vérifier les liens et l’aperçu social après déploiement.
