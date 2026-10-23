@@ -1,0 +1,25 @@
+/* RECOVIA – pied de page commun à toutes les pages */
+.recovia-footer-v2{background:#102646;color:#dbe5f3;font-family:inherit;line-height:1.65;clear:both}
+.recovia-footer-v2 *{box-sizing:border-box}
+.recovia-footer-v2 a{color:#e6eefb;text-decoration:none;transition:color .2s,background .2s,transform .2s}
+.recovia-footer-v2 a:hover{color:#fff;text-decoration:underline}
+.recovia-footer-v2 a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.recovia-footer-v2 .rf-wrap{max-width:1180px;margin:auto;padding:0 24px}
+.recovia-footer-v2 .rf-top{padding:58px 0 46px;display:grid;grid-template-columns:1.45fr 1fr 1fr 1.12fr;gap:34px}
+.recovia-footer-v2 .rf-brand{font-size:27px;letter-spacing:.02em;font-weight:850;color:#fff;margin-bottom:12px}
+.recovia-footer-v2 .rf-brand span{color:#ee6670}
+.recovia-footer-v2 .rf-about{color:#c2d0e4;max-width:305px;font-size:14px;margin:0 0 20px}
+.recovia-footer-v2 .rf-title{font-weight:800;color:#fff;font-size:15px;margin:2px 0 16px}
+.recovia-footer-v2 .rf-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:14px}
+.recovia-footer-v2 .rf-contact{font-size:14px;color:#d4dfef}
+.recovia-footer-v2 .rf-contact p{margin:0 0 13px;color:#d4dfef}
+.recovia-footer-v2 .rf-call{font-weight:800;font-size:18px}
+.recovia-footer-v2 .rf-actions{display:flex;flex-wrap:wrap;gap:9px}
+.recovia-footer-v2 .rf-action{display:inline-flex;align-items:center;justify-content:center;background:#c93b33;border:1px solid #c93b33;border-radius:8px;padding:11px 15px;font-size:13px;font-weight:800;color:#fff!important;text-align:center}
+.recovia-footer-v2 .rf-action:hover{background:#e04840;text-decoration:none;transform:translateY(-1px)}
+.recovia-footer-v2 .rf-action-alt{background:transparent;border-color:#9cabc2}
+.recovia-footer-v2 .rf-action-alt:hover{background:#203d65}
+.recovia-footer-v2 .rf-bottom{border-top:1px solid #365071;padding:20px 0 25px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px;color:#b5c5dc}
+.recovia-footer-v2 .rf-bottom-links{display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:1020px){.recovia-footer-v2 .rf-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}}
+@media(max-width:600px){.recovia-footer-v2 .rf-top{grid-template-columns:1fr;padding:42px 0 32px;gap:30px}.recovia-footer-v2 .rf-bottom{align-items:flex-start;flex-direction:column;gap:12px}.recovia-footer-v2 .rf-actions{flex-direction:column;align-items:stretch}.recovia-footer-v2 .rf-action{width:100%}}

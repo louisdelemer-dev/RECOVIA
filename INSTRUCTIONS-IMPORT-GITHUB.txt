@@ -1,0 +1,17 @@
+RECOVIA - Nouveau pied de page global
+
+Archive basée exclusivement sur RECOVIA-main (10).zip fourni le 23 octobre 2026.
+
+Contenu : 43 pages HTML et 1 feuille CSS nouvelle.
+
+Dans GitHub, à la racine du dépôt RECOVIA :
+1. Remplacer les pages HTML présentes dans ce ZIP.
+2. Ajouter assets/css/footer-recovia.css.
+3. Ne pas importer ce fichier d'instructions.
+4. Déployer sur Netlify et vérifier l'accueil, les pages Services, Débiteurs, Contact et les pages de confirmation.
+
+Le formulaire de l’accueil conserve ses champs et sa configuration Netlify. Sa redirection a été corrigée de /contact.html vers /contact-envoye.
+Le menu de navigation n'a pas été modifié.
+Le pied de page est désormais identique sur les 43 pages et stylisé par une feuille CSS partagée.
+Pour les changements futurs du design du footer, modifier assets/css/footer-recovia.css.
+Pour modifier les liens/textes, mettre à jour le HTML sur les pages ou envisager un composant de template partagé.
