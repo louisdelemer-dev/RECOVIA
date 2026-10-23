@@ -1,1 +1,9 @@
-Importer les 3 fichiers aux emplacements indiqués dans le dépôt GitHub RECOVIA. Ne pas modifier les autres fichiers. La photo est un recadrage de la photographie existante hero-recovia-office.jpg du ZIP fourni. Vérifier les liens et l’aperçu social après déploiement.
+RECOVIA — Patch article modèle mise en demeure
+
+Importer les fichiers à la racine du dépôt GitHub en conservant les dossiers assets/images et assets/documents.
+
+Fichiers : nouvelle page HTML, ressources.html, guide-gestion-impayes.html (lien ajouté), photographie et modèle TXT téléchargeable.
+
+La photographie est issue de la photo existante du guide de gestion des impayés ; elle est donc réutilisée pour ce nouvel article.
+
+Vérifier après déploiement Netlify : page, bouton copier, téléchargement TXT, carte Ressources, lien depuis le guide précédent et aperçu social.

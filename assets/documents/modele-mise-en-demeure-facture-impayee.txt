@@ -1,0 +1,27 @@
+[Votre entreprise / Nom du créancier]
+[Adresse]
+[Code postal et ville]
+
+[Nom / Dénomination du débiteur]
+[Adresse]
+[Code postal et ville]
+
+À [ville], le [date]
+
+Objet : Mise en demeure de payer – Facture n° [référence]
+
+Madame, Monsieur,
+
+Sauf erreur de notre part, la facture n° [référence], émise le [date] pour un montant de [montant] €, et arrivée à échéance le [date], demeure impayée malgré nos précédentes relances.
+
+Par la présente, nous vous mettons formellement en demeure de procéder au règlement de la somme de [montant] € dans un délai de [8 ou 15] jours à compter de la réception du présent courrier.
+
+Vous pouvez effectuer ce règlement par [modalités de paiement]. Si vous contestez tout ou partie de cette somme, nous vous invitons à nous communiquer rapidement les motifs de votre contestation et les justificatifs utiles.
+
+À défaut de règlement ou de solution convenue dans ce délai, nous nous réservons la possibilité d'engager les démarches de recouvrement appropriées, y compris judiciaires, dans les conditions prévues par la loi.
+
+Si votre paiement est déjà intervenu, nous vous remercions de nous transmettre son justificatif.
+
+Veuillez agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+
+[Nom, fonction et signature]
