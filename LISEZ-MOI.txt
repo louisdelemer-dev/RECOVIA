@@ -1,0 +1,15 @@
+CORRECTIF REVCLI - REVERSEMENT AVANT DATE LIMITE
+
+Principe :
+- La date limite calculee a 72 h ouvrees reste une DATE MAXIMALE de reversement.
+- Elle ne bloque plus un reversement effectue avant cette date.
+- Tout paiement RECOVIA non encore reverse est disponible dans REVCLI des lors que la facturation des honoraires/frais est validee.
+- Les paiements deja reverses restent exclus.
+- La date limite reste affichee pour permettre le suivi et la priorisation.
+
+Fichiers a remplacer :
+- assets/js/reversements.js
+- assets/js/screens/reversements-screen.js
+- assets/js/command-engine.js
+
+Aucun SQL necessaire.
