@@ -8,7 +8,29 @@
 <link href="assets/css/style.css?v=20260911-paiement" rel="stylesheet"/>
 <title>Régler un dossier RECOVIA | Paiement en ligne</title>
 <meta content="Réglez en ligne votre dossier RECOVIA par carte bancaire à l’aide de votre référence de dossier." name="description"/>
-<link href="https://recovia-france.fr/regler-un-dossier.html" rel="canonical"/><meta content="fr_FR" property="og:locale"/><meta content="website" property="og:type"/><meta content="RECOVIA" property="og:site_name"/><meta content="Régler un dossier RECOVIA | Paiement en ligne" property="og:title"/><meta content="Réglez en ligne votre dossier RECOVIA par carte bancaire à l’aide de votre référence de dossier." property="og:description"/><meta content="https://recovia-france.fr/regler-un-dossier.html" property="og:url"/><meta content="https://recovia-france.fr/assets/images/logo-recovia.png" property="og:image"/><meta content="summary" name="twitter:card"/><meta content="Régler un dossier RECOVIA | Paiement en ligne" name="twitter:title"/><meta content="Réglez en ligne votre dossier RECOVIA par carte bancaire à l’aide de votre référence de dossier." name="twitter:description"/></head>
+<link href="https://recovia-france.fr/regler-un-dossier.html" rel="canonical"/><meta content="fr_FR" property="og:locale"/><meta content="website" property="og:type"/><meta content="RECOVIA" property="og:site_name"/><meta content="Régler un dossier RECOVIA | Paiement en ligne" property="og:title"/><meta content="Réglez en ligne votre dossier RECOVIA par carte bancaire à l’aide de votre référence de dossier." property="og:description"/><meta content="https://recovia-france.fr/regler-un-dossier.html" property="og:url"/><meta content="https://recovia-france.fr/assets/images/logo-recovia.png" property="og:image"/><meta content="summary" name="twitter:card"/><meta content="Régler un dossier RECOVIA | Paiement en ligne" name="twitter:title"/><meta content="Réglez en ligne votre dossier RECOVIA par carte bancaire à l’aide de votre référence de dossier." name="twitter:description"/><style>
+/* Ajustements limités à la page de règlement */
+.payment-aside .panel h2,.payment-aside .panel p,.payment-aside .panel strong,.payment-aside .panel a{color:#fff!important}
+.payment-aside .panel a{text-decoration:underline;text-underline-offset:3px}
+.debtor-contact{padding:8px 0 72px;background:#f7f9fc}
+.debtor-contact-inner{max-width:860px;margin:0 auto;padding:0 22px}
+.debtor-contact-card{background:#fff;border:1px solid #dfe6f1;border-radius:20px;box-shadow:0 12px 35px rgba(22,43,83,.06);padding:clamp(24px,4vw,42px)}
+.debtor-contact-card h2{color:#162c56;font-size:clamp(24px,3vw,30px);margin:0 0 10px}
+.debtor-contact-card .intro{color:#52627b;line-height:1.7;margin:0 0 25px}
+.debtor-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.debtor-contact-field{display:flex;flex-direction:column;gap:7px;margin-bottom:17px}
+.debtor-contact-field label{font-weight:650;color:#182c51;font-size:14px}
+.debtor-contact-field input,.debtor-contact-field select,.debtor-contact-field textarea{font:inherit;color:#172c51;border:1px solid #d9e1ed;border-radius:10px;padding:13px 14px;width:100%;box-sizing:border-box;background:#fff}
+.debtor-contact-field textarea{min-height:140px;resize:vertical}
+.debtor-contact-field input:focus,.debtor-contact-field select:focus,.debtor-contact-field textarea:focus{outline:2px solid #375b9c;outline-offset:1px}
+.debtor-contact-consent{display:flex;align-items:flex-start;gap:10px;color:#52627b;font-size:13px;line-height:1.55;margin:12px 0 20px}
+.debtor-contact-consent input{margin-top:4px;flex-shrink:0}
+.debtor-contact-consent a{color:#234b93;text-decoration:underline}
+.debtor-contact-submit{border:0;border-radius:9px;background:#cf3b32;color:#fff;font:inherit;font-weight:700;padding:14px 25px;cursor:pointer}
+.debtor-contact-submit:hover{background:#b82d27}
+.debtor-contact-small{font-size:12px;color:#63718a;line-height:1.6;margin-top:16px}
+@media(max-width:650px){.debtor-contact-grid{grid-template-columns:1fr}}
+</style></head>
 <body>
 <header class="header">
 <div class="topbar">
@@ -44,10 +66,28 @@
 <div class="payment-security"><strong>Paiement sécurisé</strong><p>Après validation, vous serez redirigé vers la page de paiement sécurisée CentralPay. RECOVIA ne conserve pas vos données de carte bancaire.</p></div>
 </div>
 <aside class="payment-aside">
-<div class="panel"><h2>Besoin d’aide ?</h2><p>Notre service débiteurs peut vous accompagner pour identifier votre dossier ou convenir d’une solution de règlement.</p><p><strong>01 75 43 88 22</strong><br/>debiteurs@recovia-france.fr</p></div>
+<div class="panel"><h2>Besoin d’aide ?</h2><p>Notre service débiteurs peut vous accompagner pour identifier votre dossier ou convenir d’une solution de règlement.</p><p><a href="tel:+33175438822"><strong>01 75 43 88 22</strong></a><br/><a href="mailto:debiteurs@recovia-france.fr">debiteurs@recovia-france.fr</a></p></div>
 <div class="payment-note"><strong>Important</strong><p>Saisissez avec soin la référence figurant sur nos courriers, e-mails ou SMS. Elle permettra à RECOVIA de rapprocher votre règlement de votre dossier.</p></div>
 </aside>
 </div></section>
+<section class="debtor-contact" id="contacter-service-debiteurs"><div class="debtor-contact-inner"><div class="debtor-contact-card">
+<h2>Contacter notre service débiteurs</h2>
+<p class="intro">Une question sur votre dossier, une difficulté de paiement ou une demande d’échéancier ? Adressez-nous votre message. Notre équipe reviendra vers vous dans les meilleurs délais.</p>
+<form name="message-debiteur-recovia" method="POST" action="/message-debiteur-envoye.html" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="message-debiteur-recovia"/>
+<p hidden><label>Ne pas remplir ce champ : <input name="bot-field"/></label></p>
+<div class="debtor-contact-grid">
+<div class="debtor-contact-field"><label for="debtor-name">Nom et prénom *</label><input id="debtor-name" name="nom" type="text" maxlength="150" autocomplete="name" required/></div>
+<div class="debtor-contact-field"><label for="debtor-email">Adresse e-mail *</label><input id="debtor-email" name="email" type="email" maxlength="254" autocomplete="email" required/></div>
+<div class="debtor-contact-field"><label for="debtor-reference">Référence du dossier</label><input id="debtor-reference" name="reference_dossier" type="text" maxlength="100" placeholder="Référence figurant sur votre courrier"/></div>
+<div class="debtor-contact-field"><label for="debtor-phone">Téléphone (facultatif)</label><input id="debtor-phone" name="telephone" type="tel" maxlength="30" autocomplete="tel"/></div>
+</div>
+<div class="debtor-contact-field"><label for="debtor-reason">Objet de votre demande *</label><select id="debtor-reason" name="objet" required><option value="">Sélectionnez un motif</option><option>Question sur mon dossier</option><option>Demande d’échéancier</option><option>Difficulté de paiement</option><option>Contestation de la créance</option><option>Justificatif de règlement</option><option>Autre demande</option></select></div>
+<div class="debtor-contact-field"><label for="debtor-message">Votre message *</label><textarea id="debtor-message" name="message" maxlength="5000" placeholder="Expliquez-nous votre demande sans communiquer de coordonnées bancaires ni de données sensibles inutiles." required></textarea></div>
+<label class="debtor-contact-consent"><input type="checkbox" name="confidentialite_lue" value="oui" required/><span>J’ai pris connaissance de la <a href="politique-confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a> et comprends que mes informations seront utilisées pour traiter ma demande. *</span></label>
+<button class="debtor-contact-submit" type="submit">Envoyer mon message</button>
+<p class="debtor-contact-small">* Champs obligatoires. Ne transmettez jamais de numéro de carte bancaire ou de mot de passe dans ce formulaire. L’envoi d’un message ne suspend pas automatiquement les démarches en cours ni les échéances de paiement.</p>
+</form></div></div></section>
 </main>
 <footer class="footer" id="contact"><div class="footer-inner"><div><div class="recovia-coords"><a class="recovia-phone-btn" href="tel:+33175438822">Tél. : 01 75 43 88 22</a><div>contact@recovia-france.fr</div><div>99, Avenue Achille Peretti</div><div>92200 Neuilly-sur-Seine</div></div>© 2026 RECOVIA — Marque du groupe DGB Alliance SAS</div><div><a href="carrieres.html">Carrières</a>
 <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a> · <a href="contact.html">Contact</a></div></div></footer>
