@@ -13,6 +13,7 @@
 </style><style>
 .rs-wrap{max-width:1120px;margin:auto;padding:0 22px}.rs-hero{background:linear-gradient(115deg,#14284e,#304d84);color:#fff;padding:76px 0 80px}.rs-hero h1{color:#fff;font-size:clamp(2rem,4vw,3.3rem);line-height:1.13;max-width:850px;margin:14px 0 18px}.rs-hero p{color:#e6ecf8;font-size:1.17rem;line-height:1.65;max-width:770px}.rs-eyebrow{font-size:.83rem;font-weight:800;letter-spacing:.1em;color:#fff}.rs-btn{display:inline-block;background:#cc3c32;color:#fff!important;text-decoration:none;padding:15px 24px;border-radius:9px;font-weight:800;margin:12px 12px 0 0}.rs-btn-light{background:#fff;color:#17325d!important}.rs-section{padding:68px 0}.rs-section h2{font-size:clamp(1.6rem,2.8vw,2.25rem);color:#162f57;margin:0 0 15px}.rs-intro{color:#52617a;font-size:1.09rem;line-height:1.7;max-width:770px;margin-bottom:30px}.rs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.rs-card{border:1px solid #dde5f0;background:white;border-radius:16px;padding:31px;box-shadow:0 8px 24px rgba(16,36,72,.05)}.rs-card h3{color:#17325d;font-size:1.4rem;margin:0 0 12px}.rs-card p,.rs-card li{color:#506078;line-height:1.7}.rs-card ul{padding-left:21px;margin:15px 0 20px}.rs-card a{font-weight:800;color:#c63b32}.rs-pill{display:inline-block;color:#bb342c;background:#fff0ee;padding:7px 11px;border-radius:7px;font-size:.8rem;font-weight:800;margin-bottom:17px}.rs-muted{background:#f5f7fb}.rs-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.rs-step{padding:23px;background:white;border:1px solid #dfe5ef;border-radius:13px}.rs-step b{display:block;color:#c93d33;font-size:1.2rem;margin-bottom:12px}.rs-step h3{color:#17325d;margin:0 0 8px}.rs-step p{color:#52617a;line-height:1.65;margin:0}.rs-band{background:#17325d;color:#fff;padding:56px 0}.rs-band h2{color:white}.rs-band p{color:#e0e9f5;line-height:1.75;max-width:790px}.rs-small{font-size:.9rem;color:#66758b;line-height:1.7;margin-top:18px}@media(max-width:700px){.rs-grid,.rs-steps{grid-template-columns:1fr}.rs-hero{padding:52px 0}.rs-section{padding:45px 0}.rs-card{padding:24px}}
 </style><link rel="stylesheet" href="assets/css/footer-recovia.css?v=20261023"/>
+<link rel="stylesheet" href="assets/css/secteurs-recovia.css?v=20261023">
 </head>
 <body>
 <header class="header">
@@ -20,7 +21,7 @@
 <a class="logo" href="index.html"><img alt="RECOVIA" src="assets/images/logo-recovia.png"/></a>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">Menu</button>
 <nav class="nav" id="site-navigation">
-<a href="solutions.html">Solutions</a>
+<div class="rs-nav-group"><a href="solutions.html" class="">Solutions</a><button class="rs-nav-toggle" type="button" aria-label="Afficher les secteurs d’activité" aria-expanded="false" aria-controls="rs-sector-menu">▾</button><div class="rs-dropdown" id="rs-sector-menu"><a href="solutions.html">Toutes nos solutions</a><span class="rs-menu-title">Par secteur d’activité</span><a href="recouvrement-auto-ecoles.html">Auto-écoles</a><a href="recouvrement-artisans.html">Artisans et BTP</a><a href="recouvrement-domiciliation-entreprises.html">Sociétés de domiciliation</a><a href="secteurs-activite.html">Voir tous les secteurs →</a></div></div>
 <a href="judiciaire.html">Judiciaire</a>
 <a href="recherches.html">Recherches</a>
 <a href="debiteurs.html">Débiteurs</a>
@@ -46,11 +47,12 @@
 <footer id="contact" class="recovia-footer-v2" aria-label="Pied de page RECOVIA">
  <div class="rf-wrap"><div class="rf-top">
   <div><div class="rf-brand">RECOVIA<span>.</span></div><p class="rf-about">Vos factures impayées méritent une réponse adaptée. Recouvrement amiable, judiciaire et recherches : un interlocuteur pour vos créances.</p><div class="rf-actions"><a class="rf-action" href="contact.html">Nous confier un dossier →</a><a class="rf-action rf-action-alt" href="regler-un-dossier.html">Régler un dossier</a></div></div>
-  <div><div class="rf-title">Nos solutions</div><nav class="rf-links" aria-label="Services RECOVIA"><a href="recouvrement-amiable.html">Recouvrement amiable</a><a href="recouvrement-b2b.html">Recouvrement B2B</a><a href="judiciaire.html">Recouvrement judiciaire</a><a href="recherches.html">Recherches et solvabilité</a><a href="solutions.html">Toutes nos solutions</a></nav></div>
+  <div><div class="rf-title">Nos solutions</div><nav class="rf-links" aria-label="Services RECOVIA"><a href="recouvrement-amiable.html">Recouvrement amiable</a><a href="recouvrement-b2b.html">Recouvrement B2B</a><a href="judiciaire.html">Recouvrement judiciaire</a><a href="recherches.html">Recherches et solvabilité</a><a href="solutions.html">Toutes nos solutions</a><a href="secteurs-activite.html">Secteurs d’activité</a></nav></div>
   <div><div class="rf-title">Informations utiles</div><nav class="rf-links" aria-label="Informations RECOVIA"><a href="debiteurs.html">Espace débiteurs</a><a href="regler-un-dossier.html">Régler un dossier</a><a href="ressources.html">Conseils et ressources</a><a href="carrieres.html">Nous rejoindre</a><a href="https://stopimpayes.app" target="_blank" rel="noopener noreferrer">StopImpayes.app ↗</a></nav></div>
   <div class="rf-contact"><div class="rf-title">Nous contacter</div><p><a class="rf-call" href="tel:+33175438822">01 75 43 88 22</a></p><p><a href="mailto:contact@recovia-france.fr">contact@recovia-france.fr</a></p><p>99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine</p><p>Pour une demande liée à un dossier :<br><a href="mailto:debiteurs@recovia-france.fr">debiteurs@recovia-france.fr</a></p></div>
  </div><div class="rf-bottom"><span>© 2026 RECOVIA, marque de DGB Alliance SAS · Tous droits réservés.</span><nav class="rf-bottom-links" aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV</a><a href="politique-confidentialite.html">Confidentialité</a></nav></div></div>
 </footer>
 <script src="assets/js/script.js?v=20260609-menu-stable-2"></script>
+<script src="assets/js/secteurs-recovia.js?v=20261023"></script>
 </body>
 </html>

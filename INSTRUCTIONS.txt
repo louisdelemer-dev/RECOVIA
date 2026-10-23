@@ -1,1 +1,1 @@
-Remplacer assets/images/modele-mise-en-demeure-facture-impayee.jpg dans GitHub par le fichier fourni. Aucun HTML à modifier.
+Importer les fichiers à la racine du dépôt GitHub RECOVIA, en conservant les dossiers assets/css et assets/js. La page secteurs-activite.html est nouvelle. Les pages existantes sont modifiées uniquement pour la navigation, les liens de pied de page et les sections secteurs sur accueil/Solutions.

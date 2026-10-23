@@ -1,0 +1,24 @@
+/* RECOVIA — navigation secteurs (2026-10) */
+.nav .rs-nav-group{position:relative;display:inline-flex;align-items:center;gap:3px}
+.nav .rs-nav-group>a{white-space:nowrap}
+.nav .rs-nav-toggle{border:0;background:transparent;color:#21375b;font-size:14px;padding:8px 5px;cursor:pointer;line-height:1}
+.nav .rs-dropdown{display:none;position:absolute;left:-16px;top:100%;min-width:260px;padding:10px;background:#fff;border:1px solid #dfe5ef;border-radius:14px;box-shadow:0 18px 45px rgba(14,36,70,.17);z-index:1001}
+.nav .rs-dropdown a{display:block;padding:10px 12px;color:#20365b;font-size:13px;font-weight:650;line-height:1.35;border-radius:7px;white-space:nowrap}
+.nav .rs-dropdown a::after{display:none!important}
+.nav .rs-dropdown a:hover,.nav .rs-dropdown a:focus-visible{background:#edf3fb;color:#123e7c}
+.nav .rs-dropdown .rs-menu-title{display:block;padding:7px 12px 3px;color:#78869b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+@media(min-width:1121px){.nav .rs-nav-group:hover .rs-dropdown,.nav .rs-nav-group:focus-within .rs-dropdown,.nav .rs-nav-group.rs-expanded .rs-dropdown{display:block}}
+@media(max-width:1120px){.nav .rs-nav-group{display:flex;flex-wrap:wrap;width:100%;justify-content:space-between}.nav .rs-nav-group>a{flex:1}.nav .rs-nav-toggle{min-width:42px}.nav .rs-dropdown{position:static;box-shadow:none;min-width:0;width:100%;padding:5px 7px;margin:3px 0 8px;border-color:#e6ebf2}.nav .rs-nav-group.rs-expanded .rs-dropdown{display:block}.nav .rs-dropdown a{white-space:normal}}
+.rs-sector-section{padding:68px 24px;background:#f5f7fb;color:#1c3356}
+.rs-sector-wrap{max-width:1160px;margin:0 auto}
+.rs-sector-eyebrow{font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#c63a32;margin-bottom:12px}
+.rs-sector-section h2{font-size:clamp(26px,3vw,38px);line-height:1.18;color:#192f55;margin:0 0 12px}
+.rs-sector-intro{color:#596b82;font-size:16px;max-width:760px;margin-bottom:28px}
+.rs-sector-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rs-sector-card{display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #e0e7f0;border-radius:18px;padding:25px;transition:transform .2s,box-shadow .2s}
+.rs-sector-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(20,45,78,.09)}
+.rs-sector-card h3{color:#19345d;font-size:20px;margin:0 0 9px}
+.rs-sector-card p{color:#596b82;font-size:14px;line-height:1.6;margin:0 0 22px;flex:1}
+.rs-sector-card a,.rs-sector-more{font-weight:800;color:#bf332e;font-size:14px}
+.rs-sector-more{display:inline-block;margin-top:22px}
+@media(max-width:750px){.rs-sector-grid{grid-template-columns:1fr}.rs-sector-section{padding:48px 20px}}
