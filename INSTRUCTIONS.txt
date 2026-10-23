@@ -1,9 +1,1 @@
-RECOVIA — Patch article modèle mise en demeure
-
-Importer les fichiers à la racine du dépôt GitHub en conservant les dossiers assets/images et assets/documents.
-
-Fichiers : nouvelle page HTML, ressources.html, guide-gestion-impayes.html (lien ajouté), photographie et modèle TXT téléchargeable.
-
-La photographie est issue de la photo existante du guide de gestion des impayés ; elle est donc réutilisée pour ce nouvel article.
-
-Vérifier après déploiement Netlify : page, bouton copier, téléchargement TXT, carte Ressources, lien depuis le guide précédent et aperçu social.
+Remplacer assets/images/modele-mise-en-demeure-facture-impayee.jpg dans GitHub par le fichier fourni. Aucun HTML à modifier.
