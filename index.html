@@ -74,7 +74,30 @@
 .rh .rh-choice .rh-choice-pro .rh-choice-cta{background:#fff;color:#17345e}
 .rh .rh-choice .rh-choice-cta:hover{filter:brightness(.93)}
 @media(max-width:700px){.rh .rh-choice>div{min-height:0;padding:27px 24px}}
-</style></head>
+</style><style id="recovia-footer-v2-styles">
+.recovia-footer-v2{background:#102646;color:#dbe5f3;font-family:inherit;line-height:1.65}
+.recovia-footer-v2 *{box-sizing:border-box}
+.recovia-footer-v2 a{color:#e6eefb;text-decoration:none;transition:color .2s}
+.recovia-footer-v2 a:hover{color:#fff;text-decoration:underline}
+.recovia-footer-v2 .rf-wrap{max-width:1180px;margin:auto;padding:0 24px}
+.recovia-footer-v2 .rf-top{padding:57px 0 45px;display:grid;grid-template-columns:1.45fr 1fr 1fr 1.12fr;gap:35px}
+.recovia-footer-v2 .rf-brand{font-size:26px;letter-spacing:.02em;font-weight:850;color:#fff;margin-bottom:12px}
+.recovia-footer-v2 .rf-brand span{color:#ee6670}
+.recovia-footer-v2 .rf-about{color:#c2d0e4;max-width:285px;font-size:14px;margin:0 0 19px}
+.recovia-footer-v2 .rf-title{font-weight:800;color:#fff;font-size:15px;margin:2px 0 16px}
+.recovia-footer-v2 .rf-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:14px}
+.recovia-footer-v2 .rf-contact{font-size:14px;color:#d4dfef}
+.recovia-footer-v2 .rf-contact p{margin:0 0 13px}
+.recovia-footer-v2 .rf-call{font-weight:800;font-size:19px;color:#fff}
+.recovia-footer-v2 .rf-actions{display:flex;flex-wrap:wrap;gap:9px}
+.recovia-footer-v2 .rf-action{border-radius:7px;padding:10px 13px;font-size:13px;font-weight:800;background:#cb3b33;color:#fff!important;display:inline-block}
+.recovia-footer-v2 .rf-action-alt{background:transparent;border:1px solid #7186a4}
+.recovia-footer-v2 .rf-bottom{border-top:1px solid rgba(225,234,247,.18);padding:19px 0 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aabbd3;font-size:12px}
+.recovia-footer-v2 .rf-bottom-links{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:980px){.recovia-footer-v2 .rf-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}}
+@media(max-width:600px){.recovia-footer-v2 .rf-top{grid-template-columns:1fr;padding:39px 0;gap:27px}.recovia-footer-v2 .rf-bottom{flex-direction:column;gap:10px}}
+</style>
+</head>
 <body class="home-modern">
 <div class="contact-strip"><div class="contact-strip-inner"><span>✉ <a href="mailto:contact@recovia-france.fr">contact@recovia-france.fr</a></span><span>France entière</span><span>☎ <a href="tel:+33175438822">01 75 43 88 22</a></span><span>Lun. - Ven. 9h - 18h</span></div></div>
 <header class="header">
@@ -90,6 +113,7 @@
 <a href="contact.html">Contact</a>
 <a href="ressources.html">Ressources</a>
 <a class="btn-header" href="contact.html">01 75 43 88 22</a>
+<a class="btn-secondary" href="regler-un-dossier.html">Régler un dossier</a>
 </nav>
 </div>
 </header>
@@ -107,27 +131,13 @@
 <section class="rh-band"><div class="rh-wrap"><h2>Un recouvrement professionnel, encadré et suivi</h2><p>RECOVIA est une marque de DGB Alliance SAS. Notre activité s'appuie sur une assurance de responsabilité civile professionnelle et un compte dédié aux fonds des créanciers. Pour les actes réservés aux professions réglementées, nous travaillons avec les professionnels compétents.</p><p style="font-size:13px;opacity:.88">* Indicateur communiqué par RECOVIA : 81 % de dossiers solutionnés à l'amiable. La période et le périmètre de calcul doivent être précisés avant publication.</p></div></section>
 <section class="rh-section rh-muted" id="demande"><div class="rh-wrap rh-contact-layout"><div><h2>Parlons de vos factures impayées</h2><p class="rh-intro">Présentez-nous votre situation. Notre équipe vous recontactera pour étudier les possibilités de prise en charge, sans engagement.</p><div class="rh-contact-details"><p><strong>Par téléphone</strong><br><a href="tel:+33175438822">01 75 43 88 22</a></p><p><strong>Par email</strong><br><a href="mailto:contact@recovia-france.fr">contact@recovia-france.fr</a></p><p>Vous êtes débiteur et avez reçu une relance ? <a href="debiteurs.html">Accéder à votre espace dédié →</a></p></div></div><form class="rh-form" name="demande-accueil-recovia" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html"><input type="hidden" name="form-name" value="demande-accueil-recovia"><p hidden><label>Ne pas remplir : <input name="bot-field"></label></p><div class="rh-form-grid"><div class="rh-field"><label for="rh-nom">Votre nom *</label><input id="rh-nom" name="nom" autocomplete="name" required></div><div class="rh-field"><label for="rh-societe">Votre société *</label><input id="rh-societe" name="societe" autocomplete="organization" required></div><div class="rh-field"><label for="rh-email">Email professionnel *</label><input id="rh-email" name="email" type="email" autocomplete="email" required></div><div class="rh-field"><label for="rh-tel">Téléphone</label><input id="rh-tel" name="telephone" type="tel" autocomplete="tel"></div></div><div class="rh-field"><label for="rh-besoin">Votre besoin *</label><select id="rh-besoin" name="besoin" required><option value="">Sélectionnez une option</option><option>Une ou plusieurs factures impayées</option><option>Recouvrement B2B régulier</option><option>Suite judiciaire</option><option>Recherches et solvabilité</option><option>Autre demande</option></select></div><div class="rh-field"><label for="rh-message">Quelques précisions (facultatif)</label><textarea id="rh-message" name="message" placeholder="Nombre de dossiers, montant approximatif, situation…"></textarea></div><button class="rh-btn" type="submit">Envoyer ma demande →</button><small>Vos informations sont utilisées pour répondre à votre demande. Consultez notre <a href="politique-confidentialite.html">politique de confidentialité</a>. N'envoyez pas de données bancaires dans ce formulaire.</small></form></div></section>
 </main>
-<footer class="footer" id="contact">
-<div class="footer-inner">
-<div><div class="recovia-coords">
-<a class="recovia-phone-btn" href="tel:+33175438822">Tél. : 01 75 43 88 22</a>
-<div>contact@recovia-france.fr</div>
-<div>99, Avenue Achille Peretti</div>
-<div>92200 Neuilly-sur-Seine</div>
-
-<div></div>
-<div></div>
-<div></div>
-</div>
-© 2026 RECOVIA — Marque du groupe DGB Alliance SAS</div>
-<div>
-<a href="carrieres.html">Carrières</a>
-<a href="mentions-legales.html">Mentions légales</a> ·
-      <a href="cgv.html">CGV</a> ·
-      <a href="politique-confidentialite.html">Politique de confidentialité</a> ·
-      <a href="contact.html">Contact</a>
-</div>
-</div>
+<footer class="recovia-footer-v2" aria-label="Pied de page RECOVIA">
+ <div class="rf-wrap"><div class="rf-top">
+  <div><div class="rf-brand">RECOVIA<span>.</span></div><p class="rf-about">Le recouvrement de créances pensé pour les professionnels. Une approche rigoureuse, humaine et orientée vers la résolution de vos impayés.</p><div class="rf-actions"><a class="rf-action" href="contact.html">Confier mes impayés →</a><a class="rf-action rf-action-alt" href="regler-un-dossier.html">Régler un dossier</a></div></div>
+  <div><div class="rf-title">Nos solutions</div><nav class="rf-links" aria-label="Services RECOVIA"><a href="recouvrement-amiable.html">Recouvrement amiable</a><a href="recouvrement-b2b.html">Recouvrement B2B</a><a href="judiciaire.html">Recouvrement judiciaire</a><a href="recherches.html">Recherches et solvabilité</a><a href="solutions.html">Toutes nos solutions</a></nav></div>
+  <div><div class="rf-title">Informations utiles</div><nav class="rf-links" aria-label="Informations RECOVIA"><a href="debiteurs.html">Espace débiteurs</a><a href="regler-un-dossier.html">Régler un dossier</a><a href="ressources.html">Conseils et ressources</a><a href="carrieres.html">Nous rejoindre</a><a href="https://stopimpayes.app" target="_blank" rel="noopener noreferrer">StopImpayes.app ↗</a></nav></div>
+  <div class="rf-contact"><div class="rf-title">Nous contacter</div><p><a class="rf-call" href="tel:+33175438822">01 75 43 88 22</a></p><p><a href="mailto:contact@recovia-france.fr">contact@recovia-france.fr</a></p><p>99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine</p><p>Pour un dossier en cours :<br><a href="mailto:debiteurs@recovia-france.fr">debiteurs@recovia-france.fr</a></p></div>
+ </div><div class="rf-bottom"><span>© 2026 RECOVIA, marque de DGB Alliance SAS · Tous droits réservés.</span><nav class="rf-bottom-links" aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV</a><a href="politique-confidentialite.html">Confidentialité</a></nav></div></div>
 </footer>
 <script src="assets/js/script.js?v=20260609-menu-stable-2"></script>
 </body>
