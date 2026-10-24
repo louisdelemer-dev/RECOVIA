@@ -1,14 +1,19 @@
-/* RECOVIA — navigation secteurs (2026-10) */
+/* RECOVIA - menu Solutions harmonise, desktop et mobile */
 .nav .rs-nav-group{position:relative;display:inline-flex;align-items:center;gap:3px}
 .nav .rs-nav-group>a{white-space:nowrap}
 .nav .rs-nav-toggle{border:0;background:transparent;color:#21375b;font-size:14px;padding:8px 5px;cursor:pointer;line-height:1}
-.nav .rs-dropdown{display:none;position:absolute;left:-16px;top:100%;min-width:260px;padding:10px;background:#fff;border:1px solid #dfe5ef;border-radius:14px;box-shadow:0 18px 45px rgba(14,36,70,.17);z-index:1001}
-.nav .rs-dropdown a{display:block;padding:10px 12px;color:#20365b;font-size:13px;font-weight:650;line-height:1.35;border-radius:7px;white-space:nowrap}
+.nav .rs-dropdown{display:none;position:absolute;left:-95px;top:100%;width:min(690px,calc(100vw - 40px));max-width:calc(100vw - 40px);padding:20px;background:#fff;border:1px solid #dfe5ef;border-radius:14px;box-shadow:0 18px 45px rgba(14,36,70,.17);z-index:1001;box-sizing:border-box}
+.nav .rs-dropdown.rs-menu-ready{grid-template-columns:200px minmax(0,1fr);gap:16px 24px}
+.nav .rs-menu-column{min-width:0}
+.nav .rs-menu-sector-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 9px}
+.nav .rs-dropdown a{display:block;padding:9px 10px;color:#20365b;font-size:13px;font-weight:650;line-height:1.35;border-radius:7px;white-space:normal;text-decoration:none}
 .nav .rs-dropdown a::after{display:none!important}
 .nav .rs-dropdown a:hover,.nav .rs-dropdown a:focus-visible{background:#edf3fb;color:#123e7c}
-.nav .rs-dropdown .rs-menu-title{display:block;padding:7px 12px 3px;color:#78869b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-@media(min-width:1121px){.nav .rs-nav-group:hover .rs-dropdown,.nav .rs-nav-group:focus-within .rs-dropdown,.nav .rs-nav-group.rs-expanded .rs-dropdown{display:block}}
-@media(max-width:1120px){.nav .rs-nav-group{display:flex;flex-wrap:wrap;width:100%;justify-content:space-between}.nav .rs-nav-group>a{flex:1}.nav .rs-nav-toggle{min-width:42px}.nav .rs-dropdown{position:static;box-shadow:none;min-width:0;width:100%;padding:5px 7px;margin:3px 0 8px;border-color:#e6ebf2}.nav .rs-nav-group.rs-expanded .rs-dropdown{display:block}.nav .rs-dropdown a{white-space:normal}}
+.nav .rs-dropdown .rs-menu-title{display:block;padding:5px 10px 10px;color:#78869b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.nav .rs-menu-footer{grid-column:1/-1;border-top:1px solid #e7ebf2;padding-top:10px;display:flex;justify-content:flex-end}
+.nav .rs-menu-footer a{color:#b8332d;font-weight:800}
+@media(min-width:1121px){.nav .rs-nav-group:hover .rs-dropdown.rs-menu-ready,.nav .rs-nav-group:focus-within .rs-dropdown.rs-menu-ready,.nav .rs-nav-group.rs-expanded .rs-dropdown.rs-menu-ready{display:grid}.nav .rs-nav-group:hover .rs-dropdown:not(.rs-menu-ready),.nav .rs-nav-group:focus-within .rs-dropdown:not(.rs-menu-ready),.nav .rs-nav-group.rs-expanded .rs-dropdown:not(.rs-menu-ready){display:block}}
+@media(max-width:1120px){.nav .rs-nav-group{display:flex;flex-wrap:wrap;width:100%;justify-content:space-between}.nav .rs-nav-group>a{flex:1}.nav .rs-nav-toggle{min-width:42px}.nav .rs-dropdown{position:static;box-shadow:none;width:100%;max-width:100%;padding:9px;margin:3px 0 8px;border-color:#e6ebf2}.nav .rs-nav-group.rs-expanded .rs-dropdown.rs-menu-ready{display:block}.nav .rs-nav-group.rs-expanded .rs-dropdown:not(.rs-menu-ready){display:block}.nav .rs-menu-column+.rs-menu-column{margin-top:12px}.nav .rs-menu-sector-links{grid-template-columns:1fr}.nav .rs-menu-footer{justify-content:flex-start;margin-top:8px}}
 .rs-sector-section{padding:68px 24px;background:#f5f7fb;color:#1c3356}
 .rs-sector-wrap{max-width:1160px;margin:0 auto}
 .rs-sector-eyebrow{font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#c63a32;margin-bottom:12px}
