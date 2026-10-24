@@ -1,1 +1,1 @@
-Importer les fichiers à la racine du dépôt GitHub RECOVIA, en conservant les dossiers assets/css et assets/js. La page secteurs-activite.html est nouvelle. Les pages existantes sont modifiées uniquement pour la navigation, les liens de pied de page et les sections secteurs sur accueil/Solutions.
+Importer les 5 fichiers HTML à la racine du dépôt GitHub RECOVIA. La page secteurs-activite.html référence les 4 nouvelles pages. Le sous-menu Solutions reste compact : utiliser « Voir tous les secteurs ».
