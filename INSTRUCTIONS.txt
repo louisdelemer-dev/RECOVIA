@@ -1,1 +1,2 @@
-Importer les 5 fichiers HTML à la racine du dépôt GitHub RECOVIA. La page secteurs-activite.html référence les 4 nouvelles pages. Le sous-menu Solutions reste compact : utiliser « Voir tous les secteurs ».
+Importer les 4 pages HTML à la racine et les 4 images dans assets/images/. Aucun autre fichier à remplacer.
+Images : recadrages photographiques issus de visuels générés pour RECOVIA.
