@@ -1,14 +1,8 @@
-RECOVIA – NOUVELLE PAGE SÉCURITÉ PRIVÉE
+RECOVIA – ESN, AGENCES WEB ET PRESTATAIRES INFORMATIQUES
 
-Importer les trois fichiers HTML/XML directement à la racine du dépôt GitHub :
-- recouvrement-securite-privee.html (nouvelle page)
-- secteurs-activite.html (ajout de la carte secteur)
-- sitemap.xml (nouvelle URL SEO)
+Ajouter : recouvrement-prestataires-informatiques.html
+Remplacer : secteurs-activite.html et sitemap.xml
 
-Le menu Solutions, le partenariat experts-comptables et le widget de rappel sont inchangés.
-La photo de la page est une vraie photographie disponible sous licence Unsplash, chargée depuis Unsplash :
-https://unsplash.com/photos/a-security-guard-watches-people-entering-a-building-vpu0YKTSrGI
-Photographe : Guillaume deguilhem. Prise de vue en France non vérifiée.
-L'image est externe et dépend de sa disponibilité chez Unsplash.
-
-Tester les liens et l'affichage après déploiement Netlify.
+Le sous-menu Solutions et le widget de rappel ne sont pas modifiés.
+Photo réelle prise à Paris, crédit Work With Island / Unsplash, chargée depuis Unsplash.
+URL : https://recovia-france.fr/recouvrement-prestataires-informatiques.html
