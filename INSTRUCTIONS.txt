@@ -1,15 +1,14 @@
-FICHIERS À IMPORTER DANS GITHUB
+RECOVIA – NOUVELLE PAGE SÉCURITÉ PRIVÉE
 
-1. Ajouter ce nouveau fichier à la racine du site :
-- recouvrement-agences-immobilieres.html
+Importer les trois fichiers HTML/XML directement à la racine du dépôt GitHub :
+- recouvrement-securite-privee.html (nouvelle page)
+- secteurs-activite.html (ajout de la carte secteur)
+- sitemap.xml (nouvelle URL SEO)
 
-2. Remplacer les fichiers existants suivants :
-- secteurs-activite.html
-- sitemap.xml
-- assets/js/secteurs-recovia.js
+Le menu Solutions, le partenariat experts-comptables et le widget de rappel sont inchangés.
+La photo de la page est une vraie photographie disponible sous licence Unsplash, chargée depuis Unsplash :
+https://unsplash.com/photos/a-security-guard-watches-people-entering-a-building-vpu0YKTSrGI
+Photographe : Guillaume deguilhem. Prise de vue en France non vérifiée.
+L'image est externe et dépend de sa disponibilité chez Unsplash.
 
-OBJECTIF DU PATCH
-- Création de la page sectorielle “Agences immobilières et administrateurs de biens”
-- Ajout du secteur dans “Tous les secteurs d’activité”
-- Ajout du lien “Agences immobilières” dans le sous-menu Solutions
-- Conservation du widget de rappel et du bloc “Partenariats professionnels / Experts-comptables” dans le menu
+Tester les liens et l'affichage après déploiement Netlify.
