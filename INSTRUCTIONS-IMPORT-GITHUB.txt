@@ -1,17 +1,15 @@
-RECOVIA - Nouveau pied de page global
+RECOVIA — Pages experts-comptables / SEO
 
-Archive basée exclusivement sur RECOVIA-main (10).zip fourni le 23 octobre 2026.
+Importer les 5 fichiers à la racine du dépôt GitHub (respecter leurs noms).
+Trois pages : page d’entrée (2 parcours), recouvrement des honoraires, partenariat clients.
+Liens depuis la page Tous les secteurs + sitemap.xml mis à jour.
 
-Contenu : 43 pages HTML et 1 feuille CSS nouvelle.
+PHOTOGRAPHIES : de vraies photographies issues du CDN Unsplash, hébergées à distance (pas d’IA). Les photos ne sont pas garanties prises en France ; vérifier leurs droits et crédits avant une utilisation définitive, et préférer l’hébergement local après sélection et téléchargement autorisés.
+Sources URL :
+https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=84
+https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=84
+https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=84
 
-Dans GitHub, à la racine du dépôt RECOVIA :
-1. Remplacer les pages HTML présentes dans ce ZIP.
-2. Ajouter assets/css/footer-recovia.css.
-3. Ne pas importer ce fichier d'instructions.
-4. Déployer sur Netlify et vérifier l'accueil, les pages Services, Débiteurs, Contact et les pages de confirmation.
+IMPORTANT : le taux de 8 % HT est présenté comme PROPOSITION DE TARIF PARTENAIRE SOUS CONDITIONS. Définir la convention, les éventuels minimums, les exclusions et le traitement des frais judiciaires avant publication commerciale définitive. Les règles de confidentialité et déontologiques des experts-comptables doivent être respectées.
 
-Le formulaire de l’accueil conserve ses champs et sa configuration Netlify. Sa redirection a été corrigée de /contact.html vers /contact-envoye.
-Le menu de navigation n'a pas été modifié.
-Le pied de page est désormais identique sur les 43 pages et stylisé par une feuille CSS partagée.
-Pour les changements futurs du design du footer, modifier assets/css/footer-recovia.css.
-Pour modifier les liens/textes, mettre à jour le HTML sur les pages ou envisager un composant de template partagé.
+Le widget rappel et les scripts communs existants ne sont pas modifiés.
