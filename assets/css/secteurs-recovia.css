@@ -59,3 +59,13 @@
 .rcb-content .rcb-status.rcb-error{color:#9a2525;background:#fff0ef;border:1px solid #efc5c2;font-weight:650}
 .rcb-content #rcb-form input[type=tel]{display:block!important;visibility:visible!important;opacity:1!important;min-height:44px!important}
 .rcb-content #rcb-form .rcb-submit{display:block!important;visibility:visible!important;min-height:44px!important}
+
+/* Animation de transmission : aucune simulation d'appel en cours. */
+.rcb-content .rcb-status.rcb-pending{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:18px 12px;margin:12px 0;background:#f3f6fb;border:1px solid #dce5f1;border-radius:12px;color:#1b355a}
+.rcb-pending strong{font-size:13px}.rcb-pending small{font-size:11px;color:#5b6e88}
+.rcb-progress{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:5px}
+.rcb-pulse{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e4edf9;color:#19385e;font-size:23px;animation:rcb-ring 1.4s ease-in-out infinite}
+.rcb-progress-dots{display:flex;gap:5px}.rcb-progress-dots i{width:6px;height:6px;border-radius:50%;background:#bd3d30;animation:rcb-dots 1s ease-in-out infinite}.rcb-progress-dots i:nth-child(2){animation-delay:.15s}.rcb-progress-dots i:nth-child(3){animation-delay:.3s}
+@keyframes rcb-ring{0%,100%{box-shadow:0 0 0 0 rgba(38,86,146,.22)}50%{box-shadow:0 0 0 12px rgba(38,86,146,0)}}
+@keyframes rcb-dots{0%,70%,100%{opacity:.3;transform:translateY(0)}35%{opacity:1;transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){.rcb-pulse,.rcb-progress-dots i{animation:none}}

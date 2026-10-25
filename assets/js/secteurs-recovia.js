@@ -74,15 +74,18 @@ document.addEventListener('DOMContentLoaded', function () {
       if(!valid){status.classList.add('rcb-error');status.textContent='Veuillez saisir un numéro français valide (ex. 06 12 34 56 78).';phone.focus();return;}
       if(!form.elements['accord_rappel'].checked){status.classList.add('rcb-error');status.textContent='Veuillez accepter le rappel.';return;}
       form.elements['page'].value=location.pathname+location.search;
-      submit.disabled=true;submit.textContent='Envoi en cours…';
+      submit.disabled=true;submit.textContent='Transmission en cours…';
+      status.classList.add('rcb-pending');
+      status.innerHTML='<div class="rcb-progress" aria-hidden="true"><span class="rcb-pulse"><span>☎</span></span><span class="rcb-progress-dots"><i></i><i></i><i></i></span></div><strong>Transmission de votre demande…</strong><small>Nous vérifions sa bonne réception par RECOVIA.</small>';
       try {
         var data=new URLSearchParams(new FormData(form));
         var res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()});
         if(!res.ok)throw new Error('submission failed');
+        status.classList.remove('rcb-pending');
         form.reset();form.hidden=true;
         status.textContent='Merci ! Votre demande a bien été envoyée. Un conseiller RECOVIA vous rappellera pendant nos horaires d’ouverture.';
         status.classList.add('rcb-success');
-      }catch(err){status.classList.add('rcb-error');status.textContent='Votre demande n’a pas pu être envoyée. Vous pouvez nous appeler au 01 75 43 88 22.';}
+      }catch(err){status.classList.remove('rcb-pending');status.classList.add('rcb-error');status.textContent='Votre demande n’a pas pu être envoyée. Vous pouvez nous appeler au 01 75 43 88 22.';}
       finally{submit.disabled=false;submit.textContent='Demander mon rappel';}
     });
   }
