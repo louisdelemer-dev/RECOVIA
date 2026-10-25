@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ['recouvrement-auto-ecoles.html', 'Auto-écoles'],
     ['recouvrement-artisans.html', 'Artisans et BTP'],
     ['recouvrement-domiciliation-entreprises.html', 'Sociétés de domiciliation'],
+    ['recouvrement-agences-immobilieres.html', 'Agences immobilières'],
     ['recouvrement-avocats.html', 'Cabinets d’avocats'],
     ['recouvrement-salles-de-sport.html', 'Salles de sport'],
     ['recouvrement-garagistes.html', 'Garages automobiles'],

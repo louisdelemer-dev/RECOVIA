@@ -1,8 +1,15 @@
-RECOVIA - Menu Solutions : mise en avant du partenariat Experts-comptables.
+FICHIERS À IMPORTER DANS GITHUB
 
-Importer dans GitHub uniquement :
+1. Ajouter ce nouveau fichier à la racine du site :
+- recouvrement-agences-immobilieres.html
+
+2. Remplacer les fichiers existants suivants :
+- secteurs-activite.html
+- sitemap.xml
 - assets/js/secteurs-recovia.js
-- assets/css/secteurs-recovia.css
 
-Ces fichiers conservent le widget de rappel et son animation minimale de 10 secondes. Aucun fichier HTML ne doit etre remplace.
-Le lien Experts-comptables renvoie vers recouvrement-experts-comptables.html (page creee precedemment).
+OBJECTIF DU PATCH
+- Création de la page sectorielle “Agences immobilières et administrateurs de biens”
+- Ajout du secteur dans “Tous les secteurs d’activité”
+- Ajout du lien “Agences immobilières” dans le sous-menu Solutions
+- Conservation du widget de rappel et du bloc “Partenariats professionnels / Experts-comptables” dans le menu
