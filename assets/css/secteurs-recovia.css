@@ -69,3 +69,14 @@
 @keyframes rcb-ring{0%,100%{box-shadow:0 0 0 0 rgba(38,86,146,.22)}50%{box-shadow:0 0 0 12px rgba(38,86,146,0)}}
 @keyframes rcb-dots{0%,70%,100%{opacity:.3;transform:translateY(0)}35%{opacity:1;transform:translateY(-4px)}}
 @media(prefers-reduced-motion:reduce){.rcb-pulse,.rcb-progress-dots i{animation:none}}
+
+/* Mise en avant des experts-comptables, sans surcharger la colonne des secteurs. */
+.nav .rs-dropdown.rs-menu-ready{grid-template-columns:235px minmax(0,1fr)}
+.nav .rs-dropdown{width:min(740px,calc(100vw - 40px))}
+.nav .rs-menu-partner{margin-top:16px;padding-top:12px;border-top:1px solid #e7ebf2}
+.nav .rs-menu-partner .rs-menu-title{padding-bottom:7px}
+.nav .rs-dropdown .rs-menu-partner-link{display:flex;flex-direction:column;gap:6px;background:#f3f6fb;border:1px solid #dbe4f0;padding:13px 12px;border-radius:10px;color:#1f355a;text-decoration:none}
+.nav .rs-dropdown .rs-menu-partner-link strong{font-size:14px;font-weight:800;line-height:1.3}
+.nav .rs-dropdown .rs-menu-partner-link span{font-size:12px;font-weight:450;line-height:1.45;color:#596b82}
+.nav .rs-dropdown .rs-menu-partner-link:hover,.nav .rs-dropdown .rs-menu-partner-link:focus-visible{background:#eaf1fa;border-color:#a9c1df}
+@media(max-width:1120px){.nav .rs-dropdown{width:100%}.nav .rs-menu-partner{margin-bottom:10px}}

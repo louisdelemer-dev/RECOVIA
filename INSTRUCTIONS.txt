@@ -1,7 +1,8 @@
-Correctif RECOVIA – offre experts-comptables
+RECOVIA - Menu Solutions : mise en avant du partenariat Experts-comptables.
 
-Remplacer à la racine du dépôt GitHub les trois fichiers HTML contenus dans ce ZIP.
+Importer dans GitHub uniquement :
+- assets/js/secteurs-recovia.js
+- assets/css/secteurs-recovia.css
 
-Le tarif de 8 % HT est désormais présenté comme le PLAFOND des honoraires au succès pour le recouvrement amiable des clients recommandés par des cabinets partenaires (dans le périmètre de l’offre). Un taux inférieur est possible. Les créances propres aux cabinets demeurent soumises à leurs propres conditions.
-
-Aucun changement aux scripts, au widget de rappel, ni aux photos.
+Ces fichiers conservent le widget de rappel et son animation minimale de 10 secondes. Aucun fichier HTML ne doit etre remplace.
+Le lien Experts-comptables renvoie vers recouvrement-experts-comptables.html (page creee precedemment).

@@ -23,6 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
     [['solutions.html', 'Toutes nos solutions'], ['solutions.html#amiable', 'Recouvrement amiable'], ['judiciaire.html', 'Recouvrement judiciaire']].forEach(function (item) {
       var a = document.createElement('a'); a.href = item[0]; a.textContent = item[1]; solutions.appendChild(a);
     });
+    // Acces prioritaire aux partenariats : distinct des simples pages sectorielles.
+    var partner = document.createElement('div'); partner.className = 'rs-menu-partner';
+    var partnerTitle = document.createElement('span'); partnerTitle.className = 'rs-menu-title'; partnerTitle.textContent = 'Partenariats professionnels';
+    var partnerLink = document.createElement('a'); partnerLink.className = 'rs-menu-partner-link';
+    partnerLink.href = 'recouvrement-experts-comptables.html';
+    var partnerName = document.createElement('strong'); partnerName.textContent = 'Experts-comptables';
+    var partnerDesc = document.createElement('span'); partnerDesc.textContent = 'Vos honoraires impayés et des conditions privilégiées pour vos clients.';
+    partnerLink.appendChild(partnerName); partnerLink.appendChild(partnerDesc);
+    partner.appendChild(partnerTitle); partner.appendChild(partnerLink);
+    solutions.appendChild(partner);
     var sectorCol = document.createElement('div'); sectorCol.className = 'rs-menu-column';
     var secTitle = document.createElement('span'); secTitle.className = 'rs-menu-title'; secTitle.textContent = 'Par secteur d’activité';
     sectorCol.appendChild(secTitle);
