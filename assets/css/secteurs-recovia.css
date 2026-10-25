@@ -51,3 +51,11 @@
 .rcb-small{font-size:10.5px!important;line-height:1.5!important;color:#60708a!important;margin:13px 0 0!important;text-align:center}.rcb-small a{color:#274d88;text-decoration:underline}
 .rcb-hp{position:absolute!important;left:-9999px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:600px){.rcb-root{bottom:14px;right:14px}.rcb-launcher{padding:12px 15px}.rcb-panel{bottom:59px;max-height:calc(100dvh - 110px);overflow:auto}}
+
+/* Correctif : état de confirmation visible même après masquage du formulaire. */
+.rcb-content #rcb-form[hidden]{display:none!important}
+.rcb-content .rcb-status:not(:empty){display:block;padding:13px 14px;border-radius:10px;margin:12px 0;font-size:13px;line-height:1.55}
+.rcb-content .rcb-status.rcb-success{color:#155b37;background:#eaf7ef;border:1px solid #b7e3c8;font-weight:700}
+.rcb-content .rcb-status.rcb-error{color:#9a2525;background:#fff0ef;border:1px solid #efc5c2;font-weight:650}
+.rcb-content #rcb-form input[type=tel]{display:block!important;visibility:visible!important;opacity:1!important;min-height:44px!important}
+.rcb-content #rcb-form .rcb-submit{display:block!important;visibility:visible!important;min-height:44px!important}

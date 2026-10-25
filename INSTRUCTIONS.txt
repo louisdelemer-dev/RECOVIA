@@ -1,2 +1,1 @@
-Importer les 4 pages HTML à la racine et les 4 images dans assets/images/. Aucun autre fichier à remplacer.
-Images : recadrages photographiques issus de visuels générés pour RECOVIA.
+Correctif confirmation rappel RECOVIA. Remplacer les deux fichiers assets/js/secteurs-recovia.js et assets/css/secteurs-recovia.css dans GitHub. Le formulaire statique rappel-recovia deja ajoute dans index.html lors du patch precedent doit rester en place. Tester un envoi, verifier Forms > rappel-recovia dans Netlify, et configurer la notification email. Si les modifications ne s affichent pas, rafraichir avec Ctrl+F5.
