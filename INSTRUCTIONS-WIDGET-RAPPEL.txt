@@ -1,0 +1,24 @@
+RECOVIA – Widget « Faites-vous rappeler » (Netlify Forms)
+
+Importer dans GitHub en respectant les chemins :
+- index.html
+- assets/js/secteurs-recovia.js
+- assets/css/secteurs-recovia.css
+
+Le widget est injecté par le JavaScript commun déjà chargé sur les pages du site.
+Il n'apparaît pas sur les pages de règlement, débiteurs, candidatures et pages juridiques.
+Aucun service de téléphonie payant n'est nécessaire. Le visiteur soumet un numéro,
+la page d'origine et son accord de rappel.
+
+IMPORTANT – CONFIGURATION NETLIFY (nécessaire pour recevoir les emails) :
+1. Déployer le commit sur Netlify (le formulaire est déclaré statiquement dans index.html).
+2. Dans Netlify > Forms, vérifier la présence de « rappel-recovia » après déploiement.
+3. Dans les paramètres de notifications de ce formulaire, créer une notification email
+   à contact@recovia-france.fr (Netlify ne l'active pas automatiquement).
+4. Effectuer un test réel avec votre propre numéro et vérifier la réception de l'email.
+5. Contrôler le quota Forms/credits du plan Netlify et les filtres anti-spam.
+6. Vérifier que la politique de confidentialité couvre la finalité et la conservation
+   des demandes de rappel ; adapter la durée de conservation à vos pratiques.
+
+NOTE : ce formulaire ne déclenche aucun appel 3CX ; RECOVIA rappelle manuellement.
+Le message de confirmation indique uniquement que la demande a été transmise.

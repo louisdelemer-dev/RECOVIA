@@ -38,3 +38,52 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', function (e) { document.querySelectorAll('.rs-nav-group.rs-expanded').forEach(function (g) { if (!g.contains(e.target)) { g.classList.remove('rs-expanded'); var b = g.querySelector('.rs-nav-toggle'); if (b) b.setAttribute('aria-expanded', 'false'); } }); });
   document.addEventListener('keydown', function (e) { if (e.key !== 'Escape') return; document.querySelectorAll('.rs-nav-group.rs-expanded').forEach(function (g) { g.classList.remove('rs-expanded'); var b = g.querySelector('.rs-nav-toggle'); if (b) { b.setAttribute('aria-expanded', 'false'); b.focus(); } }); });
 });
+
+
+/* RECOVIA – widget de rappel. Netlify Forms, sans prestataire payant. */
+(function () {
+  function initCallback() {
+    var path = location.pathname.toLowerCase();
+    if (/regler|payer|debiteur|candidature|mentions-legales|politique-confidentialite|cgv|contact-envoye/.test(path)) return;
+    if (document.getElementById('rcb-launcher')) return;
+    var root = document.createElement('div');
+    root.className = 'rcb-root';
+    root.innerHTML = '<button id="rcb-launcher" class="rcb-launcher" type="button" aria-expanded="false" aria-controls="rcb-panel"><span aria-hidden="true">☎</span><span>Être rappelé</span></button>' +
+      '<section id="rcb-panel" class="rcb-panel" role="dialog" aria-modal="false" aria-labelledby="rcb-title" hidden>' +
+      '<div class="rcb-head"><div><strong id="rcb-title">Faites-vous rappeler</strong><p>Par un conseiller RECOVIA</p></div><button type="button" class="rcb-close" aria-label="Fermer">×</button></div>' +
+      '<div class="rcb-content"><p>Vous avez des factures impayées ? Laissez votre numéro et nous vous rappellerons pendant nos horaires d’ouverture.</p>' +
+      '<form id="rcb-form" name="rappel-recovia" method="POST" data-netlify="true" netlify-honeypot="bot-field">' +
+      '<input type="hidden" name="form-name" value="rappel-recovia"><input type="hidden" name="page" id="rcb-page"><p class="rcb-hp" aria-hidden="true"><label>Ne pas remplir <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>' +
+      '<label for="rcb-phone">Votre numéro de téléphone <span aria-hidden="true">*</span></label><input id="rcb-phone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" required maxlength="22">' +
+      '<label class="rcb-consent"><input type="checkbox" name="accord_rappel" value="oui" required><span>J’accepte que RECOVIA utilise mon numéro pour me rappeler au sujet de ma demande.</span></label>' +
+      '<button class="rcb-submit" type="submit">Demander mon rappel</button><div class="rcb-status" role="status" aria-live="polite"></div></form>' +
+      '<p class="rcb-small">Lundi au vendredi, 9 h – 18 h · Rappel gratuit, hors coût éventuel de votre opérateur.<br><a href="/politique-confidentialite.html">Confidentialité et données personnelles</a></p></div></section>';
+    document.body.appendChild(root);
+    var launcher=root.querySelector('#rcb-launcher'), panel=root.querySelector('#rcb-panel'), close=root.querySelector('.rcb-close');
+    var form=root.querySelector('#rcb-form'), phone=root.querySelector('#rcb-phone'), status=root.querySelector('.rcb-status'), submit=root.querySelector('.rcb-submit');
+    function toggle(show) {panel.hidden=!show;launcher.setAttribute('aria-expanded',String(show)); if(show)phone.focus();else launcher.focus();}
+    launcher.addEventListener('click',function(){toggle(panel.hidden);});
+    close.addEventListener('click',function(){toggle(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)toggle(false);});
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();status.textContent='';
+      var digits=phone.value.replace(/[^0-9+]/g,'');
+      var normalized=digits.replace(/[.()\-]/g,'');
+      var valid=/^0[1-9][0-9]{8}$/.test(normalized)||/^\+33[1-9][0-9]{8}$/.test(normalized)||/^0033[1-9][0-9]{8}$/.test(normalized);
+      if(!valid){status.textContent='Veuillez saisir un numéro français valide (ex. 06 12 34 56 78).';phone.focus();return;}
+      if(!form.elements['accord_rappel'].checked){status.textContent='Veuillez accepter le rappel.';return;}
+      form.elements['page'].value=location.pathname+location.search;
+      submit.disabled=true;submit.textContent='Envoi en cours…';
+      try {
+        var data=new URLSearchParams(new FormData(form));
+        var res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()});
+        if(!res.ok)throw new Error('submission failed');
+        form.reset();form.hidden=true;
+        status.textContent='Merci ! Votre demande a bien été envoyée. Un conseiller RECOVIA vous rappellera pendant nos horaires d’ouverture.';
+        status.classList.add('rcb-success');
+      }catch(err){status.textContent='Votre demande n’a pas pu être envoyée. Vous pouvez nous appeler au 01 75 43 88 22.';}
+      finally{submit.disabled=false;submit.textContent='Demander mon rappel';}
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initCallback);else initCallback();
+})();

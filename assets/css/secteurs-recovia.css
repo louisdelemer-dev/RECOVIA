@@ -27,3 +27,27 @@
 .rs-sector-card a,.rs-sector-more{font-weight:800;color:#bf332e;font-size:14px}
 .rs-sector-more{display:inline-block;margin-top:22px}
 @media(max-width:750px){.rs-sector-grid{grid-template-columns:1fr}.rs-sector-section{padding:48px 20px}}
+
+
+/* RECOVIA – widget de demande de rappel */
+.rcb-root{position:fixed;bottom:22px;right:22px;z-index:10000;font-family:inherit;color:#182e53}
+.rcb-launcher{display:flex;align-items:center;gap:10px;background:#bd3d30;color:#fff;border:0;border-radius:50px;padding:13px 20px;font-weight:700;font-size:14px;box-shadow:0 8px 28px #0d25464d;cursor:pointer}
+.rcb-launcher:hover,.rcb-launcher:focus-visible{background:#9f2f25}
+.rcb-launcher span:first-child{font-size:20px;line-height:1}
+.rcb-panel{position:absolute;right:0;bottom:65px;width:min(385px,calc(100vw - 28px));background:#fff;border:1px solid #e1e6ef;border-radius:16px;box-shadow:0 15px 55px #142b4b42;overflow:hidden}
+.rcb-panel[hidden]{display:none!important}
+.rcb-head{background:#192e50;color:white;padding:18px 20px;display:flex;justify-content:space-between;align-items:start;gap:12px}
+.rcb-head strong{font-size:19px;line-height:1.3}.rcb-head p{margin:4px 0 0;color:#dbe4f2;font-size:12px}
+.rcb-close{background:transparent;color:#fff;border:0;font-size:27px;line-height:1;cursor:pointer;padding:0 2px}
+.rcb-content{padding:18px 20px}.rcb-content>p:first-child{font-size:13px;line-height:1.55;margin:0 0 16px}
+.rcb-content form>label:not(.rcb-consent){display:block;font-size:13px;font-weight:700;margin:0 0 6px}
+.rcb-content input[type=tel]{display:block;box-sizing:border-box;width:100%;border:1px solid #cbd5e2;border-radius:8px;padding:12px 13px;font-size:15px;background:#fff;color:#142b4b}
+.rcb-content input[type=tel]:focus{outline:2px solid #416db8;outline-offset:1px}
+.rcb-consent{display:flex;align-items:start;gap:9px;margin:15px 0;font-size:11.5px;line-height:1.5;cursor:pointer}
+.rcb-consent input{margin:3px 0 0;flex:none;accent-color:#bd3d30}
+.rcb-submit{width:100%;padding:12px 14px;border:0;border-radius:8px;background:#bd3d30;color:white;font-weight:700;cursor:pointer;font-size:13px}
+.rcb-submit:hover{background:#9f2f25}.rcb-submit:disabled{opacity:.6;cursor:wait}
+.rcb-status{font-size:12px;line-height:1.5;margin-top:10px}.rcb-status:empty{display:none}.rcb-success{color:#17613b;font-weight:700}
+.rcb-small{font-size:10.5px!important;line-height:1.5!important;color:#60708a!important;margin:13px 0 0!important;text-align:center}.rcb-small a{color:#274d88;text-decoration:underline}
+.rcb-hp{position:absolute!important;left:-9999px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:600px){.rcb-root{bottom:14px;right:14px}.rcb-launcher{padding:12px 15px}.rcb-panel{bottom:59px;max-height:calc(100dvh - 110px);overflow:auto}}

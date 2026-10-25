@@ -144,5 +144,11 @@
 </footer>
 <script src="assets/js/script.js?v=20260609-menu-stable-2"></script>
 <script src="assets/js/secteurs-recovia.js?v=20261023"></script>
+
+<!-- Déclaration statique du formulaire pour la détection Netlify Forms au déploiement. -->
+<form name="rappel-recovia" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="rappel-recovia">
+  <input type="tel" name="telephone"><input type="text" name="page"><input type="text" name="accord_rappel"><input name="bot-field">
+</form>
 </body>
 </html>
