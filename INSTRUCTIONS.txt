@@ -1,4 +1,7 @@
-Remplacez uniquement assets/js/secteurs-recovia.js dans GitHub.
-L’animation de transmission reste visible au minimum 10 secondes.
-Le formulaire est transmis immédiatement à Netlify ; la confirmation ne s’affiche qu’après la réponse positive de Netlify et 10 secondes.
-En cas d’échec, un message d’erreur s’affiche après cette durée minimale.
+Correctif RECOVIA – offre experts-comptables
+
+Remplacer à la racine du dépôt GitHub les trois fichiers HTML contenus dans ce ZIP.
+
+Le tarif de 8 % HT est désormais présenté comme le PLAFOND des honoraires au succès pour le recouvrement amiable des clients recommandés par des cabinets partenaires (dans le périmètre de l’offre). Un taux inférieur est possible. Les créances propres aux cabinets demeurent soumises à leurs propres conditions.
+
+Aucun changement aux scripts, au widget de rappel, ni aux photos.
