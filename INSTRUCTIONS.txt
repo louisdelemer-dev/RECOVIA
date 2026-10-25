@@ -1,8 +1,7 @@
-RECOVIA – ESN, AGENCES WEB ET PRESTATAIRES INFORMATIQUES
+RECOVIA – PATCH CABINETS DE CONSEIL ET CONSULTANTS
 
-Ajouter : recouvrement-prestataires-informatiques.html
-Remplacer : secteurs-activite.html et sitemap.xml
+Ajouter à la racine : recouvrement-cabinets-conseil.html
+Remplacer à la racine : secteurs-activite.html et sitemap.xml
 
-Le sous-menu Solutions et le widget de rappel ne sont pas modifiés.
-Photo réelle prise à Paris, crédit Work With Island / Unsplash, chargée depuis Unsplash.
-URL : https://recovia-france.fr/recouvrement-prestataires-informatiques.html
+Le menu Solutions, la rubrique Partenariats professionnels et le widget de rappel ne sont pas modifiés.
+Photographie : vraie photo prise à Paris, Work With Island (Unsplash), chargée depuis Unsplash.
