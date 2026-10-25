@@ -1,1 +1,4 @@
-Remplacer les deux fichiers assets/js/secteurs-recovia.js et assets/css/secteurs-recovia.css dans GitHub. Animation uniquement pendant la transmission Netlify. Le rappel reste manuel, aucune communication telephonique n est lancee. Tester apres deploiement.
+Remplacez uniquement assets/js/secteurs-recovia.js dans GitHub.
+L’animation de transmission reste visible au minimum 10 secondes.
+Le formulaire est transmis immédiatement à Netlify ; la confirmation ne s’affiche qu’après la réponse positive de Netlify et 10 secondes.
+En cas d’échec, un message d’erreur s’affiche après cette durée minimale.

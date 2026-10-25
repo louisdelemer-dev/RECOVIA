@@ -79,8 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
       status.innerHTML='<div class="rcb-progress" aria-hidden="true"><span class="rcb-pulse"><span>☎</span></span><span class="rcb-progress-dots"><i></i><i></i><i></i></span></div><strong>Transmission de votre demande…</strong><small>Nous vérifions sa bonne réception par RECOVIA.</small>';
       try {
         var data=new URLSearchParams(new FormData(form));
-        var res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()});
-        if(!res.ok)throw new Error('submission failed');
+        // Conserver l'animation au moins 10 secondes, sans retarder l'envoi réel.
+        // Le résultat (succès ou erreur) n'est affiché qu'après cette durée minimale.
+        var results=await Promise.allSettled([
+          fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()}),
+          new Promise(function(resolve){setTimeout(resolve,10000);})
+        ]);
+        if(results[0].status!=='fulfilled'||!results[0].value.ok)throw new Error('submission failed');
         status.classList.remove('rcb-pending');
         form.reset();form.hidden=true;
         status.textContent='Merci ! Votre demande a bien été envoyée. Un conseiller RECOVIA vous rappellera pendant nos horaires d’ouverture.';
