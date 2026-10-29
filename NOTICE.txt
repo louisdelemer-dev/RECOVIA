@@ -1,9 +1,5 @@
-RECOVIA — Simulateur V1 (patch à appliquer après V12)
-
-Ajouter simulateur.html, assets/css/simulateur.css, assets/js/simulateur.js.
-Remplacer les 63 pages HTML incluses pour ajouter Simulateur de recouvrement au sous-menu Ressources (sur toutes les pages où le sous-menu existe).
-Ne pas remplacer vos autres fichiers.
-Calcul local sans transmission des saisies ; le bouton de contact transmet uniquement des chiffres agrégés en URL (ne pas y entrer de données personnelles).
-Les taux 30/50/70 % sont des scénarios illustratifs, non une mesure de performance RECOVIA.
-Le calcul des honoraires est indicatif ; vérifier les conditions commerciales avant publication.
-Test Netlify et tests responsive à effectuer après déploiement.
+RECOVIA — Simulateur V2
+À installer après la V1 : remplacer uniquement simulateur.html et assets/js/simulateur.js.
+Calcul dépendant du B2B/B2C, nature de la créance, ancienneté et relances.
+Les coefficients sont purement illustratifs et ne sont ni les taux FINREC ni des taux validés RECOVIA. Calibrer après collecte de données opérationnelles.
+Aucune modification du menu, du footer, ni des autres pages.
