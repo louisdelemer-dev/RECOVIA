@@ -1,0 +1,23 @@
+RECOVIA — Mise en production de l’annuaire (V10) — 29 octobre 2026
+
+PRÉREQUIS : les patches V1 à V9 ont déjà été installés, en particulier V9.
+
+Copier uniquement les fichiers de cette archive à la RACINE du dépôt GitHub, en conservant les sous-dossiers.
+Les pages index.html et ressources.html incluses dans ce patch sont modifiées UNIQUEMENT pour actualiser les versions des ressources CSS/JS, afin d'éviter qu'un ancien menu reste dans le cache du navigateur.
+
+- Menu principal : Ressources > Annuaire des entreprises (géré par assets/js/script.js + assets/css/style.css de la V9).
+- annuaire.html : retrait du badge bêta, meta SEO + index,follow, canonical.
+- fiche-entreprise.html : maintien de noindex,follow PAR PRUDENCE : les données sont chargées côté navigateur et le contenu HTML initial est quasi vide ; une architecture de fiches HTML pré-rendues et des URL dédiées sera indispensable avant une indexation de masse.
+- comparateur.html : noindex,follow (outil public mais non destiné à figurer dans les résultats de recherche).
+- sitemap.xml : ajoute annuaire.html, pas de fiches dynamiques.
+- Fonctions API V5/V7, bibliothèques CSS/JS et formulaires V9 : inchangés.
+
+À VÉRIFIER APRÈS DÉPLOIEMENT :
+1. Site sur ordinateur ET mobile : Ressources > Annuaire des entreprises.
+2. https://recovia-france.fr/annuaire.html et recherche d'un SIREN.
+3. Affichage et consultation des fiches, lien de rappel et appel téléphonique.
+4. https://recovia-france.fr/sitemap.xml contient l'annuaire.
+5. Source HTML annuaire : robots index,follow ; fiche : noindex,follow.
+6. Netlify : pas de blocage d'accès ; Search Console : soumettre le sitemap après tests.
+
+Attention : le menu n'apparaîtra que sur les pages référençant les ressources communes assets/js/script.js et assets/css/style.css. Le site peut nécessiter une invalidation du cache navigateur.
