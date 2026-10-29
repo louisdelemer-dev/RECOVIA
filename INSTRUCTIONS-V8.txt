@@ -1,0 +1,8 @@
+RECOVIA ANNUAIRE — V8, à installer après V7
+
+Remplacer : fiche-entreprise.html et assets/css/annuaire.css
+Ajouter : comparateur.html, assets/js/annuaire-compare.js, assets/js/annuaire-v8.js
+
+Aucun lien ajouté au menu ou au sitemap. Toutes les pages annuaire restent en noindex. Le comparateur est accessible depuis chaque fiche et à /comparateur.html.
+Les données proviennent en direct de l’API Recherche d’entreprises, elles ne sont pas des scores de solvabilité. La comparaison financière présente le dernier exercice public de chaque société, qui peut différer.
+Pas de configuration Netlify additionnelle. V7/INPI et V5/BODACC inchangés.

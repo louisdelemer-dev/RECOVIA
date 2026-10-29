@@ -1,0 +1,1 @@
+(()=>{'use strict';const target=document.getElementById('ra-compare-action');if(!target)return;const siren=new URLSearchParams(location.search).get('siren');if(/^\d{9}$/.test(siren||''))target.href='comparateur.html?a='+encodeURIComponent(siren);})();
