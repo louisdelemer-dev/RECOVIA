@@ -1,0 +1,17 @@
+RECOVIA — Annuaire étape 2
+
+Fichiers à ajouter/remplacer à la racine du dépôt GitHub :
+- annuaire.html
+- fiche-entreprise.html
+- assets/js/annuaire.js
+- assets/css/annuaire.css
+
+Ne pas déposer ce fichier de notes dans GitHub.
+
+Changements : filtre code postal, entreprises actives uniquement, conservation de la recherche, affichage de champs complémentaires, lien vers la fiche officielle, meilleures erreurs et styles.
+
+AUCUN lien créé dans le menu ou le pied de page du site principal.
+Pages toujours noindex,nofollow,noarchive ; accessibles par URL, donc NON privées.
+Ce prototype N’EST PAS un annuaire de fiches SEO indexables à grande échelle. Il faut une architecture de pages pré-générées ou rendues côté serveur avant ouverture publique.
+
+Tests : /annuaire.html ; rechercher par nom, SIREN, filtre 59000, entreprises actives, puis revenir depuis une fiche.
