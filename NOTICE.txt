@@ -1,11 +1,11 @@
-RECOVIA – Simulateur V7
+RECOVIA – Simulateur V8 (correctifs)
 
-Remplacer dans le dépôt GitHub :
+Fichiers à remplacer :
 - index.html
 - simulateur.html
 - assets/css/simulateur.css
 - assets/js/simulateur.js
 
-Résultats affichés seulement après clic. Cartes immobiles. Encadré compact sur l'accueil, sans formulaire supplémentaire.
-Aucun changement du barème de simulation, ni des menus.
-Contrôler le déploiement Netlify et les rendus sur mobile et ordinateur.
+Modifications : encart de l’accueil déplacé après « Parlons de vos factures impayées » et avant « Des solutions adaptées à votre secteur » ; correction de l’affichage du titre des résultats ; suppression de la ligne honoraires TTC. Le net reste estimé après honoraires TTC, pour conserver la logique financière précédente ; honoraires HT à 8 % toujours affichés.
+
+Tester le rendu Netlify et rafraîchir sans cache (Ctrl+F5) si l’ancien style persiste.

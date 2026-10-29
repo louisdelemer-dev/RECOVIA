@@ -28,7 +28,6 @@ $('estimated-rate').textContent=`${pct.format(low)} à ${pct.format(high)}`;
 $('estimated-bar').style.width=`${Math.round(high*100)}%`;
 $('collected').textContent=`${euro.format(collectedLow)} à ${euro.format(collectedHigh)}`;
 $('fees').textContent=`${euro.format(feeLow)} à ${euro.format(feeHigh)}`;
-$('fees-ttc').textContent=`${euro.format(ttcLow)} à ${euro.format(ttcHigh)}`;
 $('net').textContent=`${euro.format(Math.max(0,collectedLow-ttcLow))} à ${euro.format(Math.max(0,collectedHigh-ttcHigh))}`;
 $('assumptions').textContent=`${customer.toUpperCase()} · ${kindLabels[type]} · ${ageLabels[days]} · ${reminderLabels[rem]}`;
 $('rate-factors').textContent='Fourchette indicative de 12 points, issue de paramètres illustratifs, non de statistiques RECOVIA.';
