@@ -49,29 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
   var CONSENT_KEY = 'recovia_google_consent';
   var LEAD_SESSION_KEY = 'recovia_generate_lead_sent';
 
-  // Initialise la balise Google sur toutes les pages, mais refuse tout stockage
-  // publicitaire/analytique tant que l'utilisateur n'a pas consenti.
+  // La Google tag et le consentement par défaut sont initialisés directement
+  // dans le <head> de chaque page afin d'être détectables par Google Ads.
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
-
-  window.gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
-
-  window.gtag('js', new Date());
-  window.gtag('config', GOOGLE_TAG_ID);
-
-  if (!window.__recoviaGoogleTagLoaded) {
-    window.__recoviaGoogleTagLoaded = true;
-    var googleTag = document.createElement('script');
-    googleTag.async = true;
-    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GOOGLE_TAG_ID);
-    document.head.appendChild(googleTag);
-  }
 
   function injectConsentStyles() {
     if (document.getElementById('recovia-cookie-consent-styles')) return;
