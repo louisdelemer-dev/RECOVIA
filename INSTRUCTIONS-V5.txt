@@ -1,0 +1,25 @@
+RECOVIA - Annuaire V5 (à installer après V4)
+
+Copier/remplacer ces fichiers à la racine du dépôt GitHub :
+- fiche-entreprise.html
+- assets/css/annuaire.css
+- assets/js/annuaire.js
+- assets/js/annuaire-v5.js (nouveau)
+- netlify/functions/annuaire-bodacc.js (nouveau)
+
+La page annuaire.html reste inchangée. Aucun changement du menu, du sitemap ou de l'indexation : noindex conservé.
+
+Nouvelles fonctions :
+- Chronologie de 15 dernières annonces BODACC correspondantes au SIREN si la source retourne des données.
+- Graphique CA sur 2 à 6 exercices si les chiffres sont publics.
+- Encadré explicatif de disponibilité documentaire (extrait RNE, avis Sirene, liens INPI déjà présents V4).
+
+Le téléchargement des PDF d'actes et comptes INPI directement dans le site nécessite un accès API INPI dédié : NON implémenté ici.
+
+Points de validation après déploiement :
+1. Ouvrir /fiche-entreprise.html?siren=533270559
+2. Vérifier la section Chronologie, sinon vérifier Netlify Functions et le statut HTTP de /.netlify/functions/annuaire-bodacc?siren=533270559
+3. Tester une entreprise disposant de plusieurs CA publics pour voir le graphique.
+4. Vérifier RNE/Sirene, mobile et onglets.
+
+API BODACC : utilisation gratuite ; quotas et disponibilité tiers possibles. Contrôle en direct requis après installation.
