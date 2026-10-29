@@ -1,7 +1,16 @@
-RECOVIA – PATCH CABINETS DE CONSEIL ET CONSULTANTS
+RECOVIA - prise de rendez-vous Google Agenda
 
-Ajouter à la racine : recouvrement-cabinets-conseil.html
-Remplacer à la racine : secteurs-activite.html et sitemap.xml
+Remplacer uniquement :
+- contact.html
+- index.html
 
-Le menu Solutions, la rubrique Partenariats professionnels et le widget de rappel ne sont pas modifiés.
-Photographie : vraie photo prise à Paris, Work With Island (Unsplash), chargée depuis Unsplash.
+Page Contact : calendrier de réservation intégré + bouton dans le bandeau.
+Page d’accueil : boutons de réservation + fenêtre intégrée.
+
+Calendrier : https://calendar.app.google/PNyNytyHBRsj5U228
+
+IMPORTANT : l’URL complète de réservation a été déduite de la redirection du lien court Google. Le fonctionnement de l’iframe doit être vérifié après déploiement, car Google peut imposer des restrictions d’intégration. En cas de blocage, récupérer le véritable code « Intégrer au site Web → Page de réservation intégrée » dans Google Agenda et nous le transmettre. Un lien alternatif est prévu dans les deux pages.
+
+La réservation reste gérée par Google : l’habillage RECOVIA concerne l’encadrement et les boutons, pas l’interface interne du calendrier.
+
+Aucun fichier JS/CSS partagé n’est modifié, afin de préserver le menu et le widget « Être rappelé ».
