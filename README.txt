@@ -1,8 +1,10 @@
-RECOVIA — correctif simulateur V4 (après V3)
-
-Remplacer uniquement :
+RECOVIA — Correctif simulateur V5 (en-tête)
+Installation : remplacer seulement :
 - simulateur.html
+- assets/css/simulateur.css
 - assets/js/simulateur.js
 
-Honoraires simulés : 8 % HT des encaissements de chaque borne ; sans minimum par dossier. TVA de 20 % présentée séparément. Le taux est illustratif, non contractuel et ne préjuge pas de la tarification réelle adaptée au portefeuille.
-La formule de la V3 était déjà à 8 % sans minimum ; cette version clarifie explicitement le texte de la page.
+La page utilise désormais assets/css/style.css, assets/css/secteurs-recovia.css et assets/js/script.js déjà présents sur le site, pour afficher le même en-tête et le menu mobile.
+Le calcul de recouvrement reste celui de la V4.
+La mention obsolète de minimum par dossier a été retirée de l'interface et du commentaire JS.
+Vérifier après déploiement : en-tête bureau/mobile, menu Ressources, résultats et formulaire.

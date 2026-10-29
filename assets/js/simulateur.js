@@ -18,7 +18,7 @@ const customer=radio('customer')||'b2b',type=$('debt-kind').value,days=$('age').
 const central=Math.max(.08,Math.min(.92,base[customer]*(kind[type]||1)*(age[days]||1)*(reminder[rem]||1)));
 const low=Math.max(0,central-.06),high=Math.min(1,central+.06); // 12 points de pourcentage.
 const total=count*avg, collectedLow=total*low,collectedHigh=total*high;
-// Honoraires de simulation : 8 % HT sur les encaissements estimés, sans minimum par dossier.
+// Honoraires illustratifs : 8 % HT sur les encaissements estimés.
 // Simulation illustrative, pas un barème contractuel ni une offre tarifaire.
 const feeLow=collectedLow*.08,feeHigh=collectedHigh*.08;
 const ttcLow=feeLow*1.2,ttcHigh=feeHigh*1.2;
