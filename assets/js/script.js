@@ -124,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.setAttribute('aria-live', 'polite');
     banner.setAttribute('aria-label', 'Gestion des cookies');
     banner.innerHTML =
-      '<p><strong>Mesure d’audience et publicité</strong><br>Avec votre accord, RECOVIA utilise la balise Google pour mesurer l’audience du site et les demandes issues de ses campagnes publicitaires. Vous pouvez accepter ou refuser ces cookies. <a href="/politique-confidentialite.html">En savoir plus</a>.</p>' +
+      '<p><strong>Nous utilisons des cookies</strong><br>RECOVIA utilise, avec votre accord, des cookies de mesure d’audience et de publicité afin de mesurer les performances du site et de ses campagnes. <a href="/politique-confidentialite.html">En savoir plus</a>.</p>' +
       '<div class="rc-cookie-actions">' +
-        '<button type="button" class="rc-cookie-btn rc-cookie-btn-primary" data-cookie-choice="granted">Accepter</button>' +
-        '<button type="button" class="rc-cookie-btn" data-cookie-choice="denied">Refuser</button>' +
+        '<button type="button" class="rc-cookie-btn rc-cookie-btn-primary" data-cookie-choice="granted">Tout accepter</button>' +
+        '<button type="button" class="rc-cookie-btn" data-cookie-choice="denied">Tout refuser</button>' +
       '</div>';
     document.body.appendChild(banner);
 
