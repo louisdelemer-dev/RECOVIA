@@ -1,0 +1,21 @@
+RECOVIA — ANNUAIRE V7 (à appliquer après V6)
+
+FICHIERS À REMPLACER :
+- fiche-entreprise.html
+- assets/css/annuaire.css
+
+FICHIERS À AJOUTER :
+- assets/js/annuaire-v7.js
+- netlify/functions/annuaire-inpi.js
+
+CONFIGURATION OBLIGATOIRE POUR ACTIVER L’INPI :
+Dans Netlify > Project configuration > Environment variables, créer :
+INPI_USERNAME = identifiant technique ou compte autorisé de l’INPI
+INPI_PASSWORD = mot de passe associé
+NE JAMAIS METTRE CES SECRETS SUR GITHUB OU DANS LE JAVASCRIPT DU NAVIGATEUR.
+Puis redéployer le site. L’accès à la liste des documents et à leur téléchargement nécessite des droits INPI valides et l’acceptation de la licence. Sans ces variables, la rubrique affiche une indisponibilité explicite et un lien vers DATA INPI.
+
+IMPORTANT : la documentation INPI peut imposer des restrictions contractuelles et de protection des données. Le proxy ne montre que les documents marqués Public et non supprimés. Avant toute ouverture publique, contrôler droits de rediffusion, protections contre les abus, quotas et taille de documents. La limitation de taille à 9 Mo peut exclure certains PDF ; pour un service à grande échelle, préférer un backend et stockage sécurisés adaptés.
+
+AUCUN AJOUT AU MENU OU AU SITEMAP. noindex conservé.
+Vérifier après installation sur une société comportant des documents effectivement publics. Test de production impossible sans les identifiants.
