@@ -1,0 +1,9 @@
+RECOVIA – Nouvelle actualité juridique du 29 octobre 2026
+
+Copier les trois fichiers à la racine du dépôt GitHub RECOVIA :
+- recouvrement-sans-juge-decret-octobre-2026.html : nouvel article
+- ressources.html : ajout de la carte dans les ressources
+- sitemap.xml : indexation du nouvel article
+
+Tous les autres fichiers et le widget de rappel restent inchangés.
+Ne pas annoncer la procédure comme applicable avant l’arrêté d’entrée en vigueur.
