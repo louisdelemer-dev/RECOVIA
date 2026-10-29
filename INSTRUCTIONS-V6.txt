@@ -1,0 +1,18 @@
+RECOVIA — ANNuaire V6 (à appliquer APRÈS V5)
+
+Fichiers à remplacer :
+- annuaire.html
+- assets/js/annuaire.js
+- assets/js/annuaire-v5.js
+- assets/css/annuaire.css
+
+Ne pas remplacer la fiche-entreprise.html ni la fonction annuaire-bodacc.js : inchangées.
+
+Nouveautés : filtres avancés (secteur NAF, code APE, département, catégorie, effectifs), URL partageables, remise à zéro, affichage responsive. Maintien des justificatifs, graphiques et chronologie V5.
+
+IMPORTANT : aucun changement au menu ou au sitemap ; noindex conservé.
+La recherche requiert toujours au moins deux caractères. L'API peut ignorer les filtres en cas de recherche directe par SIREN/SIRET. Les résultats sont des données publiques, pas une évaluation de solvabilité.
+
+Documents INPI : téléchargement PDF intégré non activé : il faut d'abord créer des accès dédiés auprès de l'INPI, puis ajouter un backend sécurisé. Les liens vers les sources officielles restent actifs.
+
+Vérifications recommandées sur Netlify : recherche standard, recherche avec secteur F et département 59, retour fiche → recherche et affichage sur mobile.

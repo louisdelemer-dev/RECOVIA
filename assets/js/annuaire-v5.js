@@ -17,7 +17,7 @@
  function docs(){
   const container=$('ra-documents');if(!container)return;
   const h=element('div','ra-v5-document-note');h.append(element('strong','','Bibliothèque documentaire'),element('p','','Les extraits sont délivrés par les administrations. Les comptes et actes sont accessibles selon leur publicité et les accès disponibles ; aucun PDF non vérifié n’est présenté comme téléchargeable.'));
-  container.parentNode.insertBefore(h,container);
+  if(!container.parentNode.querySelector('.ra-v5-document-note'))container.parentNode.insertBefore(h,container);
  }
  async function timeline(siren){
   const target=$('ra-v5-timeline');if(!target)return;
