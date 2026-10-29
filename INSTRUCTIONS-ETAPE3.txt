@@ -1,0 +1,16 @@
+RECOVIA — ANNUAIRE, ÉTAPE 3 — DOSSIER DOCUMENTAIRE
+
+À copier à la racine du dépôt GitHub (écraser les trois fichiers existants) :
+- fiche-entreprise.html
+- assets/js/annuaire.js
+- assets/css/annuaire.css
+
+Pré-requis : avoir installé le patch Étape 2.
+
+Aucun lien n’est ajouté aux menus, au pied de page global ou au sitemap.
+Le noindex,nofollow,noarchive existant reste en place sur les fiches.
+
+Documents : extrait RNE par SIREN ; avis Sirene par SIRET du siège si disponible.
+Comptes et actes : consultation sur portails officiels, sans prétendre télécharger automatiquement des PDF INPI.
+Les chiffres financiers disponibles dans la réponse de l’API sont affichés à titre indicatif.
+Tests à effectuer après déploiement : entreprises actives/inactives, comptes publiés/confidentiels, absence de SIRET, liens PDF.
