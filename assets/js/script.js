@@ -158,3 +158,25 @@ document.addEventListener('DOMContentLoaded', () => {
     createConsentUi();
   }
 })();
+
+
+// RECOVIA annuaire V9 : lien Ressources > Annuaire, responsive et accessible.
+(function(){
+  function initAnnuaireMenu(){
+    var nav=document.querySelector('.nav'); if(!nav) return;
+    var anchor=Array.from(nav.querySelectorAll('a')).find(function(a){return a.getAttribute('href')==='ressources.html' && a.parentElement===nav;});
+    if(!anchor || document.getElementById('recovia-resources-menu')) return;
+    var group=document.createElement('div');group.className='recovia-resources-group';group.id='recovia-resources-menu';
+    var link=anchor.cloneNode(true); link.classList.add('recovia-resources-link');
+    group.appendChild(link);
+    var toggle=document.createElement('button');toggle.type='button';toggle.className='recovia-resources-toggle';toggle.setAttribute('aria-label','Afficher les ressources');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','recovia-resources-dropdown');toggle.textContent='▾';group.appendChild(toggle);
+    var dropdown=document.createElement('div');dropdown.className='recovia-resources-dropdown';dropdown.id='recovia-resources-dropdown';
+    dropdown.innerHTML='<a href="ressources.html">Conseils et articles</a><a href="annuaire.html">Annuaire des entreprises</a>';group.appendChild(dropdown);
+    anchor.replaceWith(group);
+    toggle.addEventListener('click',function(){var open=group.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});
+    document.addEventListener('click',function(e){if(!group.contains(e.target)){group.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');}});
+    group.addEventListener('keydown',function(e){if(e.key==='Escape'){group.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+    dropdown.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');var m=document.querySelector('.menu-toggle');if(m){m.setAttribute('aria-expanded','false');m.textContent='Menu';}});});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initAnnuaireMenu);else initAnnuaireMenu();
+})();

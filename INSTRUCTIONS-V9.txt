@@ -1,0 +1,22 @@
+RECOVIA — Annuaire V9 : contacts et sous-menu Ressources
+
+Prérequis : V8 installée, avec les fichiers des versions précédentes.
+
+Fichiers à ajouter/remplacer dans GitHub, aux chemins indiqués :
+- annuaire.html
+- fiche-entreprise.html
+- comparateur.html
+- contact.html
+- assets/js/script.js
+- assets/css/style.css
+- assets/css/annuaire.css
+
+L'URL « Se faire rappeler » réutilise le formulaire Netlify existant en préremplissant le message. Elle NE déclenche aucun appel automatique. Le client doit saisir ses coordonnées, accepter la politique de confidentialité et envoyer le formulaire.
+
+Le sous-menu Ressources -> Annuaire est injecté par le script partagé du site, de sorte qu'il apparaît sur les pages qui chargent assets/js/script.js.
+
+Le menu rend l'annuaire public par navigation, MAIS les pages annuaire, fiche et comparateur restent en NOINDEX. Pour obtenir une indexation SEO plus tard, il faudra retirer cette directive après les contrôles nécessaires.
+
+Le numéro d'appel utilisé est 01 75 43 88 22 et le courriel contact@recovia-france.fr.
+
+Tests après Netlify : menu desktop / mobile, téléphoner, préremplissage, envoi Netlify, annuaire, fiche, comparateur.

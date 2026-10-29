@@ -494,3 +494,15 @@ body{font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text);font-weight
 @media(max-width:1100px){.nav{gap:16px;font-size:14px}.logo img{height:68px}.hero-photo h1{font-size:40px}}
 @media(max-width:960px){.contact-strip-inner{justify-content:center;flex-wrap:wrap;padding:7px 18px}.contact-strip-inner span:nth-child(2),.contact-strip-inner span:nth-child(4){display:none}.topbar{padding:10px 18px}.logo img{height:62px;max-width:230px}.hero-photo .hero-inner{min-height:auto;padding-top:0;display:flex;flex-direction:column}.hero-copy{width:auto;margin:0;padding:44px 24px 30px;border-radius:0;box-shadow:none}.hero-photo-panel{position:relative;order:2;min-height:360px;background-position:62% center}.hero-photo-panel::before{display:none}.home-services{grid-template-columns:1fr 1fr;margin-top:0}.trust-grid{grid-template-columns:1fr 1fr;gap:20px}.trust-grid>div{border:0;padding:8px 12px}.quote-card{right:20px;left:20px;bottom:20px}}
 @media(max-width:600px){.hero-photo h1{font-size:35px}.home-services{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr}.hero-photo-panel{min-height:300px}.eyebrow{letter-spacing:2.5px}.contact-strip-inner{font-size:12px}}
+
+/* RECOVIA - sous-menu Ressources / Annuaire (V9) */
+.nav .recovia-resources-group{position:relative;display:inline-flex;align-items:center;gap:2px;flex-shrink:0}
+.nav .recovia-resources-link{white-space:nowrap}
+.nav .recovia-resources-toggle{border:0;background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:12px;padding:10px 4px;line-height:1;border-radius:7px}
+.nav .recovia-resources-toggle:hover,.nav .recovia-resources-toggle:focus-visible{background:#eef1f7}
+.nav .recovia-resources-dropdown{display:none;position:absolute;top:100%;left:-12px;min-width:235px;padding:9px;background:white;border:1px solid #e6e6ef;border-radius:12px;box-shadow:0 14px 32px rgba(13,24,55,.15);z-index:1000}
+.nav .recovia-resources-dropdown a{display:block;white-space:nowrap;padding:11px 13px;border-radius:8px;text-decoration:none;color:#183354;font-size:14px}
+.nav .recovia-resources-dropdown a:hover,.nav .recovia-resources-dropdown a:focus-visible{background:#f3f4fa}
+.nav .recovia-resources-dropdown a::after{display:none!important}
+@media(min-width:1121px){.nav .recovia-resources-group:hover .recovia-resources-dropdown,.nav .recovia-resources-group:focus-within .recovia-resources-dropdown,.nav .recovia-resources-group.is-open .recovia-resources-dropdown{display:block}}
+@media(max-width:1120px){.nav .recovia-resources-group{display:flex;flex-wrap:wrap;width:100%;justify-content:space-between}.nav .recovia-resources-link{flex:1}.nav .recovia-resources-toggle{padding:12px 18px}.nav .recovia-resources-group.is-open .recovia-resources-dropdown{display:flex;flex-direction:column;position:static;flex-basis:100%;min-width:0;box-shadow:none;background:#f7f8fc;margin:0 4px 8px;padding:5px}.nav .recovia-resources-dropdown a{white-space:normal}}

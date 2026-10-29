@@ -57,7 +57,7 @@
 <section class="contact-wrap">
 <div class="contact-intro"><h2>Échangeons sur votre besoin</h2><p>Entreprises, professionnels et partenaires : présentez-nous votre situation grâce au formulaire ci-dessous. Nos équipes étudieront votre demande et reviendront vers vous. Pour toute question relative à un dossier existant, les débiteurs peuvent contacter directement notre service dédié.</p><div class="reco-rdv-area"><button class="reco-rdv-button" type="button" id="reco-rdv-open">Prendre rendez-vous →</button></div></div>
 <div class="contact-layout">
-<div class="contact-form-card"><span class="contact-kicker">Entreprises et partenaires</span><h2>Envoyer une demande</h2><p>Décrivez brièvement votre besoin. Les champs marqués d’un astérisque sont obligatoires.</p>
+<div class="contact-form-card" id="demande-rappel"><span class="contact-kicker">Entreprises et partenaires</span><h2>Envoyer une demande</h2><p>Décrivez brièvement votre besoin. Les champs marqués d’un astérisque sont obligatoires.</p>
 <form name="contact-recovia" method="POST" action="/contact-envoye.html" data-netlify="true" netlify-honeypot="bot-field" accept-charset="UTF-8">
 <input type="hidden" name="form-name" value="contact-recovia"/>
 <p style="display:none"><label>Ne pas remplir : <input name="bot-field"/></label></p>
@@ -86,4 +86,8 @@
 
 <dialog class="reco-rdv-dialog" id="reco-rdv-dialog" aria-labelledby="reco-rdv-heading"><div class="reco-rdv-head"><h2 id="reco-rdv-heading">Prendre rendez-vous avec RECOVIA</h2><button type="button" class="reco-rdv-close" id="reco-rdv-close" aria-label="Fermer la fenêtre de réservation">×</button></div><iframe class="reco-rdv-frame" title="Calendrier de rendez-vous RECOVIA" data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FWAfizpoF_Ljnu1Tb9RlSRQBxfew5s0mMjdKrddpYrp9FrihsqIE6_-dQQ4ROy_-AdQ-Ti5b-?gv=true" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><p class="reco-rdv-fallback">Si le calendrier n'est pas visible, <a href="https://calendar.app.google/PNyNytyHBRsj5U228" target="_blank" rel="noopener noreferrer">accéder à la réservation Google Agenda</a>.</p></dialog>
 <script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('reco-rdv-open'),d=document.getElementById('reco-rdv-dialog'),c=document.getElementById('reco-rdv-close'),f=d&&d.querySelector('iframe');if(!b||!d)return;b.addEventListener('click',function(){if(f&&!f.src)f.src=f.dataset.src;if(typeof d.showModal==='function')d.showModal();else window.open('https://calendar.app.google/PNyNytyHBRsj5U228','_blank','noopener');});c.addEventListener('click',function(){d.close()});d.addEventListener('click',function(e){if(e.target===d)d.close()});});</script>
+<script>
+// Préremplissage non intrusif : demande de rappel depuis l'annuaire.
+(function(){function init(){var params=new URLSearchParams(location.search);if(params.get('demande')!=='rappel')return;var type=document.getElementById('contact-objet'),msg=document.getElementById('contact-message');if(type){type.value='Autre demande professionnelle';}if(msg&&!msg.value)msg.value='Bonjour, je souhaite être rappelé(e) par un conseiller RECOVIA au sujet de votre annuaire professionnel.\n\nCréneau souhaité : ';}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();
+</script>
 </body></html>

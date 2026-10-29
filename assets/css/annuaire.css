@@ -11,3 +11,17 @@
 
 /* V8 : comparateur d'entreprises */
 .ra-compare-hero{background:linear-gradient(125deg,#1d1939,#4b367e);color:#fff;border-radius:22px;padding:34px;margin-bottom:24px}.ra-compare-hero h1{font-size:clamp(28px,3.6vw,43px);margin:9px 0}.ra-compare-hero p{color:#ded8f0;line-height:1.6;margin:0}.ra-compare-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:12px;margin:22px 0}.ra-compare-field{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:800;color:#514967}.ra-compare-field input{width:100%;padding:14px 16px;border-radius:11px;border:1px solid #dad5e8;font:inherit;font-size:15px;letter-spacing:.04em}.ra-compare-submit{align-self:end}.ra-compare-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}.ra-compare-company{padding:23px;background:#fff;border:1px solid #e6e3f0;border-radius:18px;min-width:0}.ra-compare-company h2{font-size:20px;margin:10px 0;overflow-wrap:anywhere}.ra-compare-company p{color:#686981;font-size:13px;line-height:1.6}.ra-compare-company a{font-weight:800;font-size:13px}.ra-compare-table-wrap{overflow-x:auto;background:#fff;border:1px solid #e8e5f0;border-radius:17px}.ra-compare-table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:650px}.ra-compare-table th,.ra-compare-table td{text-align:left;padding:17px 20px;border-bottom:1px solid #efedf5;overflow-wrap:anywhere;vertical-align:top}.ra-compare-table thead th{background:#f7f5ff;color:#463677;font-size:13px}.ra-compare-table tbody th{width:30%;color:#5d5b72;font-size:12px;font-weight:700}.ra-compare-table td{font-size:14px;color:#25223e;font-weight:700}.ra-compare-table tr:last-child>*{border-bottom:0}.ra-compare-note{font-size:12px;color:#737187;line-height:1.7;margin-top:16px}.ra-compare-error{border-radius:12px;background:#fff7e9;padding:14px 18px;color:#805c27}.ra-compare-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}@media(max-width:760px){.ra-compare-form{grid-template-columns:1fr}.ra-compare-summary{grid-template-columns:1fr}.ra-compare-hero{padding:24px}.ra-compare-submit{width:100%}}
+
+/* V9 - espace contact RECOVIA */
+.ra-v9-contact{padding:42px 0;background:linear-gradient(125deg,#17152f,#332b67);color:#fff}
+.ra-v9-contact-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.ra-v9-eyebrow{display:block;font-size:11px;letter-spacing:.12em;font-weight:800;color:#d4c9ff;margin-bottom:10px}
+.ra-v9-contact h2{color:#fff;margin:0 0 10px;font-size:clamp(22px,2.4vw,29px);line-height:1.25}
+.ra-v9-contact p{color:#e4dff4;margin:0 0 12px;line-height:1.6}
+.ra-v9-contact-coords{display:flex;align-items:center;gap:11px;flex-wrap:wrap;font-size:14px}
+.ra-v9-contact-coords a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.ra-v9-contact-actions{display:flex;flex-direction:column;gap:10px;min-width:185px}
+.ra-v9-contact-actions a{display:flex;align-items:center;justify-content:space-between;gap:16px;border-radius:10px;padding:14px 17px;font-weight:750;text-decoration:none;transition:transform .2s ease}
+.ra-v9-contact-actions a:hover{transform:translateY(-2px)}
+.ra-v9-call{background:#fff;color:#27204f}.ra-v9-callback{border:1px solid rgba(255,255,255,.5);color:#fff}
+@media(max-width:750px){.ra-v9-contact{padding:30px 0}.ra-v9-contact-inner{flex-direction:column;align-items:stretch;gap:22px}.ra-v9-contact-actions{flex-direction:column}}
