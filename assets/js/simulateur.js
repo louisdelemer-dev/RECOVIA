@@ -12,7 +12,8 @@ const kindLabels={commercial:'facture commerciale',services:'prestation de servi
 const reminderLabels={none:'aucune relance',one:'une relance',many:'plusieurs relances'};
 const radio=name=>document.querySelector(`input[name="${name}"]:checked`)?.value;
 function calc(e){if(e)e.preventDefault();const count=Number($('count').value),avg=Number($('average').value);
-if(!Number.isInteger(count)||count<1||count>100000||!Number.isFinite(avg)||avg<1||avg>10000000){$('sim-form').reportValidity();return;}
+if(!$('count').value.trim()||!$('average').value.trim()||!Number.isInteger(count)||count<1||count>100000||!Number.isFinite(avg)||avg<1||avg>10000000){$('sim-results').hidden=true;$('sim-pending').hidden=false;document.querySelector('.results').classList.add('is-pending');return;}
+$('sim-results').hidden=false;$('sim-pending').hidden=true;document.querySelector('.results').classList.remove('is-pending');
 const customer=radio('customer')||'b2b',type=$('debt-kind').value,days=$('age').value,rem=radio('reminders')||'one';
 // Hypothèses illustratives et non résultats constatés par RECOVIA.
 const central=Math.max(.08,Math.min(.92,base[customer]*(kind[type]||1)*(age[days]||1)*(reminder[rem]||1)));
@@ -22,26 +23,41 @@ const total=count*avg, collectedLow=total*low,collectedHigh=total*high;
 // Simulation illustrative, pas un barème contractuel ni une offre tarifaire.
 const feeLow=collectedLow*.08,feeHigh=collectedHigh*.08;
 const ttcLow=feeLow*1.2,ttcHigh=feeHigh*1.2;
-$('total').textContent=euro.format(total);
+animateNumber('total',[total],false);
 $('summary').textContent=`${count.toLocaleString('fr-FR')} dossier${count>1?'s':''} · ${euro.format(avg)} de montant moyen`;
-$('estimated-rate').textContent=`${pct.format(low)} à ${pct.format(high)}`;
+animateNumber('estimated-rate',[low,high],true);
 $('estimated-bar').style.width=`${Math.round(high*100)}%`;
-$('collected').textContent=`${euro.format(collectedLow)} à ${euro.format(collectedHigh)}`;
-$('fees').textContent=`${euro.format(feeLow)} à ${euro.format(feeHigh)}`;
-$('net').textContent=`${euro.format(Math.max(0,collectedLow-ttcLow))} à ${euro.format(Math.max(0,collectedHigh-ttcHigh))}`;
+animateNumber('collected',[collectedLow,collectedHigh],false);
+animateNumber('fees',[feeLow,feeHigh],false);
+animateNumber('net',[Math.max(0,collectedLow-ttcLow),Math.max(0,collectedHigh-ttcHigh)],false);
 $('assumptions').textContent=`${customer.toUpperCase()} · ${kindLabels[type]} · ${ageLabels[days]} · ${reminderLabels[rem]}`;
 $('rate-factors').textContent='Fourchette indicative de 12 points, issue de paramètres illustratifs, non de statistiques RECOVIA.';
 const params=new URLSearchParams({demande:'simulation-recouvrement',dossiers:String(count),montant:String(Math.round(total)),clientele:customer,anciennete:days});
 $('contact-cta').href='contact.html?'+params.toString();}
+const numberAnimations=new Map();
+function animateNumber(id,values,asPercent){
+ const node=$(id); const old=numberAnimations.get(id);
+ if(old)cancelAnimationFrame(old.raf);
+ const previous=(old && old.target.length===values.length)?old.target:values.map(()=>0);
+ const target=values.slice(),start=performance.now(),duration=460;
+ const format=nums=>nums.map(n=>asPercent?pct.format(n):euro.format(n)).join(' à ');
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){node.textContent=format(target);numberAnimations.set(id,{target,raf:null});return;}
+ const state={target,raf:null};numberAnimations.set(id,state);
+ function frame(now){const t=Math.min(1,(now-start)/duration),ease=1-Math.pow(1-t,3);
+ node.textContent=format(target.map((n,i)=>previous[i]+(n-previous[i])*ease));
+ if(t<1)state.raf=requestAnimationFrame(frame);
+ }
+ state.raf=requestAnimationFrame(frame);
+}
 document.addEventListener('DOMContentLoaded',()=>{
  const form=$('sim-form');
- form.addEventListener('submit',event=>{
-   if(!form.reportValidity())return;
-   calc(event);
-   $('sim-results').hidden=false;
-   $('sim-pending').hidden=true;
-   document.querySelector('.results').classList.remove('is-pending');
-   $('sim-results').scrollIntoView({behavior:'smooth',block:'nearest'});
- });
+ form.addEventListener('submit',event=>event.preventDefault());
+ const update=()=>{
+   calc();
+   if(!$('sim-results').hidden){$('sim-pending').hidden=true;document.querySelector('.results').classList.remove('is-pending');}
+ };
+ form.addEventListener('input',update);
+ form.addEventListener('change',update);
+ update();
 });
 })();

@@ -99,3 +99,7 @@ body.simulateur-page .results-content .scenario-title + .main-metric{margin-top:
 body.simulateur-page .results-content .details>div{min-width:0}
 body.simulateur-page .results-content .details>div:last-child b{overflow-wrap:anywhere}
 body.simulateur-page .results-content .disclaimer{margin-top:17px!important;margin-bottom:22px!important}
+
+/* V9 : guidance while estimating live */
+.simulateur-page .live-hint{font-size:12px;line-height:1.5;color:#706e8a;background:#f6f3ff;border-radius:9px;padding:13px 15px;margin:7px 0 0;}
+.simulateur-page input::placeholder{color:#a5a4b3;font-weight:400;}
