@@ -1,0 +1,11 @@
+RECOVIA — V11 MENU + SUPPRESSION DES TRACEURS GOOGLE
+
+Installer après la V10. Remplacer les fichiers du ZIP à leur emplacement identique dans GitHub.
+
+1. Sous-menu « Ressources » présent en HTML statique sur les pages du site, ordinateur et mobile, avec Annuaire des entreprises.
+2. Bandeau cookies « Gérer les cookies » et panneau de consentement supprimés du JS.
+3. Les scripts de Google Analytics/Google Ads (gtag) sont supprimés des HTML pour éviter un suivi soumis à consentement sans bannière. Cela suspend les mesures Analytics et conversions Google Ads ; les campagnes publicitaires peuvent continuer mais l'attribution sera affectée.
+4. Politique de confidentialité mise à jour pour refléter cette désactivation.
+5. Les consentements aux formulaires (rappel, candidature) sont conservés.
+
+ATTENTION : avant mise en ligne, vérifier l'absence d'autres balises publicitaires injectées par Netlify ou des services tiers, et tester le menu mobile. Si Google Ads/Analytics doivent être conservés, rétablir un mécanisme de consentement conforme au lieu de supprimer la bannière.
