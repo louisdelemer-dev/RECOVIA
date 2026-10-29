@@ -1,0 +1,14 @@
+RECOVIA — Annuaire Étape 4 / Refonte UX
+
+Installer après les étapes 1, 2 et 3.
+À la racine de votre dépôt, remplacez :
+- annuaire.html
+- fiche-entreprise.html
+- assets/css/annuaire.css
+- assets/js/annuaire.js
+
+Menu global, sitemap et autres fichiers du site : NON MODIFIÉS.
+Les deux pages restent en noindex,nofollow,noarchive, et accessibles par URL directe (non protégées).
+Liens directs : /annuaire.html et /fiche-entreprise.html?siren=XXXXXXXXX.
+L'intégration documentaire et les appels API existants sont préservés.
+Testez recherche, filtres, pagination, navigation et liens documentaires après déploiement.
