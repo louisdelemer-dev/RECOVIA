@@ -1,7 +1,11 @@
-RECOVIA — Simulateur V3 (après la V2)
+RECOVIA – Simulateur V7
 
-Remplacer uniquement :
+Remplacer dans le dépôt GitHub :
+- index.html
 - simulateur.html
+- assets/css/simulateur.css
 - assets/js/simulateur.js
 
-Évolutions : fourchette de taux de 12 points de pourcentage, hypothèses plus élevées pour les créances récentes, base B2B supérieure à B2C, exemple de commission 8 % HT. Les pourcentages ne sont pas des résultats constatés et ne garantissent aucun recouvrement. Aucun autre fichier modifié.
+Résultats affichés seulement après clic. Cartes immobiles. Encadré compact sur l'accueil, sans formulaire supplémentaire.
+Aucun changement du barème de simulation, ni des menus.
+Contrôler le déploiement Netlify et les rendus sur mobile et ordinateur.

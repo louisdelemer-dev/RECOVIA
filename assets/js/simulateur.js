@@ -34,5 +34,15 @@ $('assumptions').textContent=`${customer.toUpperCase()} · ${kindLabels[type]} �
 $('rate-factors').textContent='Fourchette indicative de 12 points, issue de paramètres illustratifs, non de statistiques RECOVIA.';
 const params=new URLSearchParams({demande:'simulation-recouvrement',dossiers:String(count),montant:String(Math.round(total)),clientele:customer,anciennete:days});
 $('contact-cta').href='contact.html?'+params.toString();}
-document.addEventListener('DOMContentLoaded',()=>{const form=$('sim-form');form.addEventListener('submit',calc);form.addEventListener('change',calc);for(const id of ['count','average'])$(id).addEventListener('input',calc);calc();});
+document.addEventListener('DOMContentLoaded',()=>{
+ const form=$('sim-form');
+ form.addEventListener('submit',event=>{
+   if(!form.reportValidity())return;
+   calc(event);
+   $('sim-results').hidden=false;
+   $('sim-pending').hidden=true;
+   document.querySelector('.results').classList.remove('is-pending');
+   $('sim-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+ });
+});
 })();
