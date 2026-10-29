@@ -27,3 +27,46 @@
  .header .recovia-resources-dropdown{position:static;flex-basis:100%;box-shadow:none}
  .header .btn-header,.header .btn-secondary{width:fit-content}
 }
+
+
+/* V6 : isolation visuelle du simulateur pour éviter les conflits avec les styles globaux du site */
+body.simulateur-page{background:#f7f8fc;color:#1d2140}
+body.simulateur-page main{display:block}
+body.simulateur-page .hero h1{color:#fff}
+body.simulateur-page .hero h1 em{color:#b7a3ff}
+body.simulateur-page .hero p{color:#e0dff2}
+body.simulateur-page .layout{position:relative;z-index:2}
+body.simulateur-page .panel{overflow:hidden}
+body.simulateur-page .choice,
+body.simulateur-page .field,
+body.simulateur-page .field-grid,
+body.simulateur-page .main-metric,
+body.simulateur-page .details,
+body.simulateur-page .scenario-row,
+body.simulateur-page .net-result{position:relative;z-index:2}
+body.simulateur-page .choice::before,
+body.simulateur-page .choice::after,
+body.simulateur-page .choice label::before,
+body.simulateur-page .choice label::after,
+body.simulateur-page .field::before,
+body.simulateur-page .field::after,
+body.simulateur-page .panel::before,
+body.simulateur-page .panel::after{content:none !important;display:none !important}
+body.simulateur-page .choice label{position:relative;display:block;flex:1 1 0;min-width:90px;background:transparent}
+body.simulateur-page .choice span{position:relative;z-index:3;background:#fff;min-height:50px;display:flex;align-items:center;justify-content:center}
+body.simulateur-page select,
+body.simulateur-page .input-unit,
+body.simulateur-page .choice span{box-shadow:none}
+body.simulateur-page .details>div{align-items:flex-start}
+body.simulateur-page .details b{max-width:52%;text-align:right;white-space:normal;line-height:1.5}
+body.simulateur-page .disclaimer{display:block;background:#faf9fc;border:1px solid #e9e5f2;border-radius:12px;padding:14px 16px;font-size:12px;line-height:1.7;color:#66657a;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+body.simulateur-page .phone{padding-bottom:2px}
+@media(max-width:980px){
+  body.simulateur-page .details b{max-width:50%}
+}
+@media(max-width:640px){
+  body.simulateur-page .details>div{flex-direction:column;gap:6px}
+  body.simulateur-page .details b{max-width:100%;text-align:left}
+  body.simulateur-page .choice{flex-direction:column}
+  body.simulateur-page .choice label{width:100%}
+}
