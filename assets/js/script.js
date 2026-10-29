@@ -43,11 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 
-// Google tag + consentement cookies RECOVIA — 2026-10-29
+// Google tag + Consent Mode v2 RECOVIA — 2026-10-29
 (function () {
   var GOOGLE_TAG_ID = 'G-QY72109W09';
   var CONSENT_KEY = 'recovia_google_consent';
   var LEAD_SESSION_KEY = 'recovia_generate_lead_sent';
+
+  // Initialise la balise Google sur toutes les pages, mais refuse tout stockage
+  // publicitaire/analytique tant que l'utilisateur n'a pas consenti.
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+
+  window.gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  window.gtag('js', new Date());
+  window.gtag('config', GOOGLE_TAG_ID);
+
+  if (!window.__recoviaGoogleTagLoaded) {
+    window.__recoviaGoogleTagLoaded = true;
+    var googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GOOGLE_TAG_ID);
+    document.head.appendChild(googleTag);
+  }
 
   function injectConsentStyles() {
     if (document.getElementById('recovia-cookie-consent-styles')) return;
@@ -62,12 +86,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
   }
 
+  function getConsent() {
+    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+
+  function saveConsent(value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+  }
+
+  function updateGoogleConsent(value) {
+    var granted = value === 'granted' ? 'granted' : 'denied';
+    window.gtag('consent', 'update', {
+      analytics_storage: granted,
+      ad_storage: granted,
+      ad_user_data: granted,
+      ad_personalization: granted
+    });
+  }
+
   function isLeadConfirmationPage() {
     return /\/contact-envoye(?:\.html)?\/?$/.test(window.location.pathname);
   }
 
   function sendLeadEventOnce() {
-    if (!isLeadConfirmationPage() || typeof window.gtag !== 'function') return;
+    if (!isLeadConfirmationPage() || getConsent() !== 'granted') return;
     try {
       if (sessionStorage.getItem(LEAD_SESSION_KEY) === '1') return;
       window.gtag('event', 'generate_lead', {
@@ -78,40 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) {
       window.gtag('event', 'generate_lead', { lead_source: 'contact_form' });
     }
-  }
-
-  function loadGoogleTag() {
-    if (window.__recoviaGoogleTagLoaded) {
-      sendLeadEventOnce();
-      return;
-    }
-    window.__recoviaGoogleTagLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
-
-    window.gtag('consent', 'default', {
-      analytics_storage: 'granted',
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted'
-    });
-
-    window.gtag('js', new Date());
-    window.gtag('config', GOOGLE_TAG_ID);
-
-    var tag = document.createElement('script');
-    tag.async = true;
-    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GOOGLE_TAG_ID);
-    tag.onload = sendLeadEventOnce;
-    document.head.appendChild(tag);
-  }
-
-  function saveConsent(value) {
-    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
-  }
-
-  function getConsent() {
-    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
   }
 
   function createConsentUi() {
@@ -143,8 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!button) return;
       var choice = button.getAttribute('data-cookie-choice');
       saveConsent(choice);
+      updateGoogleConsent(choice);
       banner.hidden = true;
-      if (choice === 'granted') loadGoogleTag();
+      if (choice === 'granted') sendLeadEventOnce();
     });
 
     settings.addEventListener('click', function () {
@@ -153,9 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var current = getConsent();
     if (current === 'granted') {
+      updateGoogleConsent('granted');
       banner.hidden = true;
-      loadGoogleTag();
+      sendLeadEventOnce();
     } else if (current === 'denied') {
+      updateGoogleConsent('denied');
       banner.hidden = true;
     }
   }

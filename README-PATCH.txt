@@ -1,20 +1,18 @@
-PATCH RECOVIA – Google tag / suivi des leads – 29/10/2026
+PATCH RECOVIA — GOOGLE TAG / CONSENT MODE V2
 
-Fichiers à remplacer :
+Fichier à remplacer :
 - assets/js/script.js
-- politique-confidentialite.html
-- mentions-legales.html
-- message-debiteur-envoye.html
 
-Fonctionnement :
-- La balise Google G-QY72109W09 n'est chargée qu'après acceptation des cookies.
-- Un bouton "Gérer les cookies" permet de modifier le choix.
-- La page /contact-envoye(.html) envoie l'événement GA4 "generate_lead" après consentement.
-- L'événement n'est envoyé qu'une fois par session afin d'éviter les doublons lors d'un rechargement.
-- La politique de confidentialité est mise à jour.
+Ce correctif :
+- charge la balise Google G-QY72109W09 sur toutes les pages ;
+- applique Consent Mode v2 avec analytics/ad storage refusés par défaut ;
+- ne passe les consentements à "granted" qu'après clic sur « Tout accepter » ;
+- conserve « Tout refuser » et « Gérer les cookies » ;
+- conserve l'événement generate_lead sur /contact-envoye uniquement après consentement ;
+- évite le double comptage du lead lors d'un rechargement de page dans la même session.
 
-Après déploiement :
-1. Ouvrir le site en navigation privée.
-2. Accepter les cookies.
-3. Dans Google Ads, cliquer sur "Tester l'installation".
-4. Configurer/importer "generate_lead" comme conversion principale RECOVIA (ou créer une conversion basée sur /contact-envoye).
+Après déploiement Netlify :
+1. ouvrir recovia-france.fr dans une fenêtre privée ;
+2. la balise doit être détectable même avant acceptation ;
+3. dans Google Ads, cliquer sur « Retester » ;
+4. pour tester la conversion, accepter les cookies puis soumettre le formulaire jusqu'à /contact-envoye.
