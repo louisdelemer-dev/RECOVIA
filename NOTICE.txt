@@ -1,9 +1,10 @@
-RECOVIA — Menu et pied de page unifiés
+RECOVIA — Correctif V14
 
-Remplacer les fichiers HTML de cette archive dans votre dépôt, sans supprimer les autres fichiers.
+Installer sur la base V13 :
+- annuaire.html
+- fiche-entreprise.html
+- comparateur.html
+- simulateur.html
+- assets/css/recovia-ui-unifie.css (nouveau)
 
-Menu identique : sans Accueil ni Confier vos impayés, avec téléphone 01 75 43 88 22, régler un dossier, sous-menu Ressources comprenant Annuaire et Simulateur. Pied de page identique sur toutes les pages.
-
-Le fichier index.html est repris de la V8 du simulateur ; simulateur.html de la V9 ; pages de l’annuaire de la V10 ; autres pages de la V12. Si vous avez apporté des modifications depuis, fusionnez-les avant remplacement.
-
-Vérifier le déploiement Netlify et le menu mobile.
+Conserve le contenu des pages et rétablit les styles et scripts de navigation partagés du site RECOVIA. Vérifier menu mobile, dropdowns et footer sur Netlify.
