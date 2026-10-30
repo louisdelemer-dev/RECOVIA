@@ -1,10 +1,5 @@
-RECOVIA — Correctif V14
-
-Installer sur la base V13 :
-- annuaire.html
-- fiche-entreprise.html
-- comparateur.html
-- simulateur.html
-- assets/css/recovia-ui-unifie.css (nouveau)
-
-Conserve le contenu des pages et rétablit les styles et scripts de navigation partagés du site RECOVIA. Vérifier menu mobile, dropdowns et footer sur Netlify.
+RECOVIA V15 — Correction d'affichage du simulateur après V14
+Remplacez simulateur.html et ajoutez assets/css/simulateur-fix-v15.css.
+Ne remplacez aucun fichier commun (menu, pied de page, style.css).
+Ce correctif restaure le fond violet du hero, les cartes blanches, les textes sombres, les boutons et contrôles. La logique JS reste inchangée.
+Tester après Netlify avec rechargement forcé (Ctrl+F5).
