@@ -1,1 +1,6 @@
-V16 RECOVIA — Corrige exclusivement les deux groupes de boutons du simulateur. Remplacer simulateur.html et assets/css/simulateur-fix-v15.css. Le paramètre de cache CSS a été incrémenté. Le menu, le pied de page et les calculs ne sont pas modifiés. Tester après déploiement sur mobile et ordinateur.
+RECOVIA — Page Conformité & garanties V2
+
+Remplacer uniquement conformite.html et assets/css/conformite.css.
+Le fichier HTML référence les logos Hiscox et Ministère de la Justice via des ressources externes connues ; texte de secours si indisponibles.
+Les mentions sous les 3 cartes ont été remplacées. Les autres pages restent intactes.
+Vérifier sur Netlify les images avant communication commerciale.
