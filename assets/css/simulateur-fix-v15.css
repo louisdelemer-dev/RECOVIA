@@ -31,3 +31,48 @@ body.simulateur-page main>section.layout .details span{color:#77748c!important}
 body.simulateur-page main>section.layout .disclaimer{color:#66657a!important;background:#faf9fc!important}
 @media(max-width:850px){body.simulateur-page main>section.layout{grid-template-columns:minmax(0,1fr)!important}}
 @media(max-width:520px){body.simulateur-page main>section.layout{padding:0 16px!important}body.simulateur-page main>section.layout>.panel{padding:22px!important}}
+
+
+/* V16 : corrections limitées aux choix B2B/B2C et aux relances */
+body.simulateur-page main>section.layout .field .choice{
+  display:flex!important;flex-flow:row nowrap!important;
+  align-items:stretch!important;gap:8px!important;
+  width:100%!important;max-width:100%!important;
+  min-height:0!important;overflow:visible!important;
+  margin:0!important;padding:0!important;
+  border:0!important;background:transparent!important;
+}
+body.simulateur-page main>section.layout .field .choice>label{
+  position:relative!important;display:block!important;
+  flex:1 1 0%!important;width:0!important;min-width:0!important;
+  max-width:none!important;margin:0!important;padding:0!important;
+  overflow:visible!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+}
+body.simulateur-page main>section.layout .field .choice>label>span{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  position:relative!important;width:100%!important;min-width:0!important;
+  height:auto!important;min-height:43px!important;
+  box-sizing:border-box!important;margin:0!important;padding:10px 5px!important;
+  overflow:visible!important;text-align:center!important;
+  white-space:normal!important;line-height:1.3!important;
+  background:#fff!important;color:#202443!important;
+  border:1px solid #dedce8!important;border-radius:9px!important;
+  transform:none!important;clip-path:none!important;
+}
+body.simulateur-page main>section.layout .field .choice>label::before,
+body.simulateur-page main>section.layout .field .choice>label::after,
+body.simulateur-page main>section.layout .field .choice>label>span::before,
+body.simulateur-page main>section.layout .field .choice>label>span::after{
+  display:none!important;content:none!important;
+}
+body.simulateur-page main>section.layout .field .choice>label>input:checked+span{
+  background:#f1ecff!important;border-color:#7144d1!important;color:#5c30b7!important;
+}
+body.simulateur-page main>section.layout .field .choice>label>input:focus-visible+span{
+  outline:2px solid #7144d1!important;outline-offset:2px!important;
+}
+@media(max-width:520px){
+ body.simulateur-page main>section.layout .field .choice{flex-flow:row nowrap!important;gap:5px!important}
+ body.simulateur-page main>section.layout .field .choice>label>span{font-size:11px!important;padding:10px 3px!important}
+}

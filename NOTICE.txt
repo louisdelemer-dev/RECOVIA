@@ -1,5 +1,1 @@
-RECOVIA V15 — Correction d'affichage du simulateur après V14
-Remplacez simulateur.html et ajoutez assets/css/simulateur-fix-v15.css.
-Ne remplacez aucun fichier commun (menu, pied de page, style.css).
-Ce correctif restaure le fond violet du hero, les cartes blanches, les textes sombres, les boutons et contrôles. La logique JS reste inchangée.
-Tester après Netlify avec rechargement forcé (Ctrl+F5).
+V16 RECOVIA — Corrige exclusivement les deux groupes de boutons du simulateur. Remplacer simulateur.html et assets/css/simulateur-fix-v15.css. Le paramètre de cache CSS a été incrémenté. Le menu, le pied de page et les calculs ne sont pas modifiés. Tester après déploiement sur mobile et ordinateur.
