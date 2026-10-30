@@ -1,6 +1,5 @@
-RECOVIA — Page Conformité & garanties V2
+Patch RECOVIA conformité V3
 
-Remplacer uniquement conformite.html et assets/css/conformite.css.
-Le fichier HTML référence les logos Hiscox et Ministère de la Justice via des ressources externes connues ; texte de secours si indisponibles.
-Les mentions sous les 3 cartes ont été remplacées. Les autres pages restent intactes.
-Vérifier sur Netlify les images avant communication commerciale.
+Remplacer uniquement conformite.html à la racine du dépôt GitHub.
+
+Suppression de la section « Justificatifs / Des garanties qui peuvent être documentées » et de la question FAQ sur les justificatifs. Toutes les autres rubriques, logos, styles, en-tête et pied de page sont conservés.
