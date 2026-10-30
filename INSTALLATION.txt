@@ -1,9 +1,10 @@
-RECOVIA – Nouvelle actualité juridique du 29 octobre 2026
+RECOVIA - Page Conformité et garanties
 
-Copier les trois fichiers à la racine du dépôt GitHub RECOVIA :
-- recouvrement-sans-juge-decret-octobre-2026.html : nouvel article
-- ressources.html : ajout de la carte dans les ressources
-- sitemap.xml : indexation du nouvel article
+Ajouter conformite.html et assets/css/conformite.css.
+Remplacer uniquement les fichiers HTML présents dans ce ZIP, qui ont reçu un lien Conformité et garanties dans Ressources et Informations utiles.
 
-Tous les autres fichiers et le widget de rappel restent inchangés.
-Ne pas annoncer la procédure comme applicable avant l’arrêté d’entrée en vigueur.
+Le logo BNP Paribas est appelé depuis Wikimedia Commons (source publique, non stockée dans le ZIP). Une validation de son utilisation au regard des droits de marque est recommandée. En l’absence de réseau ou si la ressource est indisponible, le logo peut ne pas apparaître. Vous pouvez substituer un fichier de marque autorisé et hébergé localement.
+
+Avant mise en ligne: vérifier attestation Hiscox, existence du compte dédié BNP Paribas et récépissé / preuve d’envoi de la déclaration au procureur de Nanterre. Ces garanties sont déclarées par RECOVIA et non certifiées dans ce patch.
+
+Aucun numéro de police, plafond de garantie ou RIB n’est publié.
