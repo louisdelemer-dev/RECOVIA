@@ -1,4 +1,5 @@
-RECOVIA - Page identification du numéro, version épurée
+RECOVIA - Page d’identification du numéro 01 75 43 88 22
 
-Remplacer uniquement 0175438822.html à la racine du dépôt GitHub.
-Le sitemap et les autres pages restent inchangés.
+Remplacer uniquement le fichier 0175438822.html à la racine du dépôt GitHub RECOVIA.
+
+Modification : précision des trois motifs possibles d’appel (recouvrement, demande reçue, prospection commerciale auprès de professionnels).
