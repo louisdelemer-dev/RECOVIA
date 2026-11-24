@@ -1,7 +1,4 @@
-RECOVIA — Page identification du numéro 01 75 43 88 22
+RECOVIA - Page identification du numéro, version épurée
 
-Ajouter 0175438822.html à la racine du dépôt GitHub.
-Remplacer sitemap.xml à la racine du dépôt GitHub (vérifier les entrées ajoutées à votre sitemap depuis le 29 octobre 2026 pour éviter de les écraser).
-Page : https://recovia-france.fr/0175438822.html
-Après déploiement, demander l’indexation de cette URL dans Google Search Console.
-Aucune autre page ou fonctionnalité du site n’est modifiée.
+Remplacer uniquement 0175438822.html à la racine du dépôt GitHub.
+Le sitemap et les autres pages restent inchangés.
