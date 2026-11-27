@@ -114,3 +114,30 @@ body.rv-editorial-unified .rg-layout>article table{max-width:100%}
  body.rv-editorial-unified .rv-layout>article h2,body.rv-editorial-unified .rg-layout>article h2{margin-top:38px;font-size:1.43rem}
  body.rv-editorial-unified .rv-layout>article p,body.rv-editorial-unified .rg-layout>article p{font-size:1rem;line-height:1.76}
 }
+
+/* Correctifs du 27 novembre : lisibilite des encarts et rapprochement de l'image. */
+body.rv-editorial-unified .rv-layout>article .fe-cta h2,
+body.rv-editorial-unified .rg-layout>article .fe-cta h2 {
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1;
+  text-shadow:none;
+}
+body.rv-editorial-unified .rv-layout>article .fe-cta p,
+body.rv-editorial-unified .rg-layout>article .fe-cta p {
+  color:#edf3ff!important;
+}
+/* Cette page affiche la photographie dans la grille de lecture : limiter les marges cumulees. */
+body.rv-editorial-unified:has(.fe-cover) .page-hero {
+  padding-bottom:12px!important;
+}
+body.rv-editorial-unified:has(.fe-cover) .page-hero + section.grey {
+  padding-top:0!important;
+}
+body.rv-editorial-unified:has(.fe-cover) .rv-layout {
+  padding-top:22px!important;
+}
+@media (max-width:600px) {
+  body.rv-editorial-unified:has(.fe-cover) .page-hero {padding-bottom:8px!important;}
+  body.rv-editorial-unified:has(.fe-cover) .rv-layout {padding-top:18px!important;}
+}

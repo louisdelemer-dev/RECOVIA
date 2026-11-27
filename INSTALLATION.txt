@@ -1,7 +1,6 @@
-RECOVIA – Uniformisation de la mise en forme des dix articles Ressources
+RECOVIA - Correctif de mise en forme
 
-Le modele de reference est « Quand faire appel a une societe de recouvrement ? ».
-Decompresser puis copier les 10 fichiers HTML a la racine de GitHub et le fichier assets/css/ressources-sommaire.css a son emplacement.
-Le fond, les titres, les espacements, les images et les colonnes laterales sont harmonises.
-Aucun contenu redactionnel ni aucune metadonnee SEO n’a ete modifie.
-Controle recommande sur desktop et mobile apres Netlify.
+1. Remplacer assets/css/ressources-sommaire.css
+2. Remplacer facturation-electronique-recouvrement-impayes.html a la racine du depot GitHub.
+
+Corrige le titre sombre du bloc bleu et rapproche la photographie du titre. Aucun contenu editorial ou SEO n est modifie.
