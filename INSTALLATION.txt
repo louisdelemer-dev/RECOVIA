@@ -1,12 +1,8 @@
-RECOVIA — ARTICLE SEO FACTURATION ÉLECTRONIQUE / RECOUVREMENT
-27 novembre 2026
+RECOVIA — Ajout de l’image DOC’UP à l’article facturation électronique
 
-À déposer à la racine du dépôt GitHub :
-- facturation-electronique-recouvrement-impayes.html (nouvelle page)
-- ressources.html (nouvel article en première position, menu Ressources conservé)
-- sitemap.xml (URL ajoutée, autres URL et pages de numéros conservées)
+Remplacer à la racine du dépôt GitHub :
+- facturation-electronique-recouvrement-impayes.html
 
-Le correctif préserve les éléments déjà présents dans le dépôt RECOVIA, notamment le menu Ressources, les pages de numéros et les scripts existants. Aucune modification à index.html, contact.html, aux formulaires ou au widget rappel.
+Modifications : image en ouverture de l’article, balises og:image, twitter:image et champ image dans Article schema.org. Aucun autre fichier modifié.
 
-URL prévue : https://recovia-france.fr/facturation-electronique-recouvrement-impayes.html
-Après déploiement, vérifier la page sur ordinateur/mobile et demander l'indexation dans Google Search Console.
+IMPORTANT : l’image est hébergée chez DOC’UP et elle peut être soumise au droit d’auteur. Un crédit ne vaut pas autorisation de réutilisation. Vérifier l’accord de DOC’UP et l’autorisation de hotlink, puis privilégier une copie locale autorisée dans assets/images/ pour fiabiliser l’affichage et les aperçus sociaux. Le chargement et les aperçus depuis le domaine tiers ne sont pas garantis.
