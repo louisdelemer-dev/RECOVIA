@@ -1,13 +1,7 @@
-RECOVIA – Sommaires et encarts de contact dans les articles Ressources
+RECOVIA – Uniformisation de la mise en forme des dix articles Ressources
 
-Correctif daté du 27 novembre 2026.
-
-Copier les 10 fichiers HTML à la racine du dépôt GitHub en remplaçant les versions existantes.
-Créer (ou remplacer) le fichier assets/css/ressources-sommaire.css dans le dossier indiqué.
-
-Ce correctif conserve les textes, images, balises SEO et liens existants.
-Il ajoute un sommaire adapté au contenu de chaque article et un encart « Un impayé à recouvrer ? ».
-Les deux guides possédant déjà un sommaire conservent leur présentation d’origine ; le guide de gestion des impayés conserve son propre encart.
-Sur ordinateur, la colonne latérale reste accessible pendant le défilement. Sur mobile, elle passe après l’article.
-
-Après déploiement Netlify, vérifier particulièrement les pages longues et l’affichage sur mobile.
+Le modele de reference est « Quand faire appel a une societe de recouvrement ? ».
+Decompresser puis copier les 10 fichiers HTML a la racine de GitHub et le fichier assets/css/ressources-sommaire.css a son emplacement.
+Le fond, les titres, les espacements, les images et les colonnes laterales sont harmonises.
+Aucun contenu redactionnel ni aucune metadonnee SEO n’a ete modifie.
+Controle recommande sur desktop et mobile apres Netlify.

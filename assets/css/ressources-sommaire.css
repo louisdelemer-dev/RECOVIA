@@ -21,3 +21,96 @@
 @media(max-width:880px){.rg-layout .rg-sidebar{position:static;max-height:none}}
 /* La page du décret était volontairement étroite avant l'ajout du sommaire. */
 .rec26-shell{max-width:1200px!important}
+
+
+
+/* ======================================================================
+   RECOVIA | Charte editoriale Ressources - reference :
+   quand-faire-appel-societe-recouvrement.html
+   Appliquee uniquement aux articles marques .rv-editorial-unified.
+   ====================================================================== */
+body.rv-editorial-unified,body.rv-editorial-unified main{background:#fff;color:#243850}
+body.rv-editorial-unified main>section.grey,
+body.rv-editorial-unified main>section.rec26-main{background:#fff!important}
+body.rv-editorial-unified main>section:not(.page-hero):not(.rec26-hero),
+body.rv-editorial-unified main>div.rv-layout,
+body.rv-editorial-unified main>div.rg-layout{background-color:#fff}
+/* Entete : fond clair, identite et rythme identiques a l'article de reference. */
+body.rv-editorial-unified .page-hero,
+body.rv-editorial-unified .rec26-hero{background:#fff!important;color:#142e53!important;padding-top:58px;padding-bottom:34px}
+body.rv-editorial-unified .page-hero h1,
+body.rv-editorial-unified .rec26-hero h1{color:#142e53!important;line-height:1.17;letter-spacing:-.03em}
+body.rv-editorial-unified .page-hero p,
+body.rv-editorial-unified .rec26-hero p{color:#50617b!important;line-height:1.72}
+body.rv-editorial-unified .rec26-hero .rec26-kicker{color:#b7352b!important}
+body.rv-editorial-unified .page-hero .container,
+body.rv-editorial-unified .rec26-hero .container{max-width:1120px}
+/* Images d'ouverture : alignement, marge et proportions constantes. */
+body.rv-editorial-unified .article-photo,
+body.rv-editorial-unified .rg-photo{max-width:1060px;margin:24px auto 0;padding:0 24px}
+body.rv-editorial-unified .article-photo img,
+body.rv-editorial-unified .rg-photo img{width:100%;height:auto;aspect-ratio:16/9;max-height:420px;object-fit:cover;border-radius:15px}
+body.rv-editorial-unified .article-photo figcaption,
+body.rv-editorial-unified .rg-photo figcaption,
+body.rv-editorial-unified .fe-cover figcaption{margin:9px 0 0;font-size:.78rem;line-height:1.5;color:#6a788b;text-align:right}
+/* Grille article + colonne fixe de lecture. */
+body.rv-editorial-unified .rv-layout,
+body.rv-editorial-unified .rg-layout{width:100%;max-width:1120px;margin:0 auto;padding:47px 24px 76px;display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:44px;align-items:start;background:#fff}
+body.rv-editorial-unified .rec26-shell{max-width:1200px;padding:0 24px}
+body.rv-editorial-unified .rec26-main{padding:0 0 25px!important}
+body.rv-editorial-unified .rec26-article{padding:0!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important}
+body.rv-editorial-unified .rv-layout>article,
+body.rv-editorial-unified .rg-layout>article{min-width:0;max-width:none!important;margin:0!important;padding:0!important;background:transparent!important;border-radius:0}
+/* Corps du texte : meme lisibilite, interlignage, espacements et contraste. */
+body.rv-editorial-unified .rv-layout>article,
+body.rv-editorial-unified .rg-layout>article{color:#334962;font-size:1.035rem;line-height:1.84}
+body.rv-editorial-unified .rv-layout>article p,
+body.rv-editorial-unified .rg-layout>article p{font-size:1.035rem;line-height:1.84;margin:0 0 19px;color:inherit}
+body.rv-editorial-unified .rv-layout>article li,
+body.rv-editorial-unified .rg-layout>article li{font-size:1.02rem;line-height:1.78;margin-bottom:9px}
+body.rv-editorial-unified .rv-layout>article ul,
+body.rv-editorial-unified .rg-layout>article ul,
+body.rv-editorial-unified .rv-layout>article ol,
+body.rv-editorial-unified .rg-layout>article ol{margin-top:9px;margin-bottom:24px;padding-left:25px}
+body.rv-editorial-unified .rv-layout>article h2,
+body.rv-editorial-unified .rg-layout>article h2{position:relative;color:#17325d;font-size:clamp(1.43rem,2.3vw,1.82rem);line-height:1.32;letter-spacing:-.018em;margin:50px 0 18px;padding-top:17px;scroll-margin-top:116px}
+body.rv-editorial-unified .rv-layout>article h2::before,
+body.rv-editorial-unified .rg-layout>article h2::before{content:"";display:block;position:absolute;top:0;left:0;width:40px;height:3px;background:#c63c33;border-radius:3px;margin:0}
+body.rv-editorial-unified .rv-layout>article h3,
+body.rv-editorial-unified .rg-layout>article h3{color:#17325d;font-size:1.2rem;line-height:1.4;margin:27px 0 12px}
+body.rv-editorial-unified .rv-layout>article .intro,
+body.rv-editorial-unified .rv-layout>article .fe-lead,
+body.rv-editorial-unified .rg-layout>article .rg-lead{font-size:1.17rem;line-height:1.78;color:#344c69;margin:24px 0 32px}
+body.rv-editorial-unified .rv-layout>article a,
+body.rv-editorial-unified .rg-layout>article a{overflow-wrap:anywhere}
+/* Respecter les encadres metier, sans transformer les CTA en sections ordinaires. */
+body.rv-editorial-unified .rv-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta,.recovia-support) h2,
+body.rv-editorial-unified .rg-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta,.recovia-support) h2{margin-top:0;padding-top:0}
+body.rv-editorial-unified .rv-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta,.recovia-support) h2::before,
+body.rv-editorial-unified .rg-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta,.recovia-support) h2::before{display:none}
+body.rv-editorial-unified .rv-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta) p,
+body.rv-editorial-unified .rg-layout>article :is(.article-cta,.rg-cta,.fe-cta,.rec26-cta) p{color:#e4edf9}
+body.rv-editorial-unified .fe-cover{margin:0 0 31px}
+body.rv-editorial-unified .fe-cover img{width:100%;height:auto;aspect-ratio:16/9;max-height:420px;object-fit:cover;border-radius:15px}
+/* Colonne latérale identique, quelle que soit la structure historique. */
+body.rv-editorial-unified .rv-sidebar,
+body.rv-editorial-unified .rg-sidebar{position:sticky;top:112px;align-self:start;max-height:calc(100vh - 130px);min-width:0;z-index:2}
+body.rv-editorial-unified .rv-toc,
+body.rv-editorial-unified .rg-toc{background:#f4f6fa;border:1px solid #e2e8f1;border-radius:14px}
+body.rv-editorial-unified .rv-sidebar-cta,
+body.rv-editorial-unified .rg-sidebar-cta{background:#22345e;border-radius:14px}
+/* Les cartes et tableaux des articles restent visibles et utilisables. */
+body.rv-editorial-unified .rv-layout>article table,
+body.rv-editorial-unified .rg-layout>article table{max-width:100%}
+@media(max-width:920px){
+ body.rv-editorial-unified .rv-layout,body.rv-editorial-unified .rg-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:29px;padding:30px 20px 60px}
+ body.rv-editorial-unified .rv-sidebar,body.rv-editorial-unified .rg-sidebar{position:static;max-height:none;grid-row:2}
+ body.rv-editorial-unified .rec26-shell{padding:0 20px}
+}
+@media(max-width:600px){
+ body.rv-editorial-unified .page-hero,body.rv-editorial-unified .rec26-hero{padding-top:38px;padding-bottom:22px}
+ body.rv-editorial-unified .rv-layout,body.rv-editorial-unified .rg-layout{padding:27px 18px 48px}
+ body.rv-editorial-unified .article-photo,body.rv-editorial-unified .rg-photo{padding:0 18px;margin-top:14px}
+ body.rv-editorial-unified .rv-layout>article h2,body.rv-editorial-unified .rg-layout>article h2{margin-top:38px;font-size:1.43rem}
+ body.rv-editorial-unified .rv-layout>article p,body.rv-editorial-unified .rg-layout>article p{font-size:1rem;line-height:1.76}
+}
