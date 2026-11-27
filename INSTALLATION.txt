@@ -1,8 +1,13 @@
-RECOVIA — Ajout de l’image DOC’UP à l’article facturation électronique
+RECOVIA – Sommaires et encarts de contact dans les articles Ressources
 
-Remplacer à la racine du dépôt GitHub :
-- facturation-electronique-recouvrement-impayes.html
+Correctif daté du 27 novembre 2026.
 
-Modifications : image en ouverture de l’article, balises og:image, twitter:image et champ image dans Article schema.org. Aucun autre fichier modifié.
+Copier les 10 fichiers HTML à la racine du dépôt GitHub en remplaçant les versions existantes.
+Créer (ou remplacer) le fichier assets/css/ressources-sommaire.css dans le dossier indiqué.
 
-IMPORTANT : l’image est hébergée chez DOC’UP et elle peut être soumise au droit d’auteur. Un crédit ne vaut pas autorisation de réutilisation. Vérifier l’accord de DOC’UP et l’autorisation de hotlink, puis privilégier une copie locale autorisée dans assets/images/ pour fiabiliser l’affichage et les aperçus sociaux. Le chargement et les aperçus depuis le domaine tiers ne sont pas garantis.
+Ce correctif conserve les textes, images, balises SEO et liens existants.
+Il ajoute un sommaire adapté au contenu de chaque article et un encart « Un impayé à recouvrer ? ».
+Les deux guides possédant déjà un sommaire conservent leur présentation d’origine ; le guide de gestion des impayés conserve son propre encart.
+Sur ordinateur, la colonne latérale reste accessible pendant le défilement. Sur mobile, elle passe après l’article.
+
+Après déploiement Netlify, vérifier particulièrement les pages longues et l’affichage sur mobile.
