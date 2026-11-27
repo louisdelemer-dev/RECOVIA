@@ -1,9 +1,12 @@
-RECOVIA - Trois pages officielles d’identification de numéros
+RECOVIA — ARTICLE SEO FACTURATION ÉLECTRONIQUE / RECOUVREMENT
+27 novembre 2026
 
-Ajouter à la racine GitHub :
-- 0362276225.html
-- 0162281287.html
-- 0162281286.html
-Remplacer sitemap.xml par la version jointe si le sitemap de votre dépôt n’a pas été modifié depuis la version ayant déjà intégré 0175438822.html. Sinon, ajoutez uniquement les trois URL au sitemap actuel afin de ne perdre aucune entrée récente.
+À déposer à la racine du dépôt GitHub :
+- facturation-electronique-recouvrement-impayes.html (nouvelle page)
+- ressources.html (nouvel article en première position, menu Ressources conservé)
+- sitemap.xml (URL ajoutée, autres URL et pages de numéros conservées)
 
-Les pages conservent l’identité visuelle RECOVIA, le motif d’appel incluant le service commercial, et les scripts partagés. Après déploiement, demander l’indexation des URL dans Google Search Console.
+Le correctif préserve les éléments déjà présents dans le dépôt RECOVIA, notamment le menu Ressources, les pages de numéros et les scripts existants. Aucune modification à index.html, contact.html, aux formulaires ou au widget rappel.
+
+URL prévue : https://recovia-france.fr/facturation-electronique-recouvrement-impayes.html
+Après déploiement, vérifier la page sur ordinateur/mobile et demander l'indexation dans Google Search Console.
